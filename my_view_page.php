@@ -101,7 +101,7 @@ if( $t_current_project_id == ALL_PROJECTS ) {
 
 ?>
 <div class="col-xs-12 col-md-12">
-	<div id="before_reporting" class="widget-box widget-color-blue2 ">
+	<div id="before_reporting" class="widget-box widget-color-orange ">
 		<div class="widget-header widget-header-small">
 			<h4 class="widget-title lighter">
 				報告する前に
