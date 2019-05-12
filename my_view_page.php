@@ -8,7 +8,7 @@
 #
 # MantisBT is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A https://github.com/ponapalt/mantisbt.gitPARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
@@ -98,6 +98,26 @@ if( $t_current_project_id == ALL_PROJECTS ) {
 	$t_test_filter = filter_ensure_valid_filter( array( FILTER_PROPERTY_PROJECT_ID => [$t_current_project_id]) );
 	$t_project_ids_to_check = filter_get_included_projects( $t_test_filter );
 }
+
+?>
+<div class="col-xs-12 col-md-12">
+	<div id="before_reporting" class="widget-box widget-color-blue2 ">
+		<div class="widget-header widget-header-small">
+			<h4 class="widget-title lighter">
+				報告する前に
+			</h4>
+		</div>
+		<div class="widget-body">
+			<div class="widget-main no-padding">
+				<ul>
+					<li>左側の「登録」から新規課題を登録できます。</li>
+					<li>不具合報告前にOSを「再起動」してみてください。OSレベルでの問題が直る場合があります。<br />特に最近のWindowsの場合 シャットダウン→電源ON と 再起動 で挙動が異なります。</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<?php
 
 # Retrieve the boxes to display
 # - exclude hidden boxes per configuration (order == 0)
