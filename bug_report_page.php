@@ -716,6 +716,21 @@ if( $t_show_attachments ) {
 </table>
 </div>
 </div>
+
+<div id="before_reporting" class="widget-box widget-color-orange ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			送信ボタンを押す前に / Before pushing "Send" button
+		</h4>
+	</div>
+	<div class="widget-body">
+		<ul>
+			<li>スパム避けのためにパスワードが必要です。送信ボタンを押すとユーザー名とパスワードを聞かれますので、それぞれ "bts" と入力してください。</li>
+			<li>To send report, please input "bts" into username and password box in popup dialog.</li>
+		</ul>
+	</div>
+</div>
+
 <div class="widget-toolbox padding-8 clearfix">
 	<span class="required pull-right"> * <?php echo lang_get( 'required' ) ?></span>
 	<input <?php echo helper_get_tab_index() ?> type="submit" class="btn btn-primary btn-white btn-round" value="<?php echo lang_get( 'submit_report_button' ) ?>" />

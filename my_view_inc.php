@@ -70,11 +70,32 @@ $t_bug_resolved_status_threshold = config_get( 'bug_resolved_status_threshold' )
 $t_hide_status_default = config_get( 'hide_status_default' );
 $t_default_show_changed = config_get( 'default_show_changed' );
 
+
+$t_anonymous_user = current_user_is_anonymous();
+
+if ( $t_anonymous_user ) {
+
+$c_filter['assigned'] = filter_get_default();
+$c_filter['assigned'][FILTER_PROPERTY_HIDE_STATUS] = array( '0' => $t_bug_resolved_status_threshold );
+
+if( $p_project_id != ALL_PROJECTS ) {
+	$c_filter['assigned'][FILTER_PROPERTY_PROJECT_ID] = array( '0' => $p_project_id );
+}
+
+
+# $c_filter['assigned'] = filter_create_assigned_to_unresolved( helper_get_current_project(), 0 );
+$t_url_link_parameters['assigned'] = FILTER_PROPERTY_HIDE_STATUS . '=' . $t_bug_resolved_status_threshold;
+
+}
+else {
+
 $c_filter['assigned'] = filter_create_assigned_to_unresolved( helper_get_current_project(), $t_current_user_id );
 $t_url_link_parameters['assigned'] = FILTER_PROPERTY_HANDLER_ID . '=' . $t_current_user_id . '&' . FILTER_PROPERTY_HIDE_STATUS . '=' . $t_bug_resolved_status_threshold;
 
+}
+
 # @TODO cproensa: make this value configurable
-$t_recent_days = 30;
+$t_recent_days = 365;
 $c_filter['recent_mod'] = filter_create_recently_modified( $t_recent_days );
 $t_url_link_parameters['recent_mod'] = FILTER_PROPERTY_HIDE_STATUS . '=none'
 		. '&' . FILTER_PROPERTY_FILTER_BY_LAST_UPDATED_DATE . '=' . $c_filter['recent_mod'][FILTER_PROPERTY_FILTER_BY_LAST_UPDATED_DATE]

@@ -126,7 +126,7 @@ $t_boxes = array_filter( config_get( 'my_view_boxes' ) );
 $t_anonymous_user = current_user_is_anonymous();
 foreach( $t_boxes as $t_box_title => $t_box_display ) {
 	if( # Remove "Assigned to Me" box for users that can't handle issues
-		(  $t_box_title == 'assigned'
+		(  $t_box_title == 'resolved'
 		&& (  $t_anonymous_user
 		   || !access_has_any_project_level('handle_bug_threshold', $t_project_ids_to_check, $t_current_user_id )
 		   )
