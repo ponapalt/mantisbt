@@ -93,20 +93,20 @@ use Mantis\Exceptions\ClientException;
  * @property int category_id
  * @property int date_submitted
  * @property int last_updated
- * @property-read int eta
- * @property-read string os
- * @property-read string os_build
- * @property-read string platform
- * @property-read string version
+ * @property int eta
+ * @property string os
+ * @property string os_build
+ * @property string platform
+ * @property string version
  * @property string fixed_in_version
  * @property string target_version
  * @property string build
- * @property-read int view_state
+ * @property int view_state
  * @property string summary
- * @property-read float sponsorship_total
- * @property-read int sticky
+ * @property float sponsorship_total
+ * @property int sticky
  * @property int due_date
- * @property-read int profile_id
+ * @property int profile_id
  * @property string description
  * @property string steps_to_reproduce
  * @property string additional_information
@@ -744,7 +744,10 @@ class BugData {
 		history_log_event_direct( $c_bug_id, 'sponsorship_total', $t_old_data->sponsorship_total, $this->sponsorship_total );
 		history_log_event_direct( $c_bug_id, 'sticky', $t_old_data->sticky, $this->sticky );
 
-		history_log_event_direct( $c_bug_id, 'due_date', ( $t_old_data->due_date != date_get_null() ) ? $t_old_data->due_date : null, ( $this->due_date != date_get_null() ) ? $this->due_date : null );
+		history_log_event_direct( $c_bug_id, 'due_date',
+			( $t_old_data->due_date != date_get_null() ) ? $t_old_data->due_date : null,
+			( $this->due_date != date_get_null() ) ? $this->due_date : null
+		);
 
 		# Update extended info if requested
 		if( $p_update_extended ) {
@@ -1720,7 +1723,7 @@ function bug_get_bugnote_stats( $p_bug_id ) {
  */
 function bug_get_attachments( $p_bug_id ) {
 	db_param_push();
-	$t_query = 'SELECT id, title, diskfile, filename, filesize, file_type, date_added, user_id
+	$t_query = 'SELECT id, title, diskfile, filename, filesize, file_type, date_added, user_id, bugnote_id
 		                FROM {bug_file}
 		                WHERE bug_id=' . db_param() . '
 		                ORDER BY date_added';

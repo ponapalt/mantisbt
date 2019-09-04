@@ -53,6 +53,7 @@
  * @author Mmgseabra
  * @author Vitorvicentevalente
  * @author Waldir
+ * @author Waldyrious
  */
 
 $s_actiongroup_menu_move = 'Mover';
@@ -664,6 +665,7 @@ $s_configuration_corrupted = 'A configuração na base de dados está corrompida
 $s_set_configuration_option_action_create = 'Criar uma opção de configuração';
 $s_set_configuration_option_action_edit = 'Editar uma opção de configuração';
 $s_set_configuration_option_action_clone = 'Duplicar uma opção de configuração';
+$s_set_configuration_option_action_view = 'Ver opção de configuração';
 $s_plugin = 'Plugin';
 $s_plugins_installed = 'Plugins instalados';
 $s_plugins_available = 'Plugins disponíveis';
@@ -1107,6 +1109,8 @@ $s_update_issue_status = 'Atualizar estado do problema';
 $s_set_view_status = 'Definir o estado de visibilidade ao informar sobre um novo problema ou nota';
 $s_update_view_status = 'Alterar o estado de visibilidade de um problema ou nota existente';
 $s_show_list_of_users_monitoring_issue = 'Mostrar lista de utilizadores a acompanhar um problema';
+$s_add_users_monitoring_issue = 'Adicionar monitores a um problema';
+$s_remove_users_monitoring_issue = 'Remover monitores de um problema';
 $s_notes = 'Notas';
 $s_add_notes = 'Acrescentar notas';
 $s_view_private_notes = 'Ver as notas privadas dos outros';

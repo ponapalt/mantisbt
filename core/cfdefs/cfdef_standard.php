@@ -267,7 +267,7 @@ function cfdef_prepare_list_value_for_email( $p_value ) {
  */
 function cfdef_print_email_value( $p_value ) {
 	if( !is_blank( $p_value ) ) {
-		echo '<a href="mailto:' . string_attribute( $p_value ) . '">' . string_display_line( $p_value ) . '</a>';
+		print_email_link( $p_value, $p_value );
 	}
 }
 
@@ -453,6 +453,19 @@ function cfdef_input_textbox( array $p_field_def, $p_custom_field_value, $p_requ
 		echo ' maxlength="' . $p_field_def['length_max'] . '"';
 	} else {
 		echo ' maxlength="255"';
+	}
+	if( !empty( $p_field_def['valid_regexp'] ) ) {
+		# the custom field regex is evaluated with preg_match and looks for a partial match in the string
+		# however, the html property is matched for the whole string.
+		# unless we have explicit start and end tokens, adapt the html regex to allow a substring match.
+		$t_cf_regex = $p_field_def['valid_regexp'];
+		if( substr( $t_cf_regex, 0, 1 ) != '^' ) {
+			$t_cf_regex = '.*' . $t_cf_regex;
+		}
+		if( substr( $t_cf_regex, -1 ) != '$' ) {
+			$t_cf_regex .= '.*';
+		}
+		echo ' pattern="' . $t_cf_regex . '"';
 	}
 	echo ' value="' . string_attribute( $p_custom_field_value ) .'" />';
 }
