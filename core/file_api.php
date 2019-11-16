@@ -78,7 +78,7 @@ function file_attach_files( $p_bug_id, $p_files, $p_bugnote_id = 0 ) {
 				'bug',
 				'', /* title */
 				'', /* desc */
-				0, /* user_id */
+				null, /* user_id */
 				0, /* date_added */
 				0, /* skip_bug_update */
 				$p_bugnote_id );
@@ -209,7 +209,7 @@ function file_bug_has_attachments( $p_bug_id ) {
 /**
  * Check if the current user can view attachments for the specified bug.
  * @param integer $p_bug_id           A bug identifier.
- * @param integer $p_uploader_user_id An user identifier.
+ * @param integer $p_uploader_user_id A user identifier.
  * @return boolean
  */
 function file_can_view_bug_attachments( $p_bug_id, $p_uploader_user_id = null ) {
@@ -222,7 +222,7 @@ function file_can_view_bug_attachments( $p_bug_id, $p_uploader_user_id = null ) 
 /**
  * Check if the current user can download attachments for the specified bug.
  * @param integer $p_bug_id           A bug identifier.
- * @param integer $p_uploader_user_id An user identifier.
+ * @param integer $p_uploader_user_id A user identifier.
  * @return boolean
  */
 function file_can_download_bug_attachments( $p_bug_id, $p_uploader_user_id = null ) {
@@ -235,7 +235,7 @@ function file_can_download_bug_attachments( $p_bug_id, $p_uploader_user_id = nul
 /**
  * Check if the current user can delete attachments from the specified bug.
  * @param integer $p_bug_id           A bug identifier.
- * @param integer $p_uploader_user_id An user identifier.
+ * @param integer $p_uploader_user_id A user identifier.
  * @return boolean
  */
 function file_can_delete_bug_attachments( $p_bug_id, $p_uploader_user_id = null ) {
@@ -418,13 +418,21 @@ function file_get_visible_attachments( $p_bug_id ) {
 		$t_ext = strtolower( pathinfo( $t_attachment['display_name'], PATHINFO_EXTENSION ) );
 		$t_attachment['alt'] = $t_ext;
 
-		if( $t_attachment['exists'] && $t_attachment['can_download'] && $t_filesize != 0 && $t_filesize <= config_get( 'preview_attachments_inline_max_size' ) ) {
-			if( in_array( $t_ext, $t_preview_text_ext, true ) ) {
-				$t_attachment['preview'] = true;
+		if( $t_attachment['exists'] && $t_attachment['can_download'] && $t_filesize != 0 ) {
+			$t_preview = $t_filesize <= config_get( 'preview_attachments_inline_max_size' );
+
+			if( stripos( $t_attachment['file_type'], 'text/' ) === 0 || in_array( $t_ext, $t_preview_text_ext, true ) ) {
+				$t_attachment['preview'] = $t_preview;
 				$t_attachment['type'] = 'text';
-			} else if( in_array( $t_ext, $t_preview_image_ext, true ) ) {
-				$t_attachment['preview'] = true;
+			} else if( stripos( $t_attachment['file_type'], 'image/' ) === 0 || in_array( $t_ext, $t_preview_image_ext, true ) ) {
+				$t_attachment['preview'] = $t_preview;
 				$t_attachment['type'] = 'image';
+			} else if( stripos( $t_attachment['file_type'], 'audio/' ) === 0 ) {
+				$t_attachment['preview'] = $t_preview;
+				$t_attachment['type'] = 'audio';
+			} else if( stripos( $t_attachment['file_type'], 'video/' ) === 0 ) {
+				$t_attachment['preview'] = $t_preview;
+				$t_attachment['type'] = 'video';
 			}
 		}
 

@@ -3658,12 +3658,16 @@ $g_file_type_icons = array(
 	'jpeg'	=> 'fa-file-image-o',
 	'log'	=> 'fa-file-text-o',
 	'lzh'	=> 'fa-file-archive-o',
+	'md'	=> 'fa-file-text-o',
 	'mhtml'	=> 'fa-file-code-o',
 	'mid'	=> 'fa-file-audio-o',
 	'midi'	=> 'fa-file-audio-o',
 	'mov'	=> 'fa-file-movie-o',
+	'mp3'	=> 'fa-file-audio-o',
+	'mp4'	=> 'fa-file-movie-o',
 	'msg'	=> 'fa-envelope-o',
 	'one'	=> 'fa-file-o',
+	'ogg'	=> 'fa-file-movie-o',
 	'patch'	=> 'fa-file-text-o',
 	'pcx'	=> 'fa-file-image-o',
 	'pdf'	=> 'fa-file-pdf-o',
@@ -4360,7 +4364,7 @@ $g_global_settings = array(
 	'ldap_simulation_file_path', 'plugin_path', 'bottom_include_page', 'top_include_page',
 	'default_home_page', 'logout_redirect_page', 'manual_url', 'logo_url', 'wiki_engine_url',
 	'cdn_enabled', 'public_config_names', 'email_login_enabled', 'email_ensure_unique',
-	'impersonate_user_threshold', 'email_retry_in_days'
+	'impersonate_user_threshold', 'email_retry_in_days', 'neato_tool', 'dot_tool'
 );
 
 /**

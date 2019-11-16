@@ -68,7 +68,8 @@ require_api( 'user_api.php' );
 #precache access levels
 access_cache_matrix_project( helper_get_current_project() );
 
-$t_show_time_tracking = access_has_bug_level( config_get( 'time_tracking_view_threshold' ), $f_bug_id );
+$t_show_time_tracking = config_get( 'time_tracking_enabled' )
+	&& access_has_bug_level( config_get( 'time_tracking_view_threshold' ), $f_bug_id );
 
 # get attachments data
 if( !isset( $t_fields ) ) {
@@ -311,10 +312,6 @@ $t_block_icon = $t_collapse_block ? 'fa-chevron-down' : 'fa-chevron-up';
 			if( !is_blank( $t_activity['note']->note ) ) {
 				echo string_display_links( $t_activity['note']->note );
 				$t_add_space = true;
-			}
-
-			if( $t_add_space && isset( $t_activity['attachments'] ) && count( $t_activity['attachments'] ) > 0 ) {
-				echo '<br /><br />';
 			}
 		} else {
 			if ( !$t_security_token_attachments_delete ) {

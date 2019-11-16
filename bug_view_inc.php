@@ -629,9 +629,7 @@ if( $t_flags['relationships_show'] ) {
 }
 
 # User list monitoring the bug
-if( $t_flags['monitor_show'] && isset( $t_issue['monitors'] ) ) {
-	$t_num_users = sizeof( $t_issue['monitors'] );
-
+if( $t_flags['monitor_show'] ) {
 	echo '<div class="col-md-12 col-xs-12">';
 	echo '<a id="monitors"></a>';
 	echo '<div class="space-10"></div>';
@@ -664,7 +662,7 @@ if( $t_flags['monitor_show'] && isset( $t_issue['monitors'] ) ) {
 		</th>
 		<td>
 	<?php
-			if( 0 == $t_num_users ) {
+			if( !isset( $t_issue['monitors'] ) || count( $t_issue['monitors'] ) == 0 ) {
 				echo lang_get( 'no_users_monitoring_bug' );
 			} else {
 				$t_first_user = true;
@@ -892,8 +890,8 @@ function bug_view_relationship_get_details( $p_bug_id, BugRelationshipData $p_re
 	# add delete link if bug not read only and user has access level
 	if( !bug_is_readonly( $p_bug_id ) && !current_user_is_anonymous() && ( $p_html_preview == false ) ) {
 		if( access_has_bug_level( config_get( 'update_bug_threshold' ), $p_bug_id ) ) {
-			$t_relationship_info_html .= ' <a class="noprint"
-			href="bug_relationship_delete.php?bug_id=' . $p_bug_id . '&amp;rel_id=' . $p_relationship->id . htmlspecialchars( form_security_param( 'bug_relationship_delete' ) ) . '"><i class="ace-icon fa fa-trash-o"></i></a>';
+			$t_relationship_info_html .= ' <a class="red noprint zoom-130"
+			href="bug_relationship_delete.php?bug_id=' . $p_bug_id . '&amp;rel_id=' . $p_relationship->id . htmlspecialchars( form_security_param( 'bug_relationship_delete' ) ) . '"><i class="ace-icon fa fa-trash-o bigger-115"></i></a>';
 		}
 	}
 
@@ -1207,7 +1205,7 @@ function bug_view_action_buttons( $p_bug_id, $p_flags ) {
 	}
 
 	# CLONE button
-	if( $p_flags['can_close'] ) {
+	if( $p_flags['can_clone'] ) {
 		echo '<div class="pull-left padding-right-2">';
 		html_button( string_get_bug_report_url(), lang_get( 'create_child_bug_button' ), array( 'm_id' => $p_bug_id ) );
 		echo '</div>';
