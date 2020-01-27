@@ -763,15 +763,13 @@ if( $t_show_attachments ) {
 	</div>
 	<div class="widget-body">
 		<ul>
-			<li>バグ報告のコツ</li>
-			<li>
+			<li>バグ報告のコツ
 				<ul>
-					<li>SSPのバージョン・OSのバージョン・問題が発生したゴースト・詳しい再現手順がないとたいてい対応できません。<li>
+					<li>SSPのバージョン・OSのバージョン・問題が発生したゴースト・詳しい再現手順がないとたいてい対応できません。</li>
 					<li>バグ報告の書き方については、<a href="https://ukiya.hatenadiary.org/entry/20091121/1258791856">バグ報告の方法</a> <a href="https://ukiya.hatenadiary.org/entry/20091127/1259336056">SSPでの情報の取り方</a> などを参考にしてください。</li>
 				</ul>
 			</li>
-			<li>投稿時のパスワード</li>
-			<li>
+			<li>投稿時のパスワード
 				<ul>
 					<li>スパム避けのためにパスワードが必要です。送信ボタンを押すとユーザー名とパスワードを聞かれますので、それぞれ "bts" と入力してください。</li>
 					<li>To send report, please input "bts" into username and password box in popup dialog.</li>
