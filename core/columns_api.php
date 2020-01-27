@@ -1232,16 +1232,16 @@ function print_column_bugnotes_count( BugData $p_bug, $p_columns_target = COLUMN
 
 	# grab the bugnote count
 	$t_bugnote_stats = bug_get_bugnote_stats( $p_bug->id );
-	if( null !== $t_bugnote_stats ) {
+	if( is_array( $t_bugnote_stats ) ) {
 		$t_bugnote_count = $t_bugnote_stats['count'];
-		$v_bugnote_updated = $t_bugnote_stats['last_modified'];
+		$t_bugnote_updated = $t_bugnote_stats['last_modified'];
 	} else {
 		$t_bugnote_count = 0;
 	}
 
 	echo '<td class="column-bugnotes-count">';
 	if( $t_bugnote_count > 0 ) {
-		$t_show_in_bold = $v_bugnote_updated > strtotime( '-' . $g_filter[FILTER_PROPERTY_HIGHLIGHT_CHANGED] . ' hours' );
+		$t_show_in_bold = $t_bugnote_updated > strtotime( '-' . $g_filter[FILTER_PROPERTY_HIGHLIGHT_CHANGED] . ' hours' );
 		if( $t_show_in_bold ) {
 			echo '<span class="bold">';
 		}
@@ -1665,7 +1665,6 @@ function print_column_overdue( BugData $p_bug, $p_columns_target = COLUMNS_TARGE
 	if( access_has_bug_level( config_get( 'due_date_view_threshold' ), $p_bug->id ) &&
 		!date_is_null( $p_bug->due_date ) &&
 		bug_is_overdue( $p_bug->id ) ) {
-		$t_overdue_text = lang_get( 'overdue' );
 		$t_overdue_text_hover = sprintf( lang_get( 'overdue_since' ), date( config_get( 'short_date_format' ), $p_bug->due_date ) );
 		echo '<i class="fa fa-times-circle-o" title="' . string_display_line( $t_overdue_text_hover ) . '"></i>';
 	} else {
