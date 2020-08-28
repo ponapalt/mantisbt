@@ -129,7 +129,7 @@ print_manage_menu( 'manage_user_page.php' );
 
 			<!-- Realname -->
 			<tr><?php
-			if( $t_ldap && ON == config_get( 'use_ldap_realname' ) ) {
+			if( $t_ldap && ON == config_get_global( 'use_ldap_realname' ) ) {
 				# With LDAP
 				echo '<td class="category">' . lang_get( 'realname_label' ) . '</td>';
 				echo '<td>';
@@ -144,7 +144,7 @@ print_manage_menu( 'manage_user_page.php' );
 			</tr>
 			<!-- Email -->
 			<tr><?php
-			if( $t_ldap && ON == config_get( 'use_ldap_email' ) ) {
+			if( $t_ldap && ON == config_get_global( 'use_ldap_email' ) ) {
 				# With LDAP
 				echo '<td class="category">' . lang_get( 'email_label' ) . '</td>';
 				echo '<td>' . string_display_line( user_get_email( $t_user_id ) ) . '</td>';
@@ -228,7 +228,7 @@ $t_reset = $t_user['id'] != auth_get_current_user_id()
 	&& auth_can_set_password( $t_user['id'] )
 	&& user_is_enabled( $t_user['id'] )
 	&& !user_is_protected( $t_user['id'] );
-$t_unlock = OFF != config_get( 'max_failed_login_count' ) && $t_user['failed_login_count'] > 0;
+$t_unlock = !user_is_login_request_allowed( $t_user['id'] );
 $t_delete = !( ( user_is_administrator( $t_user_id ) && ( user_count_level( config_get_global( 'admin_site_threshold' ) ) <= 1 ) ) );
 $t_impersonate = auth_can_impersonate( $t_user['id'] );
 

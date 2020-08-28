@@ -226,7 +226,9 @@ function get_capability_row( $p_caption, $p_threshold, $p_all_projects_only = fa
 	echo "<tr>\n";
 
 	# Access levels
-	echo '  <td>' . string_display( $p_caption ) . "</td>\n";
+	echo '  <td>', string_display( $p_caption ),
+			'<input type="hidden" name="flag_exists_' . $p_threshold . '[]" value="1" />',
+			"</td>\n";
 	foreach( $g_access_levels as $t_access_level => $t_access_label ) {
 		$t_file = in_array( $t_access_level, $t_file_exp );
 		$t_global = in_array( $t_access_level, $t_global_exp );
@@ -271,7 +273,9 @@ function get_capability_boolean( $p_caption, $p_threshold, $p_all_projects_only 
 	$t_can_change = access_has_project_level( config_get_access( $p_threshold ), $g_project_id, $g_user )
 			  && ( ( ALL_PROJECTS == $g_project_id ) || !$p_all_projects_only );
 
-	echo "<tr>\n\t<td>" . string_display_line( $p_caption ) . "</td>\n";
+	echo "<tr>\n\t<td>", string_display_line( $p_caption ),
+			'<input type="hidden" name="flag_exists_' . $p_threshold . '[]" value="1" />',
+			"</td>\n";
 
 	# Value
 	$t_color = set_color( $p_threshold, $t_file, $t_global, $t_project, $t_can_change );
@@ -394,7 +398,11 @@ get_capability_row( lang_get( 'add_users_monitoring_issue' ), 'monitor_add_other
 get_capability_row( lang_get( 'remove_users_monitoring_issue' ), 'monitor_delete_others_bug_threshold' );
 get_capability_boolean( lang_get( 'set_status_assigned' ), 'auto_set_status_to_assigned' );
 get_capability_enum( lang_get( 'assigned_status' ), 'bug_assigned_status', 'status' );
-get_capability_boolean( lang_get( 'limit_access' ), 'limit_reporters', true );
+if( ON == config_get( 'limit_reporters', null, ALL_USERS, ALL_PROJECTS ) ) {
+	get_capability_boolean( lang_get( 'limit_access' ), 'limit_reporters', true );
+} else {
+	get_capability_row( lang_get( 'limit_view_unless_threshold_option' ), 'limit_view_unless_threshold' );
+}
 get_section_end();
 
 # Notes
@@ -418,6 +426,16 @@ get_capability_row( lang_get( 'create_new_tags' ), 'tag_create_threshold' );
 get_capability_row( lang_get( 'edit_tags' ), 'tag_edit_threshold' );
 get_capability_row( lang_get( 'edit_own_tags' ), 'tag_edit_own_threshold' );
 get_section_end();
+
+# Attachments
+if( config_get( 'allow_file_upload' ) == ON ) {
+	get_section_begin_mcwt( lang_get( 'attachments' ) );
+	get_capability_row( lang_get( 'view_list_of_attachments' ), 'view_attachments_threshold' );
+	get_capability_row( lang_get( 'download_attachments' ), 'download_attachments_threshold' );
+	get_capability_row( lang_get( 'delete_attachments' ), 'delete_attachments_threshold' );
+	get_capability_row( lang_get( 'upload_issue_attachments' ), 'upload_bug_file_threshold' );
+	get_section_end();
+}
 
 # Others
 get_section_begin_mcwt( lang_get( 'others' ) );

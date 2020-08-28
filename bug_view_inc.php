@@ -292,11 +292,11 @@ if( $t_flags['reporter_show'] || $t_flags['handler_show'] || $t_flags['due_date_
 	if( $t_flags['due_date_show'] ) {
 		echo '<th class="bug-due-date category">', lang_get( 'due_date' ), '</th>';
 
-		if( $t_issue_view['overdue'] ) {
-			echo '<td class="bug-due-date overdue">', $t_issue_view['due_date'], '</td>';
-		} else {
-			echo '<td class="bug-due-date">', $t_issue_view['due_date'], '</td>';
+		$t_css = 'bug-due-date';
+		if( $t_issue_view['overdue'] !== false ) {
+			$t_css .= ' due-' . $t_issue_view['overdue'];
 		}
+		echo '<td class="' . $t_css . '">', $t_issue_view['due_date'], '</td>';
 	} else {
 		$t_spacer += 2;
 	}
@@ -423,7 +423,7 @@ if( $t_flags['projection_show'] || $t_flags['eta_show'] ) {
 
 if( ( $t_flags['profiles_platform_show'] && isset( $t_issue['platform'] ) && !is_blank( $t_issue['platform'] ) ) ||
 	( $t_flags['profiles_os_show'] && isset( $t_issue['os'] ) && !is_blank( $t_issue['os'] ) ) ||
-    ( $t_flags['profiles_os_version_show'] && isset( $t_issue['os_version'] ) && !is_blank( $t_issue['os_version'] ) ) ) {
+    ( $t_flags['profiles_os_build_show'] && isset( $t_issue['os_build'] ) && !is_blank( $t_issue['os_build'] ) ) ) {
 	$t_spacer = 0;
 
 	echo '<tr>';
@@ -445,9 +445,9 @@ if( ( $t_flags['profiles_platform_show'] && isset( $t_issue['platform'] ) && !is
 	}
 
 	# OS Version
-	if( $t_flags['profiles_os_version_show'] && isset( $t_issue['os_version'] ) && !is_blank( $t_issue['os_version'] ) ) {
-		echo '<th class="bug-os-version category">', lang_get( 'os_version' ), '</th>';
-		echo '<td class="bug-os-version">', string_display_line( $t_issue['os_version'] ), '</td>';
+	if( $t_flags['profiles_os_build_show'] && isset( $t_issue['os_build'] ) && !is_blank( $t_issue['os_build'] ) ) {
+		echo '<th class="bug-os-build category">', lang_get( 'os_build' ), '</th>';
+		echo '<td class="bug-os-build">', string_display_line( $t_issue['os_build'] ), '</td>';
 	} else {
 		$t_spacer += 2;
 	}
@@ -464,7 +464,7 @@ if( ( $t_flags['profiles_platform_show'] && isset( $t_issue['platform'] ) && !is
 #
 
 if( ( $t_flags['versions_product_version_show'] && isset( $t_issue['version'] ) ) ||
-    ( $t_flags['versions_product_build_show'] && isset( $t_issue['product_build'] ) ) ) {
+    ( $t_flags['versions_product_build_show'] && isset( $t_issue['build'] ) ) ) {
 	$t_spacer = 2;
 
 	echo '<tr>';
@@ -478,9 +478,9 @@ if( ( $t_flags['versions_product_version_show'] && isset( $t_issue['version'] ) 
 	}
 
 	# Product Build
-	if( $t_flags['versions_product_build_show'] && isset( $t_issue['product_build'] ) ) {
+	if( $t_flags['versions_product_build_show'] && isset( $t_issue['build'] ) ) {
 		echo '<th class="bug-product-build category">', lang_get( 'product_build' ), '</th>';
-		echo '<td class="bug-product-build">', string_display_line( $t_issue['product_build'] ), '</td>';
+		echo '<td class="bug-product-build">', string_display_line( $t_issue['build'] ), '</td>';
 	} else {
 		$t_spacer += 2;
 	}
@@ -681,8 +681,7 @@ if( $t_flags['monitor_show'] ) {
 			<form method="get" action="bug_monitor_add.php" class="form-inline noprint">
 			<?php echo form_security_field( 'bug_monitor_add' ) ?>
 				<input type="hidden" name="bug_id" value="<?php echo (integer)$f_issue_id; ?>" />
-				<label for="bug_monitor_list_username"><?php echo lang_get( 'username' ) ?></label>
-				<input type="text" class="input-sm" id="bug_monitor_list_username" name="username" />
+				<input type="text" class="input-sm" id="bug_monitor_list_user_to_add" name="user_to_add" />
 				<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="<?php echo lang_get( 'add_user_to_monitor' ) ?>" />
 			</form>
 			<?php } ?>
@@ -941,16 +940,16 @@ function bug_view_relationship_view_box( $p_bug_id, $p_can_update ) {
 	}
 
 	$t_relationship_graph = ON == config_get( 'relationship_graph_enable' );
-	$t_show_top_div = $p_can_update || $t_relationship_graph;
-	?>
+	$t_event_buttons = event_signal( 'EVENT_MENU_ISSUE_RELATIONSHIP', $p_bug_id );
+	$t_show_top_div = $p_can_update || $t_relationship_graph || !empty( $t_event_buttons );
+?>
 	<div class="col-md-12 col-xs-12">
 	<div class="space-10"></div>
-
-	<?php
+<?php
 	$t_collapse_block = is_collapsed( 'relationships' );
 	$t_block_css = $t_collapse_block ? 'collapsed' : '';
 	$t_block_icon = $t_collapse_block ? 'fa-chevron-down' : 'fa-chevron-up';
-	?>
+?>
 	<div id="relationships" class="widget-box widget-color-blue2 <?php echo $t_block_css ?>">
 	<div class="widget-header widget-header-small">
 		<h4 class="widget-title lighter">
@@ -964,20 +963,41 @@ function bug_view_relationship_view_box( $p_bug_id, $p_can_update ) {
 		</div>
 	</div>
 	<div class="widget-body">
-		<?php if( $t_show_top_div ) { ?>
+<?php
+	if( $t_show_top_div ) {
+?>
 		<div class="widget-toolbox padding-8 clearfix">
-		<?php
-			if( $t_relationship_graph ) {
-		?>
-		<div class="btn-group pull-right noprint">
-		<span class="small"><?php print_small_button( 'bug_relationship_graph.php?bug_id=' . $p_bug_id . '&graph=relation', lang_get( 'relation_graph' ) )?></span>
-		<span class="small"><?php print_small_button( 'bug_relationship_graph.php?bug_id=' . $p_bug_id . '&graph=dependency', lang_get( 'dependency_graph' ) )?></span>
-		</div>
-		<?php
-			} # $t_relationship_graph
+<?php
+		# Default relationship buttons
+		$t_buttons = array();
+		if( $t_relationship_graph ) {
+			$t_buttons[lang_get( 'relation_graph' )] =
+				'bug_relationship_graph.php?bug_id=' . $p_bug_id . '&graph=relation';
+			$t_buttons[lang_get( 'dependency_graph' )] =
+				'bug_relationship_graph.php?bug_id=' . $p_bug_id . '&graph=dependency';
+		}
 
-			if( $p_can_update ) {
-			?>
+		# Plugin-added buttons
+		foreach( $t_event_buttons as $t_plugin => $t_plugin_buttons ) {
+			foreach( $t_plugin_buttons as $t_callback => $t_callback_buttons ) {
+				if( is_array( $t_callback_buttons ) ) {
+					$t_buttons = array_merge( $t_buttons, $t_callback_buttons );
+				}
+			}
+		}
+?>
+		<div class="btn-group pull-right noprint">
+<?php
+		# Print the buttons, if any
+		foreach( $t_buttons as $t_label => $t_url ) {
+			print_small_button( $t_url, $t_label );
+		}
+?>
+		</div>
+
+<?php
+		if( $p_can_update ) {
+?>
 		<form method="post" action="bug_relationship_add.php" class="form-inline noprint">
 		<?php echo form_security_field( 'bug_relationship_add' ) ?>
 		<input type="hidden" name="src_bug_id" value="<?php echo $p_bug_id?>" />
@@ -986,11 +1006,13 @@ function bug_view_relationship_view_box( $p_bug_id, $p_can_update ) {
 		<input type="text" class="input-sm" name="dest_bug_id" value="" />
 		<input type="submit" class="btn btn-primary btn-sm btn-white btn-round" name="add_relationship" value="<?php echo lang_get( 'add_new_relationship_button' )?>" />
 		</form>
-			<?php
-			} # can update
-			?>
+<?php
+		} # can update
+?>
 		</div>
-		<?php } # show top div ?>
+<?php
+	} # show top div
+?>
 
 		<div class="widget-main no-padding">
 			<div class="table-responsive">

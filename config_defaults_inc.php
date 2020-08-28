@@ -2394,7 +2394,7 @@ $g_enable_product_build = OFF;
  *   - handler
  *   - monitors
  *   - os
- *   - os_version
+ *   - os_build
  *   - platform
  *   - priority
  *   - product_build
@@ -2431,7 +2431,7 @@ $g_bug_report_page_fields = array(
 	'due_date',
 	'handler',
 	'os',
-	'os_version',
+	'os_build',
 	'platform',
 	'priority',
 	'product_build',
@@ -2460,7 +2460,7 @@ $g_bug_report_page_fields = array(
  *   - id
  *   - last_updated
  *   - os
- *   - os_version
+ *   - os_build
  *   - platform
  *   - priority
  *   - product_build
@@ -2500,7 +2500,7 @@ $g_bug_view_page_fields = array(
 	'id',
 	'last_updated',
 	'os',
-	'os_version',
+	'os_build',
 	'platform',
 	'priority',
 	'product_build',
@@ -2534,7 +2534,7 @@ $g_bug_view_page_fields = array(
  *   - id
  *   - last_updated
  *   - os
- *   - os_version
+ *   - os_build
  *   - platform
  *   - priority
  *   - product_build
@@ -2572,7 +2572,7 @@ $g_bug_update_page_fields = array(
 	'id',
 	'last_updated',
 	'os',
-	'os_version',
+	'os_build',
 	'platform',
 	'priority',
 	'product_build',
@@ -2586,84 +2586,6 @@ $g_bug_update_page_fields = array(
 	'status',
 	'steps_to_reproduce',
 	'summary',
-	'target_version',
-	'view_state',
-);
-
-/**
- * An array of optional fields to show on the bug change status page. This
- * only changes the visibility of fields shown below the form used for
- * updating the status of an issue.
- *
- * The following optional fields are allowed:
- *   - additional_info
- *   - attachments
- *   - category_id
- *   - date_submitted
- *   - description
- *   - due_date
- *   - eta
- *   - fixed_in_version
- *   - handler
- *   - id
- *   - last_updated
- *   - os
- *   - os_version
- *   - platform
- *   - priority
- *   - product_build
- *   - product_version
- *   - project
- *   - projection
- *   - reporter
- *   - reproducibility
- *   - resolution
- *   - severity
- *   - status
- *   - steps_to_reproduce
- *   - summary
- *   - tags
- *   - target_version
- *   - view_state
- *
- * Fields not listed above cannot be shown on the bug change status page.
- * Visibility of custom fields is handled via the Manage =>
- * Manage Custom Fields administrator page (use the same settings as the
- * bug view page).
- *
- * This setting can be set on a per-project basis by using the
- * Manage => Manage Configuration administrator page.
- *
- * @global array $g_bug_change_status_page_fields
- */
-$g_bug_change_status_page_fields = array(
-	'additional_info',
-	'attachments',
-	'category_id',
-	'date_submitted',
-	'description',
-	'due_date',
-	'eta',
-	'fixed_in_version',
-	'handler',
-	'id',
-	'last_updated',
-	'os',
-	'os_version',
-	'platform',
-	'priority',
-	'product_build',
-	'product_version',
-	'project',
-	'projection',
-	'reporter',
-	'reproducibility',
-	'resolution',
-	'severity',
-	'status',
-	'steps_to_reproduce',
-	'summary',
-	'tags',
 	'target_version',
 	'view_state',
 );
@@ -3048,9 +2970,24 @@ $g_allow_no_category = OFF;
 /**
  * limit reporters. Set to ON if you wish to limit reporters to only viewing
  * bugs that they report.
+ * This feature is deprecated and replaced by the 'limit_view_unless_threshold'
+ * option. It must be OFF to enable the new one.
+ * @deprecated 2.24.0 Use $g_limit_view_unless_threshold instead
  * @global integer $g_limit_reporters
  */
 $g_limit_reporters = OFF;
+
+/**
+ * Threshold at which a user can view all issues in the project (as allowed by other permissions).
+ * Not meeting this threshold means the user can only see the issues they reported,
+ * are handling or monitoring.
+ * A value of ANYBODY means that all users have full visibility (as default)
+ *
+ * This is a replacement for old option {@see $g_limit_reporters}.
+ *
+ * @global integer $g_limit_view_unless_threshold
+ */
+$g_limit_view_unless_threshold = ANYBODY;
 
 /**
  * reporter can close. Allow reporters to close the bugs they reported, after
@@ -3142,7 +3079,7 @@ $g_bug_count_hyperlink_prefix = 'view_all_set.php?type=' . FILTER_ACTION_PARSE_N
  * http://rubular.com/.
  * @global string $g_user_login_valid_regex
  */
-$g_user_login_valid_regex = '/^([a-z\d\-.+_ ]+(@[a-z\d\-.]+\.[a-z]{2,4})?)$/i';
+$g_user_login_valid_regex = '/^([a-z\d\-.+_ ]+(@[a-z\d\-.]+\.[a-z]{2,18})?)$/i';
 
 /**
  * Default tag prefix used to filter the list of tags in
@@ -4165,6 +4102,33 @@ $g_due_date_view_threshold = NOBODY;
  */
 $g_due_date_default = '';
 
+/**
+ * Due date warning levels.
+ *
+ * A variable number of Levels (defined as a number of seconds going backwards
+ * from the current timestamp, compared to an issue's due date) can be defined.
+ * Levels must be defined in ascending order.
+ *
+ * - The first entry (array key 0) defines "Overdue". Normally and by default,
+ *   its value is `0` meaning that issues will be marked overdue as soon as
+ *   their due date has passed. However, it is also possible to set it to a
+ *   higher value to flag overdue issues earlier, or even use a negative value
+ *   to allow a "grace period" after due date.
+ * - Array keys 1 and 2 offer two levels of "Due soon": orange and green.
+ *   By default, only the first one is set, to 7 days.
+ *
+ * Out of the box, MantisBT allows for 3 warning levels. Additional ones may
+ * be defined, but in that case new `due-N` CSS rules (where N is the
+ * array's index) must be created otherwise the extra levels will not be
+ * highlighted in the UI.
+ *
+ * @global  array $g_due_date_warning_levels
+ */
+$g_due_date_warning_levels = array(
+	0,
+	7 * SECONDS_PER_DAY,
+);
+
 ################
 # Sub-projects #
 ################
@@ -4361,7 +4325,10 @@ $g_global_settings = array(
 	'ldap_simulation_file_path', 'plugin_path', 'bottom_include_page', 'top_include_page',
 	'default_home_page', 'logout_redirect_page', 'manual_url', 'logo_url', 'wiki_engine_url',
 	'cdn_enabled', 'public_config_names', 'email_login_enabled', 'email_ensure_unique',
-	'impersonate_user_threshold', 'email_retry_in_days', 'neato_tool', 'dot_tool'
+	'impersonate_user_threshold', 'email_retry_in_days', 'neato_tool', 'dot_tool',
+	'ldap_server', 'ldap_root_dn', 'ldap_organization', 'ldap_protocol_version',
+	'ldap_network_timeout', 'ldap_follow_referrals', 'ldap_bind_dn', 'ldap_bind_passwd',
+	'ldap_uid_field', 'ldap_realname_field', 'use_ldap_realname', 'use_ldap_email'
 );
 
 /**
@@ -4399,7 +4366,6 @@ $g_public_config_names = array(
 	'backward_year_count',
 	'bottom_include_page',
 	'bug_assigned_status',
-	'bug_change_status_page_fields',
 	'bug_closed_status_threshold',
 	'bug_count_hyperlink_prefix',
 	'bug_duplicate_resolution',
@@ -4504,6 +4470,7 @@ $g_public_config_names = array(
 	'due_date_default',
 	'due_date_update_threshold',
 	'due_date_view_threshold',
+	'due_date_warning_levels',
 	'email_ensure_unique',
 	'email_dkim_domain',
 	'email_dkim_enable',
@@ -4552,6 +4519,7 @@ $g_public_config_names = array(
 	'language_choices_arr',
 	'limit_email_domains',
 	'limit_reporters',
+	'limit_view_unless_threshold',
 	'logo_image',
 	'logo_url',
 	'logout_cookie',

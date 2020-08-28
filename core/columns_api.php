@@ -425,7 +425,7 @@ function column_get_title( $p_column ) {
 		case 'last_updated':
 			return lang_get( 'updated' );
 		case 'os_build':
-			return lang_get( 'os_version' );
+			return lang_get( 'os_build' );
 		case 'project_id':
 			return lang_get( 'email_project' );
 		case 'reporter_id':
@@ -762,7 +762,7 @@ function print_column_title_os( $p_sort, $p_dir, $p_columns_target = COLUMNS_TAR
  */
 function print_column_title_os_build( $p_sort, $p_dir, $p_columns_target = COLUMNS_TARGET_VIEW_PAGE ) {
 	echo '<th class="column-os-build">';
-	print_view_bug_sort_link( lang_get( 'os_version' ), 'os_build', $p_sort, $p_dir, $p_columns_target );
+	print_view_bug_sort_link( lang_get( 'os_build' ), 'os_build', $p_sort, $p_dir, $p_columns_target );
 	print_sort_icon( $p_dir, $p_sort, 'os_build' );
 	echo '</th>';
 }
@@ -1079,7 +1079,8 @@ function print_column_selection( BugData $p_bug, $p_columns_target = COLUMNS_TAR
 	global $g_checkboxes_exist;
 
 	echo '<td class="column-selection">';
-	if( # check report_bug_threshold for the actions "copy" or "move" into any other project
+	if( COLUMNS_TARGET_PRINT_PAGE == $p_columns_target ||
+		# check report_bug_threshold for the actions "copy" or "move" into any other project
 		access_has_any_project_level( 'report_bug_threshold' ) ||
 		# !TODO: check if any other projects actually exist for the bug to be moved to
 		access_has_project_level( config_get( 'move_bug_threshold', null, null, $p_bug->project_id ), $p_bug->project_id ) ||
@@ -1634,20 +1635,17 @@ function print_column_tags( BugData $p_bug, $p_columns_target = COLUMNS_TARGET_V
  * @access public
  */
 function print_column_due_date( BugData $p_bug, $p_columns_target = COLUMNS_TARGET_VIEW_PAGE ) {
-	$t_overdue = '';
-
 	if( !access_has_bug_level( config_get( 'due_date_view_threshold' ), $p_bug->id ) ||
 		date_is_null( $p_bug->due_date )
 	) {
+		$t_css = '';
 		$t_value = '&#160;';
 	} else {
-		if( bug_is_overdue( $p_bug->id ) ) {
-			$t_overdue = ' overdue';
-		}
+		$t_css = " due-" . bug_overdue_level( $p_bug->id );
 		$t_value = string_display_line( date( config_get( 'short_date_format' ), $p_bug->due_date ) );
 	}
 
-	printf( '<td class="column-due-date%s">%s</td>', $t_overdue, $t_value );
+	printf( '<td class="column-due-date%s">%s</td>', $t_css, $t_value );
 }
 
 /**
@@ -1663,10 +1661,29 @@ function print_column_overdue( BugData $p_bug, $p_columns_target = COLUMNS_TARGE
 	echo '<td class="column-overdue">';
 
 	if( access_has_bug_level( config_get( 'due_date_view_threshold' ), $p_bug->id ) &&
-		!date_is_null( $p_bug->due_date ) &&
-		bug_is_overdue( $p_bug->id ) ) {
-		$t_overdue_text_hover = sprintf( lang_get( 'overdue_since' ), date( config_get( 'short_date_format' ), $p_bug->due_date ) );
-		echo '<i class="fa fa-times-circle-o" title="' . string_display_line( $t_overdue_text_hover ) . '"></i>';
+		!date_is_null( $p_bug->due_date )
+	) {
+		$t_level = bug_overdue_level( $p_bug->id );
+		if( $t_level === 0 ) {
+			$t_icon = 'fa-times-circle-o';
+			$t_overdue_text_hover = sprintf(
+				lang_get( 'overdue_since' ),
+				date( config_get( 'short_date_format' ), $p_bug->due_date )
+			);
+		} else {
+			$t_icon = $t_level === false ? 'fa-info-circle' : 'fa-warning';
+
+			$t_duration = $p_bug->due_date - db_now();
+			if( $t_duration <= SECONDS_PER_DAY ) {
+				$t_overdue_text_hover = lang_get( 'overdue_one_day' );
+			} else {
+				$t_overdue_text_hover = sprintf(
+					lang_get( 'overdue_days' ),
+					ceil( $t_duration / SECONDS_PER_DAY )
+				);
+			}
+		}
+		echo '<i class="fa ' . $t_icon . '" title="' . string_display_line( $t_overdue_text_hover ) . '"></i>';
 	} else {
 		echo '&#160;';
 	}

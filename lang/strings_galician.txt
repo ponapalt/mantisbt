@@ -43,6 +43,7 @@
  * @author Bithunter
  * @author Elisardojm
  * @author Fitoschido
+ * @author Iváns
  * @author Macofe
  * @author McDutchie
  * @author Toliño
@@ -366,7 +367,7 @@ $s_submit_button = 'Enviar';
 $s_profile_updated_msg = 'Perfil actualizado...';
 $s_my_sponsorship = 'Os meus patrocinadores';
 $s_update_sponsorship_button = 'Cambiar o estado dos pagamentos';
-$s_no_sponsored = 'Non se atopou ningún problema que lle fose asignado a vostede.';
+$s_no_sponsored = 'Non se atopou ningún problema que che fose asignado.';
 $s_own_sponsored = 'Problemas que vostede patrocinou:';
 $s_issues_handled = 'Problemas patrocinados que asignou a:';
 $s_no_own_sponsored = 'Non ten patrocinado ningún problema.';
@@ -452,7 +453,7 @@ $s_status = 'Estado';
 $s_duplicate_id = 'ID duplicado';
 $s_os = 'Sistema operativo';
 $s_projection = 'Previsión';
-$s_os_version = 'Versión do sistema operativo';
+$s_os_build = 'Versión do sistema operativo';
 $s_eta = 'Tempo estimado';
 $s_product_version = 'Versión do produto';
 $s_build = 'Compilación';
@@ -757,7 +758,6 @@ $s_reset_password_msg2 = '"Restablecer o contrasinal" establece o contrasinal en
 $s_show_all_users = 'Todos';
 $s_users_unused = 'SEN USO';
 $s_users_new = 'Novo';
-$s_account_reset_protected_msg = 'Conta protexida. Non se pode restablecer o contrasinal.';
 $s_account_reset_msg = 'Unha solicitude de confirmación foi enviada ao enderezo de correo electrónico do usuario seleccionado. Mediante isto, o usuario será capaz de cambiar o seu contrasinal.';
 $s_account_reset_msg2 = 'O contrasinal da conta foi establecido en branco...';
 $s_account_unlock_msg = 'A conta foi desbloqueada.';
@@ -853,8 +853,8 @@ $s_report_stay = 'Continuar o informe';
 $s_selected_project = 'Proxecto seleccionado';
 $s_valid_project_msg = 'Debe seleccionar un proxecto válido.';
 $s_signup_done_title = 'O rexistro da conta foi procesado.';
-$s_password_emailed_msg = 'Parabéns. Tense rexistrado correctamente. Nestes intres estáselle enviando unha confirmación por correo para verificar o seu enderezo de correo electrónico.
-Ao visitar a ligazón que lle foi enviada activarase a súa conta.';
+$s_password_emailed_msg = 'Parabéns, rexistrácheste de xeito correcto. Nestes intres estamos a enviarche unha confirmación por correo para verificar o teu enderezo de correo electrónico.
+Ó visitar a ligazón que che foi enviada activarase a túa conta.';
 $s_no_reponse_msg = 'Terá sete días para completar o proceso de confirmación da conta; se non o pode completar neste período, a súa nova conta podería ser eliminada.';
 $s_signup_captcha_request_label = 'Insira o código como aparece no cadro da dereita:';
 $s_signup_captcha_refresh = 'Xerar un novo código';
@@ -1071,8 +1071,6 @@ $s_copy_from_parent = 'Copiar os datos adicionais do problema principal';
 $s_copy_notes_from_parent = 'Copiar as notas da incidencia';
 $s_copy_attachments_from_parent = 'Copiar os datos adxuntos';
 $s_with = 'con';
-$s_viewing_bug_relationship_graph_title = 'Gráfica de relacións';
-$s_viewing_bug_dependency_graph_title = 'Gráfica de dependencias';
 $s_relation_graph = 'Gráfica de relación';
 $s_dependency_graph = 'Gráfica de dependencia';
 $s_vertical = 'Vertical';

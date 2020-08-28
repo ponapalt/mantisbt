@@ -42,6 +42,7 @@
  * @author Herr Mlinka
  * @author Janjko
  * @author KWiki
+ * @author Neptune, the Mystic
  * @author Obsuser
  * @author Teoo3
  */
@@ -209,7 +210,7 @@ $s_priority = 'Prioritet';
 $s_resolution = 'Rješenje';
 $s_duplicate_id = 'Duplicirani ID';
 $s_projection = 'Projekcija';
-$s_os_version = 'Verzija';
+$s_os_build = 'Verzija';
 $s_product_version = 'Verzija produkta';
 $s_votes = 'Glasovi';
 $s_summary = 'Sažetak';
@@ -310,7 +311,6 @@ $s_edit_user_title = 'Editiraj korisnika';
 $s_reset_password_button = 'Resetiraj zaporku';
 $s_delete_user_button = 'Obriši korisnika';
 $s_reset_password_msg = 'Reset Password sends the confirmation URL via email.';
-$s_account_reset_protected_msg = 'Korisnički račun zaštićen. Ne mogu resetirati zaporku.';
 $s_account_reset_msg = 'Confirmation message has been sent to your email address...';
 $s_account_reset_msg2 = 'Postavljena je prazna korisnička zaporka...';
 $s_manage_user_protected_msg = 'Korisnički račun zaštićen; polja \'Razina pristupa\' i \'Omogućeno\' ne mogu se promijeniti. Ostala polja su uspješno ažurirana.';
@@ -435,6 +435,8 @@ $s_attached_files = 'Pridružene datoteke';
 $s_advanced_filters = 'Napredni filteri';
 $s_roadmap = 'Plan razvoja';
 $s_roadmap_empty = 'Nema informacija o planu razvoja';
+$s_show_summary = 'Prikaži sažetak';
+$s_hide_summary = 'Skrij sažetak';
 $s_filters = 'Filteri';
 $s_save_filters_as_shared = 'Spremi filtere kao dijeljene';
 $s_due_date = 'Krajnji rok';

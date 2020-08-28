@@ -182,7 +182,7 @@ class IssueViewPageCommand extends Command {
 		# Due date
 		$t_flags['due_date_show'] = in_array( 'due_date', $t_fields ) && access_has_bug_level( config_get( 'due_date_view_threshold' ), $t_issue_id );
 		if( $t_flags['due_date_show'] ) {
-			$t_issue_view['overdue'] = bug_is_overdue( $t_issue_id );
+			$t_issue_view['overdue'] = bug_overdue_level( $t_issue_id );
 
 			if( isset( $t_issue['due_date'] ) ) {
 				$t_issue_view['due_date'] = date( config_get( 'normal_date_format' ), strtotime( $t_issue['due_date'] ) );
@@ -204,7 +204,7 @@ class IssueViewPageCommand extends Command {
 		$t_flags['profiles_show'] = config_get( 'enable_profiles' ) != OFF;
 		$t_flags['profiles_platform_show'] = $t_flags['profiles_show'] && in_array( 'platform', $t_fields );
 		$t_flags['profiles_os_show'] = $t_flags['profiles_show'] && in_array( 'os', $t_fields );
-		$t_flags['profiles_os_version_show'] = $t_flags['profiles_show'] && in_array( 'os_version', $t_fields );
+		$t_flags['profiles_os_build_show'] = $t_flags['profiles_show'] && in_array( 'os_build', $t_fields );
 
 		$t_flags['monitor_show'] =
 			!$t_force_readonly &&
@@ -248,10 +248,11 @@ class IssueViewPageCommand extends Command {
 		$t_flags['can_reopen'] = !$t_force_readonly && access_can_reopen_bug( $t_issue_data );
 
 		$t_closed_status = config_get( 'bug_closed_status_threshold', null, null, $t_issue_data->project_id );
-		$t_flags['can_close'] = !$t_issue_readonly &&
+		$t_flags['can_close'] = !$t_force_readonly &&
 			access_can_close_bug( $t_issue_data ) && bug_check_workflow( $t_issue_data->status, $t_closed_status );
 
-		$t_flags['can_move'] = !$t_issue_readonly && access_has_bug_level( config_get( 'move_bug_threshold' ), $t_issue_id );
+		$t_flags['can_move'] = !$t_issue_readonly && user_has_more_than_one_project( $t_user_id ) &&
+			access_has_bug_level( config_get( 'move_bug_threshold' ), $t_issue_id );
 		$t_flags['can_delete'] = !$t_issue_readonly && access_has_bug_level( config_get( 'delete_bug_threshold' ), $t_issue_id );
 
 		if( $t_force_readonly ) {

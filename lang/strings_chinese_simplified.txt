@@ -62,6 +62,7 @@
  * @author 佛壁灯
  * @author 夢蝶葬花
  * @author 沈澄心
+ * @author 邢家朋
  */
 
 $s_actiongroup_menu_move = '移动';
@@ -248,6 +249,7 @@ $s_new_account_signup_msg = '已创建如下账号：';
 $s_reset_request_msg = '有人（可能是您）通过电子邮件确认请求了一次密码更改。如果这不是您，可忽略这条消息，不会发生任何事情。
 
 如果您请求了此次确认，请访问以下URL来更改您的密码：';
+$s_reset_request_admin_msg = '您的密码已被重置。请访问以下网址以设置新密码:';
 $s_reset_request_in_progress_msg = '请填好你的用户名和邮件地址，系统将自动发确认邮件到你的信箱，收到邮件后请按邮件里的步骤修改你的密码。';
 $s_email_notification_title_for_status_bug_new = '以下问题现已（再次）属于新建状态';
 $s_email_notification_title_for_status_bug_feedback = '以下问题需要您的反馈。';
@@ -467,7 +469,7 @@ $s_status = '状态';
 $s_duplicate_id = '重复编号';
 $s_os = '操作系统';
 $s_projection = '处理方式';
-$s_os_version = '操作系统版本';
+$s_os_build = '操作系统版本';
 $s_eta = '估计完成时间';
 $s_product_version = '产品版本';
 $s_build = '构建号';
@@ -659,6 +661,7 @@ $s_resolved_status = '问题已经被认为已解决的状态';
 $s_readonly_status = '只读问题的状态设置为';
 $s_reopen_status = '重新打开的问题状态设置为';
 $s_reopen_resolution = '重新打开的问题的处理状况设置为';
+$s_limit_view_unless_threshold_option = '查看其他用户的问题 (如果没有设置，将仅限显示用户报告、处理或监控的问题)';
 $s_config_delete_sure = '您确实要删除的设置：';
 $s_in_project = '在项目';
 $s_delete_config_button = '删除设置';
@@ -675,6 +678,7 @@ $s_set_configuration_option_action_create = '创建配置选项';
 $s_set_configuration_option_action_edit = '编辑配置选项';
 $s_set_configuration_option_action_clone = '克隆配置选项';
 $s_set_configuration_option_action_view = '查看配置选项';
+$s_show_all_complex = '显示所有用于“%1$s”选项的值';
 $s_plugin = '插件';
 $s_plugins_installed = '已装插件';
 $s_plugins_available = '可用插件';
@@ -777,7 +781,6 @@ $s_reset_password_msg2 = '如果重置密码，新密码将变为空。';
 $s_show_all_users = '全部';
 $s_users_unused = '未用';
 $s_users_new = '新的';
-$s_account_reset_protected_msg = '帐号受保护，不能重置密码。';
 $s_account_reset_msg = '一封确认请求已发往选定用户的电子邮件地址。通过使用它，用户将可以更改他们的密码。';
 $s_account_reset_msg2 = '账号密码已经置为空...';
 $s_account_unlock_msg = '该帐户已解锁。';
@@ -1097,13 +1100,13 @@ $s_copy_from_parent = '从父问题中复制扩展数据';
 $s_copy_notes_from_parent = '复制事项注释';
 $s_copy_attachments_from_parent = '复制附件';
 $s_with = '有';
-$s_viewing_bug_relationship_graph_title = '关联图表';
-$s_viewing_bug_dependency_graph_title = '依赖关系图';
-$s_relation_graph = '关联图表';
+$s_relation_graph = '关系图表';
 $s_dependency_graph = '依赖图表';
 $s_vertical = '垂直';
 $s_horizontal = '水平';
 $s_view_issue = '查看问题';
+$s_show_summary = '显示摘要';
+$s_hide_summary = '隐藏摘要';
 $s_perm_rpt_capability = '权限';
 $s_view = '视图';
 $s_issues = '问题';
@@ -1247,6 +1250,8 @@ $s_copy_columns_to = '复制列到';
 $s_due_date = '超期时间';
 $s_overdue = '逾期';
 $s_overdue_since = '自%1$s起已逾期';
+$s_overdue_one_day = '逾期不到一天';
+$s_overdue_days = '逾期%1$d天';
 $s_view_account_title = '用户信息';
 $s_manage_user = '管理用户';
 $s_install_information = 'MantisBT安装信息';
@@ -1296,7 +1301,7 @@ $MANTIS_ERROR[ERROR_NO_DIRECTORY] = '目录不存在；请检查项目设置。'
 $MANTIS_ERROR[ERROR_DUPLICATE_PROJECT] = '已经存在一个同名的项目。';
 $MANTIS_ERROR[ERROR_EMPTY_FIELD] = '字段“%1$s”是必须填写的，不能为空白，请重新填写。';
 $MANTIS_ERROR[ERROR_INVALID_FIELD_VALUE] = '用于“%1$s”的值无效';
-$MANTIS_ERROR[ERROR_PROTECTED_ACCOUNT] = '该帐号设置为被保护状态，解除保护前你不能使用该账号。';
+$MANTIS_ERROR[ERROR_PROTECTED_ACCOUNT] = '该帐号设置为被保护状态，在账户保护解除之前，您不能执行所要求的操作。';
 $MANTIS_ERROR[ERROR_ACCESS_DENIED] = '无权访问。';
 $MANTIS_ERROR[ERROR_UPLOAD_FAILURE] = '文件上传失败，MantisBT 系统无法读取文件；请检查项目设置。';
 $MANTIS_ERROR[ERROR_FILE_TOO_BIG] = '文件上传失败，可能是文件大小超出 PHP 的上传上限造成的。';

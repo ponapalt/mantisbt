@@ -515,7 +515,7 @@ function layout_navbar_projects_menu() {
 	if( !layout_navbar_can_show_projects_menu() ) {
 		return;
 	}
-	echo '<li class="grey" id="dropdown_projects_menu">' . "\n";
+	echo "\n" . '<li class="grey" id="dropdown_projects_menu">' . "\n";
 	echo '<a data-toggle="dropdown" href="#" class="dropdown-toggle">' . "\n";
 
 	$t_current_project_id = helper_get_current_project();
@@ -594,29 +594,31 @@ function layout_navbar_projects_list( $p_project_id = null, $p_include_all_proje
 	echo '<div class="projects-searchbox">';
 	echo '<input class="search form-control input-md" placeholder="' . lang_get( 'search' ) . '" />';
 	echo '</div>';
-	echo '</li>';
+	echo "</li>\n";
+
 	echo '<li class="divider"></li>' . "\n";
+
 	echo '<li>';
-	echo '<div class="scrollable-menu">';
-	echo '<ul class="list dropdown-yellow no-margin">';
+	echo '<div class="scrollable-menu">' . "\n";
+	echo '<ul class="list dropdown-yellow no-margin">' . "\n";
 
 	if( $p_include_all_projects && $p_filter_project_id !== ALL_PROJECTS ) {
-		echo ALL_PROJECTS == $p_project_id ? '<li class="active">' : '<li>';
-		echo '<a href="' . helper_mantis_url( 'set_project.php' ) . '?project_id=' . ALL_PROJECTS . '">';
-		echo lang_get( 'all_projects' ) . ' </a></li>' . "\n";
+		echo '<li>';
+		echo project_link_for_menu( ALL_PROJECTS, false, 'project_link' );
+		echo "</li>\n";
 		echo '<li class="divider"></li>' . "\n";
 	}
 
 	foreach( $t_project_ids as $t_id ) {
 		echo 0 == strcmp( $t_id, $p_project_id ) ? '<li class="active">' : '<li>';
-		echo '<a href="' . helper_mantis_url( 'set_project.php' ) . '?project_id=' . $t_id . '"';
-		echo ' class="project-link"> ' . string_attribute( project_get_field( $t_id, 'name' ) ) . ' </a></li>' . "\n";
+		echo project_link_for_menu( $t_id, false, 'project_link' );
+		echo "</li>\n";
 		layout_navbar_subproject_option_list( $t_id, $p_project_id, $p_filter_project_id, $p_trace );
 	}
 
-	echo '</ul>';
-	echo '</div>';
-	echo '</li>';
+	echo "</ul>\n";
+	echo "</div>\n";
+	echo "</li>\n";
 }
 
 /**
@@ -633,6 +635,7 @@ function layout_navbar_subproject_option_list( $p_parent_id, $p_project_id = nul
 	array_push( $p_parents, $p_parent_id );
 	$t_user_id = auth_get_current_user_id();
 	$t_project_ids = user_get_accessible_subprojects( $t_user_id, $p_parent_id );
+	$t_indent = str_repeat( '&nbsp;', 4 );
 
 	foreach( $t_project_ids as $t_id ) {
 		if( $p_trace ) {
@@ -642,9 +645,8 @@ function layout_navbar_subproject_option_list( $p_parent_id, $p_project_id = nul
 		}
 
 		echo 0 == strcmp( $p_project_id, $t_full_id ) ? '<li class="active">' : '<li>';
-		echo '<a href="' . helper_mantis_url( 'set_project.php' ) . '?project_id=' . $t_full_id . '"';
-		echo ' class="project-link"> ' . str_repeat( '&#160;', count( $p_parents ) * 4 );
-		echo string_attribute( project_get_field( $t_id, 'name' ) ) . '</a></li>' . "\n";
+		echo project_link_for_menu( $t_id, false, 'project_link', $p_parents, $t_indent );
+		echo "</li>\n";
 
 		layout_navbar_subproject_option_list( $t_id, $p_project_id, $p_filter_project_id, $p_trace, $p_parents );
 	}

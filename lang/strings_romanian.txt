@@ -38,6 +38,7 @@
  * @ingroup Language
  * @file
  *
+ * @author Adsbn
  * @author Danutz
  * @author KlaudiuMihaila
  * @author Minisarm
@@ -415,7 +416,7 @@ $s_status = 'Stare';
 $s_duplicate_id = 'ID duplicat';
 $s_os = 'Sistem de operare';
 $s_projection = 'Estimare';
-$s_os_version = 'Versiune';
+$s_os_build = 'Versiune';
 $s_eta = 'Estimare rezolvare';
 $s_product_version = 'Versiune produs';
 $s_build = 'Build';
@@ -692,7 +693,6 @@ $s_reset_password_msg2 = 'Înțializarea parolei va face ca parola să fie nulă
 $s_show_all_users = 'Toți';
 $s_users_unused = 'Nefolosit';
 $s_users_new = 'Nou';
-$s_account_reset_protected_msg = 'Cont protejat. Parola nu poate fi resetată.';
 $s_account_reset_msg = 'Mesajul de confirmare a fost trimis pe adresa dumneavoastră de e-mail...';
 $s_account_reset_msg2 = 'Noua parolă este nulă...';
 $s_account_unlock_msg = 'Contul a fost deblocat.';
@@ -787,9 +787,9 @@ $s_selected_project = 'Proiect selectat';
 $s_valid_project_msg = 'Trebuie să alegeți un proiect valid.';
 $s_signup_done_title = 'Înregistrarea contului a fost realizată.';
 $s_password_emailed_msg = 'Felicitări! V-ați înregistrat cu succes. Vi s-a trimis un e-mail de confirmare pentru a verifica adresa care ați introdus-o. Vizitând adresa trimisă prin e-mail vă veți activa contul.';
-$s_no_reponse_msg = 'Aveți șapte zile pentru a încheai procesul de confirmare a contului. Dacă eșuați confirmarea contului în aceste șapte zile acest cont va fi șters.';
+$s_no_reponse_msg = 'Aveți șapte zile pentru a încheia procesul de confirmare a contului. Dacă eșuați confirmarea contului în aceste șapte zile acest cont va fi șters.';
 $s_signup_info = 'După completarea acestui formular și verificarea datelor veți primi un e-mail de confirmare la adresa specificată. Utilizând e-mailul de confirmare veți putea să vă activați contul. Dacă activarea contului va eșua timp de 7 zile, înregistrarea dumneavoastră va fi ștearsă. Este obligatoriu să specificați o adresă de e-mail validă pentru a primi e-mailul de confirmare.';
-$s_signup_title = 'Întergistrare utilizator';
+$s_signup_title = 'Înregistrare utilizator';
 $s_signup_button = 'Înscriere';
 $s_no_password_request = 'Parola dumneavoastră este gestionată de alt sistem. Contactați administratorul.';
 $s_edit_site_settings_title = 'Modificare parametri site';
@@ -976,8 +976,6 @@ $s_bug_created_from = 'Problemă generată din';
 $s_copy_from_parent = 'Copiază datele extinse de la problema părinte';
 $s_copy_notes_from_parent = 'Copiază comentariile bug-ului';
 $s_copy_attachments_from_parent = 'Copiază atașamentele';
-$s_viewing_bug_relationship_graph_title = 'Grafic relații';
-$s_viewing_bug_dependency_graph_title = 'Grafic dependență';
 $s_relation_graph = 'Grafic Relații';
 $s_dependency_graph = 'Grafic dependențe';
 $s_vertical = 'Vertical';

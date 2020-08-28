@@ -48,6 +48,7 @@
  * @author Uziel302
  * @author YaronSh
  * @author Yona b
+ * @author דגש חזק
  */
 
 $s_directionality = 'rtl';
@@ -447,7 +448,7 @@ $s_status = 'מצב';
 $s_duplicate_id = 'מספר כפיל';
 $s_os = 'מערכת הפעלה';
 $s_projection = 'הערכת קושי';
-$s_os_version = 'גרסת מערכת הפעלה';
+$s_os_build = 'גרסת מערכת הפעלה';
 $s_eta = 'הערכת זמן';
 $s_product_version = 'גרסת מוצר';
 $s_build = 'תת-גרסה';
@@ -743,7 +744,6 @@ $s_reset_password_msg2 = 'איפוס הססמה מוחק את הססמה הקי�
 $s_show_all_users = 'כולם';
 $s_users_unused = 'לא בשימוש';
 $s_users_new = 'חדש';
-$s_account_reset_protected_msg = 'החשבון מוגן. לא ניתן לאפס את הססמה.';
 $s_account_reset_msg = 'הודעת אישור נשלחה בדוא״ל למשתמש בחשבון. ההודעה תפנה את המשתמש לתהליך בחירת ססמה.';
 $s_account_reset_msg2 = 'הוגדרה ססמה ריקה...';
 $s_account_unlock_msg = 'הנעילה של החשבון הזה בוטלה.';
@@ -1053,8 +1053,6 @@ $s_copy_from_parent = 'העתקת נתונים מורחבים מבאג הורה'
 $s_copy_notes_from_parent = 'העתקת הערות על באג';
 $s_copy_attachments_from_parent = 'העתקת צרופות';
 $s_with = 'עם';
-$s_viewing_bug_relationship_graph_title = 'מפת יחסים';
-$s_viewing_bug_dependency_graph_title = 'תרשים תלויות';
 $s_relation_graph = 'קשרים';
 $s_dependency_graph = 'תלויות';
 $s_vertical = 'אנכי';

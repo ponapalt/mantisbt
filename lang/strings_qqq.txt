@@ -47,6 +47,7 @@
  * @author EugeneZelenko
  * @author Fryed-peach
  * @author Hamilton Abreu
+ * @author Jeromedl
  * @author Kingu
  * @author Liuxinyu970226
  * @author Lloffiwr
@@ -207,7 +208,7 @@ $s_status = '{{Identical|Status}}';
 $s_os = '[[File:MantisBT-bug_report_advanced_page_profile.png|150px|right]]
 See screenshots.
 [[File:MantisBT-filter.png|150px|right]]';
-$s_os_version = 'J\'ai ajouté - de l\'OS- à l\'ancienne traduction car plusieurs champs version existent :
+$s_os_build = 'J\'ai ajouté - de l\'OS- à l\'ancienne traduction car plusieurs champs version existent :
 "Product Version", "Fixed in Version", "Target Version"';
 $s_build = '{{Identical|Build}}';
 $s_votes = '{{Identical|Vote}}';
@@ -269,6 +270,7 @@ $s_current_status = '{{Identical|Current status}}';
 $s_workflow = '{{Identical|Workflow}}';
 $s_status_level = '{{Identical|Status}}';
 $s_access_levels = '{{Identical|Access level}}';
+$s_access_change = 'Niveau d’accès minimal pour atteindre cet état';
 $s_limit_access = '{{doc-singularthey}}';
 $s_configuration_option_type = '{{Identical|Type}}';
 $s_configuration_option_value = '{{Identical|Value}}';

@@ -58,7 +58,7 @@ require_css( 'login.css' );
 $f_error                 = gpc_get_bool( 'error' );
 $f_cookie_error          = gpc_get_bool( 'cookie_error' );
 $f_return                = string_sanitize_url( gpc_get_string( 'return', '' ) );
-$f_username              = gpc_get_string( 'username', '' );
+$f_username              = trim( gpc_get_string( 'username', '' ) );
 $f_reauthenticate        = gpc_get_bool( 'reauthenticate', false );
 $f_perm_login            = gpc_get_bool( 'perm_login', false );
 $f_secure_session        = gpc_get_bool( 'secure_session', false );
@@ -173,7 +173,7 @@ $t_upgrade_required = false;
 if( config_get_global( 'admin_checks' ) == ON && file_exists( dirname( __FILE__ ) .'/admin/.' ) ) {
 	# since admin directory and db_upgrade lists are available check for missing db upgrades
 	# if db version is 0, we do not have a valid database.
-	$t_db_version = config_get( 'database_version', 0 );
+	$t_db_version = config_get( 'database_version', 0, ALL_USERS, ALL_PROJECTS );
 	if( $t_db_version == 0 ) {
 		$t_warnings[] = lang_get( 'error_database_no_schema_version' );
 	}

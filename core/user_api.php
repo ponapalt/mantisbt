@@ -596,7 +596,7 @@ function user_signup( $p_username, $p_email = null ) {
 		#  I'll re-enable this once a plan has been properly formulated for LDAP
 		#  account management and creation.
 		#			$t_email = '';
-		#			if( ON == config_get( 'use_ldap_email' ) ) {
+		#			if( ON == config_get_global( 'use_ldap_email' ) ) {
 		#				$t_email = ldap_email_from_username( $p_username );
 		#			}
 		#			if( !is_blank( $t_email ) ) {
@@ -921,7 +921,7 @@ function user_get_field( $p_user_id, $p_field_name ) {
  */
 function user_get_email( $p_user_id ) {
 	$t_email = '';
-	if( LDAP == config_get_global( 'login_method' ) && ON == config_get( 'use_ldap_email' ) ) {
+	if( LDAP == config_get_global( 'login_method' ) && ON == config_get_global( 'use_ldap_email' ) ) {
 		$t_email = ldap_email( $p_user_id );
 	}
 	if( is_blank( $t_email ) ) {
@@ -954,7 +954,7 @@ function user_get_username( $p_user_id ) {
 function user_get_realname( $p_user_id ) {
 	$t_realname = '';
 
-	if( LDAP == config_get_global( 'login_method' ) && ON == config_get( 'use_ldap_realname' ) ) {
+	if( LDAP == config_get_global( 'login_method' ) && ON == config_get_global( 'use_ldap_realname' ) ) {
 		$t_realname = ldap_realname( $p_user_id );
 	}
 
@@ -1719,21 +1719,19 @@ function user_set_name( $p_user_id, $p_username ) {
  *   - if it is ON, generate a random password and send an email
  *      (unless the second parameter is false)
  *   - if it is OFF, set the password to blank
- *  Return false if the user is protected, true if the password was
- *   successfully reset
  *
  * @param integer $p_user_id    A valid user identifier.
  * @param boolean $p_send_email Whether to send confirmation email.
- * @return boolean
+ * @return boolean True if the password was successfully reset
+ *                 False if the user is protected.
+ * @throws ClientException
  */
 function user_reset_password( $p_user_id, $p_send_email = true ) {
-	$t_protected = user_get_field( $p_user_id, 'protected' );
-
-	# Go with random password and email it to the user
-	if( ON == $t_protected ) {
+	if( user_is_protected( $p_user_id ) ) {
 		return false;
 	}
 
+	# Go with random password and email it to the user
 	# @@@ do we want to force blank password instead of random if
 	#      email notifications are turned off?
 	#     How would we indicate that we had done this with a return value?
@@ -1743,6 +1741,11 @@ function user_reset_password( $p_user_id, $p_send_email = true ) {
 		$t_email = user_get_field( $p_user_id, 'email' );
 		if( is_blank( $t_email ) ) {
 			trigger_error( ERROR_LOST_PASSWORD_NO_EMAIL_SPECIFIED, ERROR );
+			throw new ClientException(
+				sprintf( "User id '%d' does not have an e-mail address.", (int)$p_user_id ),
+				ERROR_LOST_PASSWORD_NO_EMAIL_SPECIFIED,
+				array( (int)$p_user_id )
+			);
 		}
 
 		# Create random password
@@ -1755,7 +1758,7 @@ function user_reset_password( $p_user_id, $p_send_email = true ) {
 		if( $p_send_email ) {
 			$t_confirm_hash = auth_generate_confirm_hash( $p_user_id );
 			token_set( TOKEN_ACCOUNT_ACTIVATION, $t_confirm_hash, TOKEN_EXPIRY_ACCOUNT_ACTIVATION, $p_user_id );
-			email_send_confirm_hash_url( $p_user_id, $t_confirm_hash );
+			email_send_confirm_hash_url( $p_user_id, $t_confirm_hash, true );
 		}
 	} else {
 		# use blank password, no emailing
