@@ -344,7 +344,7 @@ if ( config_get( 'subprojects_enabled') == ON ) {
 							<div class="inline">
 							<?php print_link_button(
 								'manage_proj_edit_page.php?project_id=' . $t_subproject['id'],
-								lang_get( 'edit_link' ), 'btn-xs' );
+								lang_get( 'edit' ), 'btn-xs' );
 							?>
 							<?php print_link_button(
 								"manage_proj_subproj_delete.php?project_id=$f_project_id&subproject_id=" . $t_subproject['id'] . form_security_param( 'manage_proj_subproj_delete' ),
@@ -432,13 +432,13 @@ if ( config_get( 'subprojects_enabled') == ON ) {
 						$t_id = urlencode( $t_id );
 						$t_project_id = urlencode( $f_project_id );
 						echo '<div class="pull-left">';
-						print_form_button( 'manage_proj_cat_edit_page.php?id=' . $t_id . '&project_id=' . $t_project_id, lang_get( 'edit_link' ),
+						print_form_button( 'manage_proj_cat_edit_page.php?id=' . $t_id . '&project_id=' . $t_project_id, lang_get( 'edit' ),
 							null, null, 'btn btn-xs btn-primary btn-white btn-round' );
 						echo '</div>';
 					} ?>
 					<?php if( !$t_inherited ) {
 						echo '<div class="pull-left">';
-						print_form_button( 'manage_proj_cat_delete.php?id=' . $t_id . '&project_id=' . $t_project_id, lang_get( 'delete_link' ),
+						print_form_button( 'manage_proj_cat_delete.php?id=' . $t_id . '&project_id=' . $t_project_id, lang_get( 'delete' ),
 							null, null, 'btn btn-xs btn-primary btn-white btn-round' );
 						echo '</div>';
 					} ?>
@@ -512,7 +512,7 @@ if ( config_get( 'subprojects_enabled') == ON ) {
 		<tbody>
 <?php
 		foreach ( $t_versions as $t_version ) {
-			$t_inherited = ( $t_version['project_id'] != $f_project_id ?  true : false );
+			$t_inherited = $t_version['project_id'] != $f_project_id;
 			$t_name = version_full_name( $t_version['id'], $t_inherited, $f_project_id );
 			$t_released = $t_version['released'];
 			$t_obsolete = $t_version['obsolete'];
@@ -533,11 +533,11 @@ if ( config_get( 'subprojects_enabled') == ON ) {
 					$t_version_id = version_get_id( $t_name, $f_project_id );
 					if( !$t_inherited ) {
 						echo '<div class="pull-left">';
-						print_form_button( 'manage_proj_ver_edit_page.php?version_id=' . $t_version_id, lang_get( 'edit_link' ) );
+						print_form_button( 'manage_proj_ver_edit_page.php?version_id=' . $t_version_id, lang_get( 'edit' ) );
 						echo '</div>';
 
 						echo '<div class="pull-left">';
-						print_form_button( 'manage_proj_ver_delete.php?version_id=' . $t_version_id, lang_get( 'delete_link' ) );
+						print_form_button( 'manage_proj_ver_delete.php?version_id=' . $t_version_id, lang_get( 'delete' ) );
 						echo '</div>';
 					} ?>
 					</div>
@@ -790,7 +790,7 @@ event_signal( 'EVENT_MANAGE_PROJECT_PAGE', array( $f_project_id ) );
 			$t_username =  $t_user['display_name'];
 			$t_can_manage_this_user = $t_can_manage_users
 					&& access_has_project_level( $t_user['access_level'], $f_project_id )
-					&& ( !$f_show_global_users || $f_show_global_users && isset( $t_local_users[$t_user['id']]) );
+					&& ( !$f_show_global_users || isset( $t_local_users[$t_user['id']]) );
 		?>
 		<tr>
 			<td class="key-name" data-sortvalue="<?php echo $t_username ?>">

@@ -95,8 +95,8 @@ function plugin_pop_current() {
 function plugin_get_force_installed() {
 	$t_forced_plugins = config_get_global( 'plugins_force_installed' );
 
-	# MantisCore pseudo-plugin is force-installed by definition, with priority 3
-	$t_forced_plugins['MantisCore'] = 3;
+	# MantisCore pseudo-plugin is force-installed by definition
+	$t_forced_plugins['MantisCore'] = PLUGIN_PRIORITY_HIGH;
 
 	return $t_forced_plugins;
 }
@@ -624,20 +624,19 @@ function plugin_is_installed( $p_basename ) {
 /**
  * Install a plugin to the database.
  * @param MantisPlugin $p_plugin Plugin basename.
- * @return null
+ * @return void
  */
 function plugin_install( MantisPlugin $p_plugin ) {
 	if( plugin_is_installed( $p_plugin->basename ) ) {
 		error_parameters( $p_plugin->basename );
 		trigger_error( ERROR_PLUGIN_ALREADY_INSTALLED, WARNING );
-		return null;
 	}
 
 	plugin_push_current( $p_plugin->basename );
 
 	if( !$p_plugin->install() ) {
 		plugin_pop_current();
-		return null;
+		return;
 	}
 
 	db_param_push();
@@ -701,6 +700,7 @@ function plugin_upgrade( MantisPlugin $p_plugin ) {
 			plugin_pop_current();
 			return false;
 		}
+		$t_status = false;
 
 		switch( $t_schema[$i][0] ) {
 			case 'InsertData':
@@ -735,7 +735,6 @@ function plugin_upgrade( MantisPlugin $p_plugin ) {
 					array( $t_dict, $t_schema[$i][0] ),
 					$t_schema[$i][1]
 				);
-				$t_status = false;
 		}
 
 		if( $t_sqlarray ) {
@@ -829,6 +828,7 @@ function plugin_include( $p_basename, $p_child = null ) {
 	}
 	$t_included = false;
 	if( is_file( $t_plugin_file ) ) {
+		/** @noinspection PhpIncludeInspection */
 		include_once( $t_plugin_file );
 		$t_included = true;
 	}
@@ -851,6 +851,7 @@ function plugin_require_api( $p_file, $p_basename = null ) {
 
 	$t_path = config_get_global( 'plugin_path' ) . $t_current . '/';
 
+	/** @noinspection PhpIncludeInspection */
 	require_once( $t_path . $p_file );
 }
 
@@ -923,18 +924,22 @@ function plugin_register_installed() {
 	global $g_plugin_cache_priority, $g_plugin_cache_protected;
 
 	# register plugins specified in the site configuration
-	foreach( plugin_get_force_installed() as $t_basename => $t_priority ) {
+	$t_plugins_to_register = plugin_get_force_installed();
+	arsort( $t_plugins_to_register );
+	foreach( $t_plugins_to_register as $t_basename => $t_priority ) {
 		plugin_register( $t_basename );
 		$g_plugin_cache_priority[$t_basename] = $t_priority;
 		$g_plugin_cache_protected[$t_basename] = true;
 	}
 
 	# register plugins installed via the interface/database
-	db_param_push();
-	$t_query = 'SELECT basename, priority, protected FROM {plugin} WHERE enabled=' . db_param() . ' ORDER BY priority DESC';
-	$t_result = db_query( $t_query, array( true ) );
-
-	while( $t_row = db_fetch_array( $t_result ) ) {
+	$t_query = new DbQuery( 'SELECT basename, priority, protected 
+		FROM {plugin} 
+		WHERE enabled=:enabled
+		ORDER BY priority DESC'
+	);
+	$t_query->bind( 'enabled', true );
+	foreach( $t_query->fetch_all() as $t_row ) {
 		$t_basename = $t_row['basename'];
 		if( !plugin_is_registered( $t_basename ) ) {
 			plugin_register( $t_basename );

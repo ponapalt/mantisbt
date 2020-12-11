@@ -109,7 +109,7 @@ layout_login_page_begin();
 				<div class="space-10"></div>
 				<?php echo lang_get( 'lost_password_info' ); ?>
 				<div class="space-10"></div>
-				<input type="submit" class="width-40 pull-right btn btn-success btn-inverse bigger-110"  value="<?php echo lang_get( 'submit_button' ) ?>" />
+				<input type="submit" class="width-40 pull-right btn btn-success btn-inverse bigger-110"  value="<?php echo lang_get( 'submit' ) ?>" />
 			<?php
 			} else {
 				echo '<div class="space-10"></div>';
@@ -121,7 +121,7 @@ layout_login_page_begin();
 	</form>
 	</div>
 		<div class="toolbar center">
-			<a class="back-to-login-link pull-left" href="<?php echo AUTH_PAGE_USERNAME ?>"><?php echo lang_get( 'login_link' ); ?></a>
+			<a class="back-to-login-link pull-left" href="<?php echo AUTH_PAGE_USERNAME ?>"><?php echo lang_get( 'login' ); ?></a>
 			<?php if( auth_signup_enabled() ) { ?>
 			<a class="back-to-login-link pull-right" href="signup_page.php"><?php echo lang_get( 'signup_link' ); ?></a>
 			<?php } ?>

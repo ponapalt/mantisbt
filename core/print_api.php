@@ -1262,12 +1262,14 @@ function print_custom_field_projects_list( $p_field_id ) {
  * @return void
  */
 function print_plugin_priority_list( $p_priority ) {
-	if( $p_priority < 1 || $p_priority > 5 ) {
+	if( $p_priority < PLUGIN_PRIORITY_LOW || $p_priority > PLUGIN_PRIORITY_HIGH ) {
 		echo '<option value="', $p_priority, '" selected="selected">', $p_priority, '</option>';
 	}
 
-	for( $i = 5;$i >= 1;$i-- ) {
-		echo '<option value="', $i, '" ', check_selected( $p_priority, $i ), ' >', $i, '</option>';
+	for( $i = PLUGIN_PRIORITY_HIGH; $i >= PLUGIN_PRIORITY_LOW; $i-- ) {
+		echo '<option value="', $i, '"';
+		check_selected( $p_priority, $i );
+		echo '>', $i, '</option>';
 	}
 }
 
@@ -1375,7 +1377,7 @@ function print_view_bug_sort_link( $p_string, $p_sort_field, $p_sort, $p_dir, $p
  * @param string  $p_class         The CSS class of the link.
  * @return void
  */
-function print_manage_user_sort_link( $p_page, $p_string, $p_field, $p_dir, $p_sort_by, $p_hide_inactive = 0, $p_filter = ALL, $p_search, $p_show_disabled = 0, $p_class = '' ) {
+function print_manage_user_sort_link( $p_page, $p_string, $p_field, $p_dir, $p_sort_by, $p_hide_inactive = 0, $p_filter = 'ALL', $p_search = '', $p_show_disabled = 0, $p_class = '' ) {
 	if( $p_sort_by == $p_field ) {
 		# If this is the selected field flip the order
 		if( 'ASC' == $p_dir || ASCENDING == $p_dir ) {
@@ -1752,7 +1754,7 @@ function print_signup_link() {
  * @return void
  */
 function print_login_link() {
-	print_link_button( auth_login_page(), lang_get( 'login_title' ) );
+	print_link_button( auth_login_page(), lang_get( 'login' ) );
 }
 
 /**
@@ -2049,7 +2051,7 @@ function print_bug_attachment_preview_image( array $p_attachment ) {
 
 	echo "\n<div class=\"bug-attachment-preview-image\">";
 	echo '<a href="' . string_attribute( $p_attachment['download_url'] ) . '">';
-	echo '<img src="' . string_attribute( $t_image_url ) . '" alt="' . string_attribute( $t_title ) . '" style="' . string_attribute( $t_preview_style ) . '" />';
+	echo '<img src="' . string_attribute( $t_image_url ) . '" alt="' . string_attribute( $t_title ) . '" loading="lazy" style="' . string_attribute( $t_preview_style ) . '" />';
 	echo '</a></div>';
 }
 
