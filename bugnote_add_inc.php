@@ -175,6 +175,17 @@ require_api( 'lang_api.php' );
 </table>
 </div>
 </div>
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			送信ボタンを押す前に / Before pushing "Send" button
+		</h4>
+	</div>
+	<div class="widget-body">
+		<ul>
+			<li>スパム避けのためにパスワードが必要です。送信ボタンを押すとユーザー名とパスワードを聞かれますので、それぞれ "bts" と入力してください。</li>
+			<li>To send report, please input "bts" into username and password box in popup dialog.</li>
+		</ul>
+	</div>
 	<div class="widget-toolbox padding-8 clearfix">
 		<input type="submit" class="btn btn-primary btn-white btn-round" value="<?php echo lang_get( 'add_bugnote_button' ) ?>" />
 	</div>
