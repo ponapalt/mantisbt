@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Simplified Chinese (中文（简体）‎)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -58,8 +58,10 @@
  * @author Xiaomingyan
  * @author Yanmiao liu
  * @author Yfdyh000
+ * @author Zhang8569
  * @author 乌拉跨氪
  * @author 佛壁灯
+ * @author 列维劳德
  * @author 夢蝶葬花
  * @author 沈澄心
  * @author 邢家朋
@@ -400,7 +402,6 @@ $s_select_file = '选择文件';
 $s_select_files = '选择文件';
 $s_upload_file_button = '上传文件';
 $s_upload_files_button = '上传文件';
-$s_max_file_size_label = '最大尺寸：';
 $s_bug_reopened_msg = '问题已经被重新打开...';
 $s_reopen_add_bugnote_title = '为重启问题添加注释原因';
 $s_bugnote_add_reopen_button = '添加问题注释并重启问题';
@@ -484,12 +485,14 @@ $s_bugnote_updated_msg = '已经被成功更新问题注释...';
 $s_last_edited = '最后编辑：';
 $s_hide_content = '隐藏内容';
 $s_show_content = '显示内容';
+$s_file_icon_description = '%1$s文件图标';
+$s_unknown_file_extension = '未知';
 $s_webmaster_contact_information = '联系<a href="mailto:%1$s" title="Contact the webmaster via e-mail.">管理员</a>获取援助';
 $s_total_queries_executed = '已执行查询总计：%1$d';
 $s_unique_queries_executed = '唯一已执行查询：%1$d';
 $s_total_query_execution_time = '已执行查询总共耗时：%1$s秒';
 $s_page_execution_time = '页面执行时间：%1$s秒';
-$s_memory_usage_in_kb = '内存使用：%1$s KB';
+$s_memory_usage = '内存使用：%1$s KiB';
 $s_log_page_number = '号码';
 $s_log_page_time = '执行时间';
 $s_log_page_caller = '调用程序';
@@ -634,8 +637,7 @@ $s_readonly_status = '只读问题的状态设置为';
 $s_reopen_status = '重新打开的问题状态设置为';
 $s_reopen_resolution = '重新打开的问题的处理状况设置为';
 $s_limit_view_unless_threshold_option = '查看其他用户的问题 (如果没有设置，将仅限显示用户报告、处理或监控的问题)';
-$s_config_delete_sure = '您确实要删除的设置：';
-$s_in_project = '在项目';
+$s_config_delete_sure = '您确实要删除项目 %2$s 中的 %1$s 设置吗？';
 $s_delete_config_button = '删除设置';
 $s_configuration_report = '配置报告';
 $s_database_configuration = '数据库配置';
@@ -654,7 +656,9 @@ $s_show_all_complex = '显示所有用于“%1$s”选项的值';
 $s_plugin = '插件';
 $s_plugins_installed = '已装插件';
 $s_plugins_available = '可用插件';
+$s_plugins_missing = '缺失或无效的插件';
 $s_plugin_description = '说明';
+$s_plugin_problem_description = '问题描述';
 $s_plugin_author = '作者： %1$s';
 $s_plugin_url = '网址：';
 $s_plugin_depends = '依赖于';
@@ -665,16 +669,20 @@ $s_plugin_actions = '操作';
 $s_plugin_install = '安装';
 $s_plugin_upgrade = '升级';
 $s_plugin_uninstall = '卸载';
+$s_plugin_manual_fix = '需要人工干预';
 $s_plugin_uninstall_message = '您确实想卸载插件"%1$s"吗？';
 $s_plugin_key_label = '密钥：';
 $s_plugin_key_met = '准备好的插件';
 $s_plugin_key_unmet = '未得到满足的依赖关系';
 $s_plugin_key_dated = '过时的依赖关系';
 $s_plugin_key_upgrade = '需要升级';
+$s_plugin_invalid_description = '无效插件';
+$s_plugin_missing_description = '缺少插件';
+$s_plugin_missing_status_message = '已安装在Mantis数据库中的插件无法加载。';
+$s_plugin_missing_class_description = '缺少插件基本类';
 $s_project_added_msg = '已添加项目...';
 $s_category_added_msg = '已添加分类...';
 $s_category_deleted_msg = '已删除分类...';
-$s_category_delete_sure_msg = '您确定要删除此分类吗？?<br />分类"%1$s"仍然包含%2$d错误。';
 $s_category_delete_confirm_msg = '您确定要删除“%1$s”分类吗？';
 $s_delete_category_button = '删除分类';
 $s_edit_project_category_title = '编辑项目分类';
@@ -683,7 +691,7 @@ $s_category_updated_msg = '分类已经成功更新...';
 $s_create_first_project = '创建项目以便记载问题。';
 $s_add_subproject_title = '添加子项目';
 $s_project_deleted_msg = '项目已经成功删除...';
-$s_project_delete_msg = '确定要删除此项目和所有附属的问题吗？';
+$s_project_delete_msg = '确定要删除项目“%1$s”吗？<br>这也会删除 %2$s 附属的问题报告。';
 $s_project_delete_button = '删除项目';
 $s_edit_project_title = '编辑项目';
 $s_project_name = '项目名称';
@@ -724,7 +732,7 @@ $s_name = '名称';
 $s_project_updated_msg = '已经成功更新项目...';
 $s_version_added_msg = '已经成功添加版本...';
 $s_version_deleted_msg = '已经成功删除版本...';
-$s_version_delete_sure = '确定要删除此版本吗? 所有相关联的问题将会被删除!!';
+$s_version_delete_sure = '确定要删除版本“%1$s”吗?';
 $s_delete_version_button = '删除版本';
 $s_edit_project_version_title = '编辑项目版本';
 $s_update_version_button = '更新版本';
@@ -735,7 +743,7 @@ $s_obsolete = '已过期';
 $s_version_updated_msg = '版本已经成功更新...';
 $s_account_delete_protected_msg = '帐号受保护，无法删除此帐号';
 $s_account_deleted_msg = '已删除帐号...';
-$s_delete_account_sure_msg = '确定要删除此帐号吗？';
+$s_delete_account_sure_msg = '确定要删除帐号“%1$s”吗？';
 $s_notify_user = '通知此更改的用户';
 $s_accounts_pruned_msg = '已删除所有在一个星期以前注册，并且从来没有登录过的账号。';
 $s_prune_accounts_button = '删除';
@@ -801,7 +809,7 @@ $s_file_uploaded_msg = '文件上传成功';
 $s_upload_file_title = '上传文件';
 $s_title = '标题';
 $s_project_file_deleted_msg = '项目文件已经删除。';
-$s_confirm_file_delete_msg = '您确定要删除这些文件吗？';
+$s_confirm_file_delete_msg = '您确定要删除文件“%1$s”吗？';
 $s_filename = '文件名';
 $s_filename_label = '文件名：';
 $s_file_update_button = '更新文件';
@@ -813,7 +821,7 @@ $s_add_file = '添加文件';
 $s_project_document_updated = '更新项目成功';
 $s_project_user_added_msg = '成功添加用户至项目';
 $s_project_removed_user_msg = '从项目删除用户成功';
-$s_remove_user_sure_msg = '确定要删除该用户吗？';
+$s_remove_user_sure_msg = '确定要从项目“%2$s”中删除用户“%1$s”吗？';
 $s_remove_user_button = '删除用户';
 $s_remove_all_users_sure_msg = '确定要删除该项目的所有用户吗？';
 $s_remove_all_users_button = '删除所有用户';
@@ -941,7 +949,7 @@ $s_query_blank_name = '没有名称就不能保存过滤器，在保存前请给
 $s_query_name_too_long = '您不能存储超过 64 个字符的过滤器名称。请为此过滤器提供一个更短的名称。';
 $s_query_store_error = '保存此筛选器时出错。';
 $s_open_queries = '管理过滤器';
-$s_query_delete_msg = '您确实要删除此筛选器吗？';
+$s_query_delete_msg = '您确实要删除筛选器“%1$s”吗？';
 $s_edit_filter = '编辑过滤器';
 $s_owner = '所有者';
 $s_update_filter = '更新过滤器';
@@ -1004,10 +1012,10 @@ $s_linked_projects_label = '关联项目';
 $s_custom_field_sequence = '顺序';
 $s_custom_field_sequence_label = '顺序';
 $s_custom_field_type_enum_string = '0:字符串,1:数值,2:浮点数,3:枚举类型,4:电子邮件,5:复选框,6:列表,7:多选列表,8:日期,9:单选框,10:多行文本';
-$s_confirm_used_custom_field_deletion = '当前有至少一个项目链接到了这个字段，如果继续，这个字段的所有值都将被永久删除；删除操作无法恢复。如果你不想删除这个字段，请点击浏览器的“返回”按钮；点击下面的按钮继续删除。';
-$s_confirm_custom_field_deletion = '你确定要删除这个自定义字段和所有相关联的值吗？';
+$s_confirm_used_custom_field_deletion = '当前有至少一个项目链接到了字段“%1$s”，如果继续，这个字段的所有值都将被永久删除；删除操作无法恢复。如果你不想删除这个字段，请点击浏览器的“返回”按钮；点击下面的按钮继续删除。';
+$s_confirm_custom_field_deletion = '你确定要删除这个自定义字段“%1$s”和所有相关联的值吗？';
 $s_field_delete_button = '删除字段';
-$s_confirm_custom_field_unlinking = '您确信您要从项目取消连接此自定义字段？只要自定义字段本身不被删除，这些值将不会被删除。';
+$s_confirm_custom_field_unlinking = '您确信您要从项目取消连接自定义字段“%1$s”？只要自定义字段本身不被删除，这些值将不会被删除。';
 $s_field_remove_button = '移除字段';
 $s_hide_status = '隐藏状态';
 $s_filter_closed = '已关闭';
@@ -1020,7 +1028,7 @@ $s_simple_filters = '简易过滤器';
 $s_monitored_by = '监视人';
 $s_attachments = '附件';
 $s_bytes = '字节';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = '附件丢失';
 $s_attachment_count = '附件计数';
 $s_view_attachments_for_issue = '查看 %1$d 问题 # %2$d 附件';
@@ -1192,7 +1200,6 @@ $s_time_tracking_stopwatch_start = '开始';
 $s_time_tracking_stopwatch_stop = '停止';
 $s_time_tracking_stopwatch_reset = '重置';
 $s_access_denied = '无权操作.';
-$s_development_team = '开发团队';
 $s_manage_columns_config = '管理列';
 $s_all_columns_title = '可用的列';
 $s_csv_columns_title = 'CSV列';
@@ -1317,6 +1324,8 @@ $MANTIS_ERROR[ERROR_LDAP_SERVER_CONNECT_FAILED] = '连接至 LDAP 服务器失�
 $MANTIS_ERROR[ERROR_LDAP_UPDATE_FAILED] = '更新 LDAP 记录失败。';
 $MANTIS_ERROR[ERROR_LDAP_USER_NOT_FOUND] = '没有找到 LDAP 帐号记录。';
 $MANTIS_ERROR[ERROR_LDAP_EXTENSION_NOT_LOADED] = 'LDAP扩展未被加载';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_SET_MIN_TLS] = '试图在LDAP服务器上开启TLS版本的行动失败了';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_STARTTLS] = '无法在LDAP服务器上开启StartTls';
 $MANTIS_ERROR[ERROR_DB_CONNECT_FAILED] = '数据库连接失败。数据库返回的错误信息是：#%1$d: %2$s';
 $MANTIS_ERROR[ERROR_DB_QUERY_FAILED] = '数据库查询失败。数据库返回的错误信息是：#%1$d: %2$s 查询语句：%3$s';
 $MANTIS_ERROR[ERROR_DB_SELECT_FAILED] = '数据库选择失败。数据库返回的错误信息是：#%1$d: %2$s。';

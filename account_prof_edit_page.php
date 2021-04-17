@@ -96,13 +96,13 @@ if( $t_global_profile ) {
 		<?php  echo form_security_field( 'account_prof_update' )?>
 		<input type="hidden" name="action" value="update" />
 		<input type="hidden" name="profile_id" value="<?php echo $v_id ?>" />
-		<input type="hidden" name="redirect" value="<?php echo $f_redirect_page ?>" />
+		<input type="hidden" name="redirect" value="<?php echo string_attribute( $f_redirect_page ) ?>" />
 
 		<div class="widget-box widget-color-blue2">
 
 			<div class="widget-header widget-header-small">
 				<h4 class="widget-title lighter">
-					<i class="ace-icon fa fa-user"></i>
+					<?php print_icon( 'fa-user', 'ace-icon' ); ?>
 					<?php echo lang_get( 'edit_profile' ) ?>
 				</h4>
 			</div>

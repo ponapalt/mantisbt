@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** German (Deutsch)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -47,6 +47,9 @@
  * @author Diebuche
  * @author Erdemaslancan
  * @author Exit91
+ * @author FF-11
+ * @author FF11
+ * @author Gebu
  * @author Geitost
  * @author Imre
  * @author KarlReichert
@@ -405,8 +408,7 @@ $s_select_file = 'Datei wählen';
 $s_select_files = 'Dateien wählen';
 $s_upload_file_button = 'Datei übertragen';
 $s_upload_files_button = 'Dateien übertragen';
-$s_max_file_size_label = 'Maximale Größe:';
-$s_file_size_info = '%1$s %2$s';
+$s_max_file_size_info = 'Maximale Größe: %1$s %2$s';
 $s_bug_reopened_msg = 'Eintrag wurde wiedereröffnet …';
 $s_reopen_add_bugnote_title = 'Notiz für Eintragswiedereröffnung hinzufügen';
 $s_bugnote_add_reopen_button = 'Notiz hinzufügen und Eintrag wieder öffnen';
@@ -490,12 +492,14 @@ $s_bugnote_updated_msg = 'Notiz wurde erfolgreich geändert …';
 $s_last_edited = 'Zuletzt bearbeitet:';
 $s_hide_content = 'Inhalt ausblenden';
 $s_show_content = 'Inhalt einblenden';
+$s_file_icon_description = '%1$s Dateisymbol';
+$s_unknown_file_extension = 'unbekannt';
 $s_webmaster_contact_information = 'Kontaktieren Sie den <a href="mailto:%1$s" title="Den Webmaster per E-Mail kontaktieren.">Administrator</a> bei Problemen';
 $s_total_queries_executed = 'Insgesamt ausgeführte Abfragen: %1$d';
 $s_unique_queries_executed = 'Einzelne Abfragen ausgeführt: %1$d';
 $s_total_query_execution_time = 'Gesamte Abfrageausführungszeit: %1$s Sekunden';
 $s_page_execution_time = 'Seitenausführungszeit: %1$s Sekunden';
-$s_memory_usage_in_kb = 'Speicherverbrauch: %1$s KiB';
+$s_memory_usage = 'Speicherverbrauch: %1$s KiB';
 $s_log_page_number = 'Zahl';
 $s_log_page_time = 'Ausführungszeit';
 $s_log_page_caller = 'Aufrufer';
@@ -641,8 +645,7 @@ $s_readonly_status = 'Status, bei dem ein Eintrag schreibgeschützt wird';
 $s_reopen_status = 'Status, auf den ein wiedereröffneter Eintrag gesetzt wird';
 $s_reopen_resolution = 'Lösung, auf die ein wiedereröffneter Eintrag gesetzt wird';
 $s_limit_view_unless_threshold_option = 'Einträge anderer Benutzer ansehen (falls nicht gesetzt, ist der Zugriff auf selbst erfasste, zugewiesene und beobachtete Einträge beschränkt)';
-$s_config_delete_sure = 'Sind Sie sicher das Sie die Einstellungen löschen möchten für:';
-$s_in_project = 'im Projekt';
+$s_config_delete_sure = 'Sind Sie sicher, dass Sie die Einstellungen für %1$s in Projekt %2$s löschen möchten?';
 $s_delete_config_button = 'Einstellungen löschen';
 $s_configuration_report = 'Konfigurations-Report';
 $s_database_configuration = 'Datenbank-Konfiguration';
@@ -661,7 +664,10 @@ $s_show_all_complex = 'Werte aller "%1$s" Optionen anzeigen';
 $s_plugin = 'Plugin';
 $s_plugins_installed = 'Installierte Plugins';
 $s_plugins_available = 'Verfügbare Plugins';
+$s_plugins_missing = 'Fehlende oder ungültige Plugins';
+$s_plugins_missing_description = 'Die Plugins in der Liste unten sind registriert, aber deren Quellcode konnte nicht in "%s" gefunden oder von dort geladen werden.<br>Versuchen Sie eine Neuinstallation oder entfernen Sie die Plugins.';
 $s_plugin_description = 'Beschreibung';
+$s_plugin_problem_description = 'Problembeschreibung';
 $s_plugin_author = 'Autor: %1$s';
 $s_plugin_url = 'Website:';
 $s_plugin_depends = 'Abhängigkeiten';
@@ -672,16 +678,23 @@ $s_plugin_actions = 'Aktionen';
 $s_plugin_install = 'Installation';
 $s_plugin_upgrade = 'Upgrade';
 $s_plugin_uninstall = 'Deinstallation';
+$s_plugin_manual_fix = 'Manuelles Eingreifen notwendig';
 $s_plugin_uninstall_message = 'Sind Sie sicher, dass Sie das Plugin „%1$s“ deinstallieren wollen?';
+$s_plugin_remove_message = 'Sind Sie sicher, dass Sie das ungültige oder fehlende Plugin "%1$s" entfernen möchten?';
 $s_plugin_key_label = 'Schlüsselworte:';
 $s_plugin_key_met = 'Plugin bereit';
 $s_plugin_key_unmet = 'nicht erfüllte Abhängigkeiten';
 $s_plugin_key_dated = 'veraltete Abhängigkeiten';
 $s_plugin_key_upgrade = 'Upgrade notwendig';
+$s_plugin_invalid_description = 'Ungültiges Plugin';
+$s_plugin_invalid_status_message = 'Die folgenden erforderlichen Eigenschaften sind nicht in den Klassen des Plugins definiert: %s';
+$s_plugin_missing_description = 'Fehlendes Plugin';
+$s_plugin_missing_status_message = 'Das Plugin ist in der Mantis-Datenbank istalliert, konnte aber nicht geladen werden.';
+$s_plugin_missing_class_description = 'Fehlende Plugin Basisklasse';
+$s_plugin_missing_class_status_message = 'Es wurde ein Verzeichnis für dieses Plugin gefunden, aber kein entsprechender Plugin Quellcode. Stellen Sie sicher, dass der Name des Verzeichnisses dem Namen der Basisklasse entspricht. Beachten Sie dabei Groß-/Kleinschreibung.';
 $s_project_added_msg = 'Projekt wurde hinzugefügt …';
 $s_category_added_msg = 'Kategorie wurde hinzugefügt …';
 $s_category_deleted_msg = 'Kategorie wurde gelöscht …';
-$s_category_delete_sure_msg = 'Soll diese Kategorie wirklich gelöscht werden?<br />Die Kategorie „%1$s“ enthält %2$d Bugs.';
 $s_category_delete_confirm_msg = 'Sind Sie sicher, dass Sie die Kategorie „%1$s“ löschen möchten?';
 $s_delete_category_button = 'Kategorie löschen';
 $s_edit_project_category_title = 'Projektkategorie bearbeiten';
@@ -690,7 +703,7 @@ $s_category_updated_msg = 'Kategorien erfolgreich aktualisiert …';
 $s_create_first_project = 'Erstellen Sie ein Projekt, um Einträge erfassen zu können.';
 $s_add_subproject_title = 'Unterprojekt hinzufügen';
 $s_project_deleted_msg = 'Projekt gelöscht …';
-$s_project_delete_msg = 'Soll das Projekt mit allen zugehörigen Einträgen gelöscht werden?';
+$s_project_delete_msg = 'Sind Sie sicher, dass Sie Projekt "%1$s" löschen möchten?<br>Dabei  werden auch %2$s zugehörige Einträge gelöscht.';
 $s_project_delete_button = 'Projekt löschen';
 $s_edit_project_title = 'Projekt bearbeiten';
 $s_project_name = 'Projektname';
@@ -731,7 +744,7 @@ $s_name = 'Name';
 $s_project_updated_msg = 'Projekt wurde aktualisiert …';
 $s_version_added_msg = 'Version wurde hinzugefügt …';
 $s_version_deleted_msg = 'Version wurde gelöscht …';
-$s_version_delete_sure = 'Soll diese Version mit allen zugehörigen Einträgen gelöscht werden?';
+$s_version_delete_sure = 'Soll die Version "%1$s" gelöscht werden?';
 $s_delete_version_button = 'Version löschen';
 $s_edit_project_version_title = 'Projektversion bearbeiten';
 $s_update_version_button = 'Version ändern';
@@ -742,7 +755,7 @@ $s_obsolete = 'Veraltet';
 $s_version_updated_msg = 'Produktversionen aktualisiert …';
 $s_account_delete_protected_msg = 'Konto geschützt. Löschung nicht möglich.';
 $s_account_deleted_msg = 'Konto gelöscht …';
-$s_delete_account_sure_msg = 'Wollen Sie dieses Konto wirklich löschen?';
+$s_delete_account_sure_msg = 'Wollen Sie das Konto "%1$s" wirklich löschen?';
 $s_notify_user = 'Benutzer über diese Änderung benachrichtigen';
 $s_accounts_pruned_msg = 'Alle Konten, die niemals benutzt wurden und älter als 1 Woche sind, wurden entfernt';
 $s_prune_accounts_button = 'Endgültig löschen';
@@ -808,7 +821,7 @@ $s_file_uploaded_msg = 'Dateiübertragung erfolgreich';
 $s_upload_file_title = 'Datei übertragen';
 $s_title = 'Titel';
 $s_project_file_deleted_msg = 'Projektdatei gelöscht';
-$s_confirm_file_delete_msg = 'Soll diese Datei wirklich gelöscht werden?';
+$s_confirm_file_delete_msg = 'Soll die Datei"%1$s" wirklich gelöscht werden?';
 $s_filename = 'Dateiname';
 $s_filename_label = 'Dateiname:';
 $s_file_update_button = 'Datei aktualisieren';
@@ -820,7 +833,7 @@ $s_add_file = 'Datei hinzufügen';
 $s_project_document_updated = 'Projekt erfolgreich aktualisiert';
 $s_project_user_added_msg = 'Benutzer zum Projekt hinzugefügt';
 $s_project_removed_user_msg = 'Benutzer aus Projekt entfernt';
-$s_remove_user_sure_msg = 'Soll dieser Benutzer wirklich aus dem Projekt entfernt werden?';
+$s_remove_user_sure_msg = 'Soll der Benutzer "%1$s" wirklich aus dem Projekt "%2$s" entfernt werden?';
 $s_remove_user_button = 'Benutzer entfernen';
 $s_remove_all_users_sure_msg = 'Sind Sie sicher, dass Sie alle Benutzer dieses Projekts entfernen wollen?';
 $s_remove_all_users_button = 'Alle Benutzer entfernen';
@@ -948,7 +961,7 @@ $s_query_blank_name = 'Bitte geben Sie einen Namen für diesen Filter ein.';
 $s_query_name_too_long = 'Es kann kein Filter mit mehr als 64 Buchstaben angelegt werden. Bitte vergeben Sie einen kürzeren Namen.';
 $s_query_store_error = 'Ein Fehler ist beim Speichern des Filters aufgetreten.';
 $s_open_queries = 'Filter verwalten';
-$s_query_delete_msg = 'Möchten Sie diesen Filter wirklich löschen?';
+$s_query_delete_msg = 'Möchten Sie den Filter "%1$s" wirklich löschen?';
 $s_edit_filter = 'Filter bearbeiten';
 $s_owner = 'Besitzer';
 $s_update_filter = 'Filter aktualisieren';
@@ -1011,10 +1024,10 @@ $s_linked_projects_label = 'Verknüpfte Projekte';
 $s_custom_field_sequence = 'Reihenfolge';
 $s_custom_field_sequence_label = 'Reihenfolge';
 $s_custom_field_type_enum_string = '0:Text,1:Zahlen,2:Gleitkommazahlen,3:Aufzählung,4:E-Mail,5:Kontrollkästchen,6:Liste,7:Mehrfachauswahl-Liste,8:Datum,9:Auswahlkästchen,10:Textbereich';
-$s_confirm_used_custom_field_deletion = 'Dieses Feld wird derzeit von mindestens einem Projekt verwendet. Wenn Sie fortfahren, werden alle Werte für dieses Feld dauerhaft gelöscht. Dieser Vorgang kann nicht rückgängig gemacht werden. Um das Feld nicht zu löschen, klicken Sie bitten den „Zurück“-Knopf in Ihrem Webbrowser. Um fortzufahren, klicken Sie bitten den „Feld löschen“-Knopf.';
-$s_confirm_custom_field_deletion = 'Möchten Sie dieses benutzerdefinierte Feld und alle zugehörigen Werte wirklich löschen?';
+$s_confirm_used_custom_field_deletion = 'Das Feld "%1$s" wird derzeit mindestens in einem Projekt verwendet. Wenn Sie fortfahren, werden alle Werte für dieses Feld dauerhaft gelöscht. Dieser Vorgang kann nicht rückgängig gemacht werden. Um das Feld nicht zu löschen, klicken Sie den „Zurück“-Knopf in Ihrem Webbrowser. Um fortzufahren, klicken Sie den „Feld löschen“-Knopf.';
+$s_confirm_custom_field_deletion = 'Möchten Sie das benutzerdefinierte Feld "%1$s" und alle zugehörigen Werte wirklich löschen?';
 $s_field_delete_button = 'Feld löschen';
-$s_confirm_custom_field_unlinking = 'Sind Sie sicher, dass Sie dieses benutzerdefinierte Feld aus dem Projekt entlinken wollen? Die Werte werden nicht gelöscht, so lange das benutzerdefinierte Feld selbst nicht gelöscht ist.';
+$s_confirm_custom_field_unlinking = 'Sind Sie sicher, dass Sie das benutzerdefinierte Feld "%1$s" aus dem Projekt entfernen wollen? Die Werte werden nicht gelöscht, solange das benutzerdefinierte Feld selbst nicht gelöscht wird.';
 $s_field_remove_button = 'Feld entfernen';
 $s_hide_status = 'Status ausblenden';
 $s_filter_closed = 'Geschlossen';
@@ -1027,7 +1040,7 @@ $s_simple_filters = 'Einfache Filter';
 $s_monitored_by = 'Beobachtet von';
 $s_attachments = 'Angehängte Datei(en)';
 $s_bytes = 'Bytes';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Dateianhang fehlt';
 $s_attachment_count = 'Anzahl Dateianhänge';
 $s_view_attachments_for_issue = 'Zeige %1$d Dateianhänge für Eintrag #%2$d';
@@ -1090,6 +1103,8 @@ $s_update_readonly_issues = 'Schreibgeschützte Einträge aktualisieren';
 $s_update_issue_status = 'Eintragsstatus aktualisieren';
 $s_set_view_status = 'Sichtbarkeitsstatus beim Erfassen eines neuen Eintrags oder einer Notiz festlegen';
 $s_update_view_status = 'Sichtbarkeitsstatus eines vorhandenen Eintrags oder einer Notiz ändern';
+$s_view_issue_revisions = 'Eintrags- oder Notizüberarbeitungen anzeigen';
+$s_drop_issue_revisions = 'Eintrags- oder Notizüberarbeitungen löschen';
 $s_set_sticky = 'Fixierung setzen / lösen';
 $s_show_list_of_users_monitoring_issue = 'Liste der Benutzer anzeigen, die einen Eintrag beobachten';
 $s_add_users_monitoring_issue = 'Benutzer als Beobachter eines Eintrags hinzufügen';
@@ -1200,7 +1215,6 @@ $s_time_tracking_stopwatch_start = 'Starten';
 $s_time_tracking_stopwatch_stop = 'Stoppen';
 $s_time_tracking_stopwatch_reset = 'Zurücksetzen';
 $s_access_denied = 'Zugriff verweigert.';
-$s_development_team = 'Entwicklungs-Team';
 $s_manage_columns_config = 'Spalten verwalten';
 $s_all_columns_title = 'Alle verfügbaren Spalten';
 $s_csv_columns_title = 'CSV-Spalten';
@@ -1316,6 +1330,7 @@ $MANTIS_ERROR[ERROR_BUG_DUPLICATE_SELF] = 'Sie können keinen Eintrag als Duplik
 $MANTIS_ERROR[ERROR_BUG_REVISION_NOT_FOUND] = 'Überarbeitung des Eintrags nicht gefunden';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_NOT_FOUND] = 'Benutzerdefiniertes Feld nicht gefunden.';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_NAME_NOT_UNIQUE] = 'Name doppelt vorhanden.';
+$MANTIS_ERROR[ERROR_CUSTOM_FIELD_NAME_INVALID] = 'Ungültiger benutzerdefinierter Feldname "%1$s": Kommas sind nicht erlaubt. siehe "Benutzerdefinierte Feldnamen lokalisieren" im Admin-Handbuch als Workaround.';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_IN_USE] = 'Mindestens ein Projekt benutzt noch dieses Feld.';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_INVALID_VALUE] = 'Ungültiger Wert für Feld „%1$s“.';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_INVALID_DEFINITION] = 'Ungültige Definition für benutzerdefiniertes Feld';
@@ -1326,6 +1341,8 @@ $MANTIS_ERROR[ERROR_LDAP_SERVER_CONNECT_FAILED] = 'Verbindung zum LDAP-Server fe
 $MANTIS_ERROR[ERROR_LDAP_UPDATE_FAILED] = 'Aktualisierung des LDAP-Eintrags fehlgeschlagen.';
 $MANTIS_ERROR[ERROR_LDAP_USER_NOT_FOUND] = 'LDAP-Benutzereintrag nicht gefunden.';
 $MANTIS_ERROR[ERROR_LDAP_EXTENSION_NOT_LOADED] = 'LDAP-Erweiterung ist nicht geladen.';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_SET_MIN_TLS] = 'Das Setzen der minimalen TLS-Version auf dem LDAP-Server ist gescheitert.';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_STARTTLS] = 'Kann StartTLS nicht auf dem LDAP-Server installieren.';
 $MANTIS_ERROR[ERROR_DB_CONNECT_FAILED] = 'Verbindung zur Datenbank fehlgeschlagen. Reportmeldung lautet #%1$d: %2$s.';
 $MANTIS_ERROR[ERROR_DB_QUERY_FAILED] = 'Datenbankabfrage fehlgeschlagen. Die Reportmeldung lautet #%1$d: %2$s für die Abfrage: %3$s.';
 $MANTIS_ERROR[ERROR_DB_SELECT_FAILED] = 'Datenbankauswahl fehlgeschlagen. Reportmeldung der Datenbank lautet #%1$d: %2$s.';
@@ -1410,7 +1427,7 @@ $s_dropzone_cancel_upload_confirmation = 'Sind Sie sich sicher, dass Sie diesen 
 $s_dropzone_remove_file = 'Datei entfernen';
 $s_dropzone_max_files_exceeded = 'Sie können keine weiteren Dateien hochladen.';
 $s_dropzone_not_supported = 'Dropzone.js unterstützt keine älteren Webbrowser!';
-$s_dropzone_multiple_files_too_big = 'Die folgenden Dateien:{{files}}Überschreiten die maximal erlaubte Dateigröße ({{maxFilesize}} MiB)';
+$s_dropzone_multiple_files_too_big = 'Die folgenden Dateien:{{files}}überschreiten die maximal erlaubte Dateigröße ({{maxFilesize}} MiB)';
 $s_save = 'Speichern';
 $s_reset = 'Zurücksetzen';
 $s_persist = 'Merken';

@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Hebrew (עברית)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -46,6 +46,8 @@ $s_plugin_XmlImportExport_title = 'בעיות יצוא / יבוא';
 $s_plugin_XmlImportExport_description = 'הוספת יכולות יבוא ויצוא XML למנטיס';
 $s_plugin_XmlImportExport_import = 'בעיות יצוא';
 $s_plugin_XmlImportExport_export = 'יצוא XML';
+$s_plugin_XmlImportExport_import_threshold = 'בעיות ייבוא';
+$s_plugin_XmlImportExport_export_threshold = 'בעיות ייצוא';
 $s_plugin_XmlImportExport_action_update = 'עדכון';
 $s_plugin_XmlImportExport_importing_in_project = 'בעיות ביבוא פרויקט:';
 $s_plugin_XmlImportExport_import_options = 'אפשרויות יבוא';

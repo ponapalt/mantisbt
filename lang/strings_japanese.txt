@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Japanese (日本語)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -43,6 +43,7 @@
  * @author Fryed-peach
  * @author Gulpin
  * @author Hiro884
+ * @author LaMagiaaa
  * @author Macofe
  * @author Mfuji
  * @author Object＊tofu
@@ -400,7 +401,7 @@ $s_select_file = 'ファイルを選択';
 $s_select_files = 'ファイルを選択';
 $s_upload_file_button = 'ファイルをアップロード';
 $s_upload_files_button = 'ファイルをアップロード';
-$s_max_file_size_label = '最大サイズ:';
+$s_max_file_size_info = '最大サイズ: %1$s %2$s';
 $s_bug_reopened_msg = '課題を差し戻しました...';
 $s_reopen_add_bugnote_title = '差し戻しの理由追加';
 $s_bugnote_add_reopen_button = 'コメントを追加して課題を差し戻し';
@@ -484,12 +485,14 @@ $s_bugnote_updated_msg = 'コメントを更新しました...';
 $s_last_edited = '最終編集:';
 $s_hide_content = '非表示';
 $s_show_content = '表示';
+$s_file_icon_description = '%1$s ファイルアイコン';
+$s_unknown_file_extension = '不明';
 $s_webmaster_contact_information = '分からない場合は、<a href="mailto:%1$s" title="メールでウェブマスターに連絡します。">管理者</a>に問い合わせてください';
 $s_total_queries_executed = '実行されたクエリ数の合計: %1$d';
 $s_unique_queries_executed = '固有クエリの実行数: %1$d';
 $s_total_query_execution_time = 'クエリの総実行時間: %1$s秒';
 $s_page_execution_time = 'ページ実行時間: %1$s秒';
-$s_memory_usage_in_kb = 'メモリ使用量: %1$s KiB';
+$s_memory_usage = 'メモリ使用量: %1$s KiB';
 $s_log_page_number = '番号';
 $s_log_page_time = '実行時間';
 $s_log_page_caller = '訪問者';
@@ -636,7 +639,6 @@ $s_reopen_status = '差し戻しされた課題に設定するステータス';
 $s_reopen_resolution = '差し戻された課題に設定する解決状況';
 $s_limit_view_unless_threshold_option = '他の利用者の課題を見る。(もし、課題が設定されていない場合、報告、処理、監視されている課題に限定されます。)';
 $s_config_delete_sure = '以下の設定を本当に削除しますか:';
-$s_in_project = 'プロジェクト:';
 $s_delete_config_button = '設定を削除';
 $s_configuration_report = '設定の表示';
 $s_database_configuration = 'データベース設定';
@@ -675,7 +677,6 @@ $s_plugin_key_upgrade = '要アップグレード';
 $s_project_added_msg = 'プロジェクトを追加しました...';
 $s_category_added_msg = 'カテゴリを追加しました...';
 $s_category_deleted_msg = 'カテゴリを削除しました...';
-$s_category_delete_sure_msg = 'このカテゴリを本当に削除しますか?<br />カテゴリ「%1$s」には課題が %2$d 個あります。';
 $s_category_delete_confirm_msg = '本当に「%1$s」カテゴリを削除しますか?';
 $s_delete_category_button = 'カテゴリを削除';
 $s_edit_project_category_title = 'プロジェクトのカテゴリの編集';
@@ -1021,7 +1022,7 @@ $s_simple_filters = '簡易フィルター';
 $s_monitored_by = '監視者';
 $s_attachments = '添付ファイル';
 $s_bytes = 'バイト';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = '添付ファイルなし';
 $s_attachment_count = '添付ファイル数';
 $s_view_attachments_for_issue = '課題#%2$dの添付ファイル%1$d件を閲覧';
@@ -1193,7 +1194,6 @@ $s_time_tracking_stopwatch_start = '開始';
 $s_time_tracking_stopwatch_stop = '停止';
 $s_time_tracking_stopwatch_reset = 'リセット';
 $s_access_denied = 'アクセスが拒否されました。';
-$s_development_team = '開発チーム';
 $s_manage_columns_config = '表示項目管理';
 $s_all_columns_title = '全項目';
 $s_csv_columns_title = 'CSV 項目';

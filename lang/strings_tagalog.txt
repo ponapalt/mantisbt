@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Tagalog (Tagalog)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -417,7 +417,7 @@ $s_hide_content = 'Itago ang Nilalaman';
 $s_show_content = 'Ipakita ang Nilalaman';
 $s_total_queries_executed = '%1$d kabuoan ng mga katanungang nasagot na.';
 $s_unique_queries_executed = '%1$d natatanging mga katanungang nasagot na.';
-$s_memory_usage_in_kb = 'paggamit ng alaala: %1$s KB';
+$s_memory_usage = 'paggamit ng alaala: %1$s KiB';
 $s_please_report = 'Pakiulat ito sa %1$s.';
 $s_warning_plain_password_authentication = '<strong>BABALA:</strong> Ginagamit ang payak na pagpapatotoo ng hudyat, ilalantad nito sa mga tagapangasiwa ang iyong mga hudyat.';
 $s_warning_default_administrator_account_present = '<strong>BABALA:</strong> Dapat na huwag mong paganahin ang likas na nakatakdang akawnt ng \'tagapangasiwa\' o baguhin ang hudyat nito.';
@@ -534,7 +534,6 @@ $s_readonly_status = 'Kalagayan kung saan nagiging mababasa lamang ang isang lab
 $s_reopen_status = 'Kalagayan kung saan nakatakda ang isang muling binuksang labas';
 $s_reopen_resolution = 'Kalutasan kung saan nakatakda ang isang muling binuksang labas';
 $s_config_delete_sure = 'Natitiyak mo bang nais mong burahin ang mga pagtatakda para sa:';
-$s_in_project = 'sa loob ng proyekto';
 $s_delete_config_button = 'Burahin ang mga Pagtatakda';
 $s_configuration_report = 'Ulat sa Pagkakaayos';
 $s_database_configuration = 'Pagkakaayos ng Kalipunan ng Dato';
@@ -567,7 +566,6 @@ $s_plugin_key_upgrade = 'kailangan ang pagtataas ng uri/kalidad';
 $s_project_added_msg = 'Matagumpay na naidagdag ang proyekto...';
 $s_category_added_msg = 'Matagumpay na naidagdag ang kaurian...';
 $s_category_deleted_msg = 'Matagumpay na nabura ang kaurian...';
-$s_category_delete_sure_msg = 'Nakatitiyak ka bang nais mong burahin ang kauriang ito?<br />Naglalaman ng %2$d mga depekto (\'\'bug\'\') ang kauriang "%1$s".';
 $s_delete_category_button = 'Burahin ang Kaurian';
 $s_edit_project_category_title = 'Baguhin ang Kaurian ng Proyekto';
 $s_update_category_button = 'Isapanahon ang Kaurian';
@@ -1021,7 +1019,6 @@ $s_time_tracking_stopwatch_start = 'Magsimula';
 $s_time_tracking_stopwatch_stop = 'Tumigil';
 $s_time_tracking_stopwatch_reset = 'Muling itakda';
 $s_access_denied = 'Tinanggihan ang Pagpunta.';
-$s_development_team = 'Koponan ng Pagpapaunlad';
 $s_manage_columns_config = 'Pamahalaan ang Pababang mga Hanay';
 $s_all_columns_title = 'Lahat ng Makukuhang mga Pababang Hanay';
 $s_csv_columns_title = 'Mga Pababang Hanay na CSV';

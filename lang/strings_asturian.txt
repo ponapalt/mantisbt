@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Asturian (asturianu)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -376,7 +376,7 @@ $s_select_file = 'Seleicionar un ficheru';
 $s_select_files = 'Seleicionar ficheros';
 $s_upload_file_button = 'Xubir ficheru';
 $s_upload_files_button = 'Xubir ficheros';
-$s_max_file_size_label = 'Tamañu máximu:';
+$s_max_file_size_info = 'Tamañu máximu: %1$s %2$s';
 $s_bug_reopened_msg = 'La incidencia reabrióse...';
 $s_reopen_add_bugnote_title = 'Amestar una nota col motivu pa reabrir la incidencia';
 $s_bugnote_add_reopen_button = 'Amestar la nota y reabrir la incidencia';
@@ -464,7 +464,7 @@ $s_total_queries_executed = 'Total de consultes executaes: %1$d';
 $s_unique_queries_executed = 'Consultes úniques executaes: %1$d';
 $s_total_query_execution_time = 'Tiempu total d\'execución de la consulta: %1$s segundos';
 $s_page_execution_time = 'Tiempu d\'execución de la páxina: %1$s segundos';
-$s_memory_usage_in_kb = 'Usu de la memoria: %1$s KiB';
+$s_memory_usage = 'Usu de la memoria: %1$s KiB';
 $s_log_page_number = 'Númberu';
 $s_log_page_time = 'Tiempu d\'execución';
 $s_log_page_caller = 'Llamante';
@@ -608,7 +608,6 @@ $s_readonly_status = 'Estáu nel qu\'una incidencia establezse como de sólo lle
 $s_reopen_status = 'Estáu que se-yos pon a les incidencies reabiertes';
 $s_reopen_resolution = 'Resolvimientu que se-yos pon a les incidencies reabiertes';
 $s_config_delete_sure = 'Tas seguru de que desees borrar la configuración de:';
-$s_in_project = 'nel proyectu';
 $s_delete_config_button = 'Desaniciar la configuración';
 $s_configuration_report = 'Informe de configuración';
 $s_database_configuration = 'Configuración de la Base de datos';
@@ -645,7 +644,6 @@ $s_plugin_key_upgrade = 'anovamientu riquíu';
 $s_project_added_msg = 'El proyectu amestóse correutamente...';
 $s_category_added_msg = 'La categoría amestóse correutamente...';
 $s_category_deleted_msg = 'La categoría desanicióse correutamente...';
-$s_category_delete_sure_msg = '¿Ta seguru de que desees desaniciar esta categoría?La categoría "%1$s" contien %2$d incidencies.<br />';
 $s_category_delete_confirm_msg = '¿Tas seguro de que quies desaniciar la categoría "%1$s"?';
 $s_delete_category_button = 'Desaniciar categoría';
 $s_edit_project_category_title = 'Editar categoría del proyectu';

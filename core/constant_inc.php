@@ -21,7 +21,7 @@
 /**
  * Mantis Version
  */
-define( 'MANTIS_VERSION', '2.25.0-dev' );
+define( 'MANTIS_VERSION', '2.26.0-dev' );
 define( 'FILTER_VERSION', 'v9' );
 
 # --- constants -------------------
@@ -35,7 +35,7 @@ define( 'GOOD', 1 );
 define( 'WARN', 2 );
 
 # PHP-related constants
-define( 'PHP_MIN_VERSION', '5.5.0' );
+define( 'PHP_MIN_VERSION', '7.0.0' );
 define( 'PHP_CLI', 0 );
 define( 'PHP_CGI', 1 );
 
@@ -350,6 +350,7 @@ define( 'ERROR_CUSTOM_FIELD_INVALID_VALUE', 1303 );
 define( 'ERROR_CUSTOM_FIELD_INVALID_DEFINITION', 1304 );
 define( 'ERROR_CUSTOM_FIELD_NOT_LINKED_TO_PROJECT', 1305 );
 define( 'ERROR_CUSTOM_FIELD_INVALID_PROPERTY', 1306 );
+define( 'ERROR_CUSTOM_FIELD_NAME_INVALID', 1307 );
 
 # ERROR_LDAP_*
 define( 'ERROR_LDAP_AUTH_FAILED', 1400 );
@@ -357,6 +358,8 @@ define( 'ERROR_LDAP_SERVER_CONNECT_FAILED', 1401 );
 define( 'ERROR_LDAP_UPDATE_FAILED', 1402 );
 define( 'ERROR_LDAP_USER_NOT_FOUND', 1403 );
 define( 'ERROR_LDAP_EXTENSION_NOT_LOADED', 1404 );
+define( 'ERROR_LDAP_UNABLE_TO_SET_MIN_TLS', 1405 );
+define( 'ERROR_LDAP_UNABLE_TO_STARTTLS', 1406 );
 
 # ERROR_CATEGORY_*
 define( 'ERROR_CATEGORY_DUPLICATE', 1500 );

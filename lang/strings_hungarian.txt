@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Hungarian (magyar)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -391,7 +391,7 @@ $s_select_file = 'Fájl kiválasztása';
 $s_select_files = 'Fájlok kiválasztása';
 $s_upload_file_button = 'Fájl feltöltése';
 $s_upload_files_button = 'Fájlok feltöltése';
-$s_max_file_size_label = 'Maximális méret:';
+$s_max_file_size_info = 'Maximális méret: %1$s %2$s';
 $s_bug_reopened_msg = 'Ügy újranyitva…';
 $s_reopen_add_bugnote_title = 'Megjegyzés hozzáadása az ügy újranyitásához';
 $s_bugnote_add_reopen_button = 'Megjegyzés hozzáadása és az ügy újranyitása';
@@ -480,7 +480,7 @@ $s_total_queries_executed = 'Összes lefuttatott lekérdezés: %1$d.';
 $s_unique_queries_executed = 'Egyedi lefuttatott lekérdezések: %1$d.';
 $s_total_query_execution_time = 'Összes lekérdezés végrehajtási ideje: %1$s másodperc';
 $s_page_execution_time = 'Lap végrehajtási ideje: %1$s másodperc';
-$s_memory_usage_in_kb = 'Memóriahasználat: %1$s KiB';
+$s_memory_usage = 'Memóriahasználat: %1$s KiB';
 $s_log_page_number = 'Szám';
 $s_log_page_time = 'Végrehajtási idő';
 $s_log_page_caller = 'Hívó';
@@ -626,7 +626,6 @@ $s_reopen_status = 'Az újranyitott ügyekhez beállítandó állapot';
 $s_reopen_resolution = 'Az újranyitott ügyekhez beállítandó döntés';
 $s_limit_view_unless_threshold_option = 'Más felhasználók ügyeinek megtekintése (ha nincs megadva, akkor az ügyek csak a felhasználó által bejelentett, kezelt és figyelt ügyekre korlátozódnak)';
 $s_config_delete_sure = 'Valóban törölni szeretné a következők beállításait:';
-$s_in_project = 'a következő projektben:';
 $s_delete_config_button = 'Beállítások törlése';
 $s_configuration_report = 'Konfigurációs jelentés';
 $s_database_configuration = 'Adatbázis konfigurációja';
@@ -665,7 +664,6 @@ $s_plugin_key_upgrade = 'frissítés szükséges';
 $s_project_added_msg = 'Projekt sikeresen hozzáadva…';
 $s_category_added_msg = 'Kategória sikeresen hozzáadva…';
 $s_category_deleted_msg = 'Kategória sikeresen törölve…';
-$s_category_delete_sure_msg = 'Valóban törli ezt a kategóriát?<br />A(z) „%1$s” kategória %2$d ügyet tartalmaz.';
 $s_category_delete_confirm_msg = 'Valóban törli a(z) „%1$s” kategóriát?';
 $s_delete_category_button = 'Kategória törlése';
 $s_edit_project_category_title = 'Projektkategória szerkesztése';
@@ -1011,7 +1009,7 @@ $s_simple_filters = 'Egyszerű szűrők';
 $s_monitored_by = 'Figyeli:';
 $s_attachments = 'melléklet';
 $s_bytes = 'bájt';
-$s_kb = 'kB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Hiányzó melléklet';
 $s_attachment_count = 'Mellékletek száma';
 $s_view_attachments_for_issue = 'A(z) #%2$d ügy %1$d mellékleteinek megnézése';
@@ -1183,7 +1181,6 @@ $s_time_tracking_stopwatch_start = 'Indítás';
 $s_time_tracking_stopwatch_stop = 'Leállítás';
 $s_time_tracking_stopwatch_reset = 'Visszaállítás';
 $s_access_denied = 'Hozzáférés megtagadva.';
-$s_development_team = 'Fejlesztőcsapat';
 $s_manage_columns_config = 'Oszlopok kezelése';
 $s_all_columns_title = 'Az összes elérhető oszlop';
 $s_csv_columns_title = 'CSV oszlopok';

@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Vietnamese (Tiếng Việt)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -429,7 +429,7 @@ $s_hide_content = 'Ẩn nội dung';
 $s_show_content = 'Hiện nội dung';
 $s_total_queries_executed = '%1$d tổng số truy vấn được thực hiện.';
 $s_unique_queries_executed = '%1$d truy vấn duy nhất được thực hiện.';
-$s_memory_usage_in_kb = 'bộ nhớ sử dụng: %1$s KB';
+$s_memory_usage = 'bộ nhớ sử dụng: %1$s KiB';
 $s_please_report = 'Xin báo cáo này đến %1$s.';
 $s_warning_plain_password_authentication = '<strong>Cảnh báo:</strong> Đồng bằng mật khẩu xác thực được sử dụng, điều này sẽ vạch trần của bạn mật khẩu để quản trị viên.';
 $s_warning_default_administrator_account_present = '<strong>Cảnh báo:</strong> Bạn nên vô hiệu hóa tài khoản của \'quản trị\' mặc định hoặc thay đổi mật khẩu của mình.';
@@ -546,7 +546,6 @@ $s_readonly_status = 'Trạng thái nơi một issue sẽ trở thành chỉ đ�
 $s_reopen_status = 'Trạng thái được lập đối với issue mở lại';
 $s_reopen_resolution = 'Giải quyết một vấn đề mở mà được thiết lập';
 $s_config_delete_sure = 'Bạn có chắc bạn muốn xóa các thiết đặt cho:';
-$s_in_project = 'trong dự án';
 $s_delete_config_button = 'Xoá các thiết đặt';
 $s_configuration_report = 'Cấu hình báo cáo';
 $s_database_configuration = 'Cấu hình cơ sở dữ liệu';
@@ -579,7 +578,6 @@ $s_plugin_key_upgrade = 'cần được nâng cấp';
 $s_project_added_msg = 'Dự án đã được thêm thành công ...';
 $s_category_added_msg = 'Chuyên mục đã được thêm thành công ...';
 $s_category_deleted_msg = 'Chuyên mục đã bị xoá thành công ...';
-$s_category_delete_sure_msg = 'Bạn có chắc chắn muốn xóa chuyên mục này? <br /> Chuyên mục "%1$s" có chứa %2$d issue.';
 $s_delete_category_button = 'Xóa chuyên mục';
 $s_edit_project_category_title = 'Chỉnh sửa chuyên mục dự án';
 $s_update_category_button = 'Cập nhật chuyên mục';
@@ -707,7 +705,7 @@ $s_add_file = 'Thêm tập tin';
 $s_project_document_updated = 'Dự án cập nhật thành công.';
 $s_project_user_added_msg = 'Thêm thành công người dùng vào dự án.';
 $s_project_removed_user_msg = 'Loại bỏ thành công người dùng khỏi dự án.';
-$s_remove_user_sure_msg = 'Bạn có chắc chắn muốn xóa người dùng này?';
+$s_remove_user_sure_msg = 'Bạn có chắc chắn muốn xóa người dùng "%1$s" khỏi dự án "%2$s"?';
 $s_remove_all_users_sure_msg = 'Bạn có chắc chắn muốn xóa tất cả những người sử dụng của dự án này?';
 $s_remove_all_users_button = 'Loại bỏ tất cả người dùng';
 $s_add_user_title = 'Thêm người dùng vào dự án';
@@ -1036,7 +1034,6 @@ $s_time_tracking_stopwatch_start = 'Bắt đầu';
 $s_time_tracking_stopwatch_stop = 'Dừng';
 $s_time_tracking_stopwatch_reset = 'Thiết lập lại';
 $s_access_denied = 'Truy nhập bị cấm.';
-$s_development_team = 'Nhóm phát triển';
 $s_manage_columns_config = 'Quản lý cột';
 $s_all_columns_title = 'Tất cả các cột có sẵn';
 $s_csv_columns_title = 'Cột CSV';

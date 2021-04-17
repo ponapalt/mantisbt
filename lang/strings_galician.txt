@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Galician (galego)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -384,7 +384,7 @@ $s_select_file = 'Seleccionar un ficheiro';
 $s_select_files = 'Seleccionar ficheiros';
 $s_upload_file_button = 'Subir o ficheiro';
 $s_upload_files_button = 'Cargar os ficheiros';
-$s_max_file_size_label = 'Tamaño máximo:';
+$s_max_file_size_info = 'Tamaño máximo: %1$s %2$s';
 $s_bug_reopened_msg = 'O problema foi reaberto...';
 $s_reopen_add_bugnote_title = 'Engadir unha nota co motivo da reapertura do problema';
 $s_bugnote_add_reopen_button = 'Engadir a nota e reabrir o problema';
@@ -472,7 +472,7 @@ $s_total_queries_executed = 'Total de consultas executadas: %1$d';
 $s_unique_queries_executed = 'Consultas únicas executadas: %1$d';
 $s_total_query_execution_time = 'Tempo total de execución de consulta: %1$s segundos';
 $s_page_execution_time = 'Tempo de execución de páxina: %1$s segundos';
-$s_memory_usage_in_kb = 'Uso da memoria: %1$s KiB';
+$s_memory_usage = 'Uso da memoria: %1$s KiB';
 $s_log_page_number = 'Número';
 $s_log_page_time = 'Tempo de execución';
 $s_log_page_caller = 'Invocador';
@@ -617,7 +617,6 @@ $s_readonly_status = 'Estado no cal os problemas son considerados de só lectura
 $s_reopen_status = 'Estado no cal son establecidos os problemas reabertos';
 $s_reopen_resolution = 'Resolución na cal son establecidos os problemas reabertos';
 $s_config_delete_sure = 'Está seguro de querer borrar os axustes de:';
-$s_in_project = 'no proxecto';
 $s_delete_config_button = 'Borrar as características';
 $s_configuration_report = 'Informe da configuración';
 $s_database_configuration = 'Configuración da base de datos';
@@ -654,7 +653,6 @@ $s_plugin_key_upgrade = 'actualización necesaria';
 $s_project_added_msg = 'O proxecto foi engadido con éxito...';
 $s_category_added_msg = 'A categoría foi engadida con éxito...';
 $s_category_deleted_msg = 'A categoría foi borrada con éxito...';
-$s_category_delete_sure_msg = 'Está seguro de querer borrar esta categoría?<br />A categoría "%1$s" contén %2$d erros.';
 $s_category_delete_confirm_msg = 'Está seguro de que quere eliminar a categoría "%1$s"?';
 $s_delete_category_button = 'Borrar a categoría';
 $s_edit_project_category_title = 'Editar a categoría do proxecto';
@@ -991,7 +989,7 @@ $s_simple_filters = 'Filtros sinxelos';
 $s_monitored_by = 'Vixiados por';
 $s_attachments = 'dato(s) adxunto(s)';
 $s_bytes = 'bytes';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Faltan os datos adxuntos';
 $s_attachment_count = 'Número de datos adxuntos';
 $s_view_attachments_for_issue = 'Ollar %1$d dato(s) adxunto(s) do problema #%2$d';
@@ -1151,7 +1149,6 @@ $s_time_tracking_stopwatch_start = 'Iniciar';
 $s_time_tracking_stopwatch_stop = 'Deter';
 $s_time_tracking_stopwatch_reset = 'Restablecer';
 $s_access_denied = 'Acceso rexeitado.';
-$s_development_team = 'Equipo de desenvolvemento';
 $s_manage_columns_config = 'Xestionar as columnas';
 $s_all_columns_title = 'Todas as columnas dispoñibles';
 $s_csv_columns_title = 'Columnas CSV';

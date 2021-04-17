@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Polish (polski)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -397,7 +397,7 @@ $s_select_file = 'Wybierz plik';
 $s_select_files = 'Wybierz pliki';
 $s_upload_file_button = 'Prześlij plik';
 $s_upload_files_button = 'Prześlij pliki';
-$s_max_file_size_label = 'Maksymalny rozmiar:';
+$s_max_file_size_info = 'Maksymalny rozmiar: %1$s %2$s';
 $s_bug_reopened_msg = 'Zgłoszenie zostało ponownie otwarte...';
 $s_reopen_add_bugnote_title = 'Dodaj komentarz z wyjaśnieniem powodu ponownego otwarcia zgłoszenia';
 $s_bugnote_add_reopen_button = 'Dodaj komentarz i ponownie otwórz zgłoszenie';
@@ -485,7 +485,7 @@ $s_total_queries_executed = '%1$d wszystkich wykonanych zapytań.';
 $s_unique_queries_executed = '%1$d wykonanych unikalnych zapytań.';
 $s_total_query_execution_time = 'Całkowity czas wykonania zapytania: %1$s sekund';
 $s_page_execution_time = 'Czas generowania strony: %1$s sekund';
-$s_memory_usage_in_kb = 'Wykorzystanie pamięci: %1$s KB';
+$s_memory_usage = 'Wykorzystanie pamięci: %1$s KiB';
 $s_log_page_number = 'Numer';
 $s_log_page_time = 'Czas wykonania';
 $s_log_page_event = 'Wydarzenie';
@@ -630,7 +630,6 @@ $s_reopen_status = 'Status na który jest ustawiane ponownie otwierane zgłoszen
 $s_reopen_resolution = 'Rozwiązanie na które jest ustawiane ponownie otwierane zgłoszenie';
 $s_limit_view_unless_threshold_option = 'Wyświetl problemy innych użytkowników (jeśli nie zostaną ustawione, dostęp będzie ograniczony do problemów zgłoszonych, obsługiwanych lub monitorowanych przez użytkownika)';
 $s_config_delete_sure = 'Czy jesteś pewien, że chcesz usunąć ustawienia dla';
-$s_in_project = 'w projekcie';
 $s_delete_config_button = 'Usuń ustawienia';
 $s_configuration_report = 'Raport z konfiguracji';
 $s_database_configuration = 'Konfiguracja bazy danych';
@@ -667,7 +666,6 @@ $s_plugin_key_upgrade = 'potrzeba nowsza wersja';
 $s_project_added_msg = 'Projekt został pomyślnie dodany...';
 $s_category_added_msg = 'Kategoria została pomyślnie dodana...';
 $s_category_deleted_msg = 'Kategoria została pomyślnie usunięta...';
-$s_category_delete_sure_msg = 'Czy na pewno chcesz usunąć tę kategorię?<br />W kategorii „%1$s” jest %2$d błędów.';
 $s_category_delete_confirm_msg = 'Czy na pewno chcesz usunąć kategorię: "%1$s"?';
 $s_delete_category_button = 'Usuń kategorię';
 $s_edit_project_category_title = 'Edycja kategorii';
@@ -1010,7 +1008,7 @@ $s_simple_filters = 'Proste filtry';
 $s_monitored_by = 'Obserwowane przez';
 $s_attachments = 'ZAŁĄCZNIKI';
 $s_bytes = 'bajtów';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Brak załącznika';
 $s_attachment_count = 'Liczba załączników';
 $s_view_attachments_for_issue = 'Pokaż %1$d załączników dla zgłoszenia nr %2$d';
@@ -1172,7 +1170,6 @@ $s_time_tracking_stopwatch_start = 'Start';
 $s_time_tracking_stopwatch_stop = 'Stop';
 $s_time_tracking_stopwatch_reset = 'Resetuj';
 $s_access_denied = 'Odmowa dostępu.';
-$s_development_team = 'Grupa programistów';
 $s_manage_columns_config = 'Zarządzanie kolumnami';
 $s_all_columns_title = 'Wszystkie dostępne kolumny';
 $s_csv_columns_title = 'Kolumny CSV';

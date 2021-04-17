@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Arabic (العربية)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -390,8 +390,6 @@ $s_select_file = 'اختر ملفا';
 $s_select_files = 'اختر الملفّات';
 $s_upload_file_button = 'رفع ملف';
 $s_upload_files_button = 'رفع الملفات';
-$s_max_file_size_label = 'الحجم الأقصى:';
-$s_file_size_info = '%1$s %2$s';
 $s_bug_reopened_msg = 'القضية تمت إعادة فتحها...';
 $s_reopen_add_bugnote_title = 'إضافة ملاحظة كسبب لإعادة فتح القضية';
 $s_bugnote_add_reopen_button = 'إضافة ملاحظة وإعادة فتح القضية';
@@ -480,7 +478,7 @@ $s_total_queries_executed = 'استعلامات إجمالية تم تنفيذه
 $s_unique_queries_executed = '%1$d استعلامات منفردة تم تنفيذها: %1$d';
 $s_total_query_execution_time = 'إجمالي وقت تنفيذ القائمة: %1$s seconds';
 $s_page_execution_time = 'وقت تنفيذ الصفحة: %1$s seconds';
-$s_memory_usage_in_kb = 'استخدام الذاكرة: %1$s KiB';
+$s_memory_usage = 'استخدام الذاكرة: %1$s KiB';
 $s_log_page_number = 'الرقم';
 $s_log_page_time = 'وقت التنفيذ';
 $s_log_page_caller = 'المتصل';
@@ -627,7 +625,6 @@ $s_reopen_status = 'الحالة التي يتم ضبط قضية معاد فتح
 $s_reopen_resolution = 'الحل الذي يتم ضبط قضية معاد فتحها إليه';
 $s_limit_view_unless_threshold_option = 'عرض مشكلات المستخدمين الآخرين (إذا لم يتم تعيينها، فسيقتصر الوصول على المشكلات التي تم الإبلاغ عنها أو معالجتها أو مراقبتها من قبل المستخدم)';
 $s_config_delete_sure = 'هل أنت متأكد أنت تريد حذف الإعدادات ل:';
-$s_in_project = 'في المشروع';
 $s_delete_config_button = 'حذف الإعدادات';
 $s_configuration_report = 'تقرير الضبط';
 $s_database_configuration = 'ضبط قاعدة البيانات';
@@ -666,7 +663,6 @@ $s_plugin_key_upgrade = 'الترقية مطلوبة';
 $s_project_added_msg = 'المشروع تمت إضافته بنجاح...';
 $s_category_added_msg = 'التصنيف تمت إضافته بنجاح...';
 $s_category_deleted_msg = 'التصنيف تم حذفه بنجاح...';
-$s_category_delete_sure_msg = 'هل أنت متأكد أنك تريد حذف هذا التصنيف؟<br />التصنيف "%1$s" يحتوي على %2$d علة.';
 $s_category_delete_confirm_msg = 'هل أنت متأكد من حذف الفئة "%1$s" ؟';
 $s_delete_category_button = 'حذف التصنيف';
 $s_edit_project_category_title = 'عدل تصنيف المشروع';
@@ -1013,7 +1009,6 @@ $s_simple_filters = 'فلاتر بسيطة';
 $s_monitored_by = 'مراقبة بواسطة';
 $s_attachments = 'الملحق(ات)';
 $s_bytes = 'بايت';
-$s_kb = 'كيلو بايت';
 $s_attachment_missing = 'الملفات المرفقة مفقودة';
 $s_attachment_count = 'عدد المرفقات';
 $s_view_attachments_for_issue = 'عرض %1$d المرفقات للمشكل #%2$d';
@@ -1185,7 +1180,6 @@ $s_time_tracking_stopwatch_start = 'بداية';
 $s_time_tracking_stopwatch_stop = 'إيقاف';
 $s_time_tracking_stopwatch_reset = 'إعادة الضبط';
 $s_access_denied = 'السماح تم رفضه.';
-$s_development_team = 'فريق التطوير';
 $s_manage_columns_config = 'التحكم بالأعمدة';
 $s_all_columns_title = 'كل الأعمدة المتوفرة';
 $s_csv_columns_title = 'أعمدة CSV';

@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Egyptian Arabic (مصرى)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -337,7 +337,6 @@ $s_unmonitor_bug_button = 'إنهاء المراقبة';
 $s_upload_file = 'رفع ملف';
 $s_select_file = 'اختر ملفا';
 $s_upload_file_button = 'رفع ملف';
-$s_max_file_size_label = 'الحجم الأقصى:';
 $s_bug_reopened_msg = 'القضيه تمت إعاده فتحها...';
 $s_reopen_add_bugnote_title = 'إضافه ملاحظه كسبب لإعاده فتح القضية';
 $s_bugnote_add_reopen_button = 'إضافه ملاحظه وإعاده فتح القضية';
@@ -411,7 +410,7 @@ $s_hide_content = 'إخفاء المحتوى';
 $s_show_content = 'إظهار المحتوى';
 $s_total_queries_executed = 'الاستعلامات الاجماليه اللى اتنفذت %1$d';
 $s_unique_queries_executed = 'الاستعلامات الفريده اللى اتنفذت %1$d';
-$s_memory_usage_in_kb = 'استخدام الذاكره: %1$s كيلوبايت';
+$s_memory_usage = 'استخدام الذاكره: %1$s كيلوبايت';
 $s_please_report = 'من فضلك أبلغ هذا إلى %1$.';
 $s_warning_plain_password_authentication = '<strong>تحذير:</strong> تحقيق كلمه السر الصافى مستخدم، هذا سيكشف كلمات سرك للإداريين.';
 $s_warning_default_administrator_account_present = '<strong>تحذير:</strong> ينبغى عليك تعطيل حساب \'administrator\' الافتراضى أو تغيير كلمه سره.';
@@ -529,7 +528,6 @@ $s_readonly_status = 'الحاله حيث تصبح قضيه ما للقراءه 
 $s_reopen_status = 'الحاله التى يتم ضبط قضيه معاد فتحها إليها';
 $s_reopen_resolution = 'الحل الذى يتم ضبط قضيه معاد فتحها إليه';
 $s_config_delete_sure = 'هل أنت متأكد أنت تريد حذف الإعدادات ل:';
-$s_in_project = 'فى المشروع';
 $s_delete_config_button = 'حذف الإعدادات';
 $s_configuration_report = 'تقرير الضبط';
 $s_database_configuration = 'ضبط قاعده البيانات';
@@ -562,7 +560,6 @@ $s_plugin_key_upgrade = 'الترقيه مطلوبة';
 $s_project_added_msg = 'المشروع تمت إضافته بنجاح...';
 $s_category_added_msg = 'التصنيف تمت إضافته بنجاح...';
 $s_category_deleted_msg = 'التصنيف تم حذفه بنجاح...';
-$s_category_delete_sure_msg = 'هل أنت متأكد أنك تريد حذف هذا التصنيف؟<br />التصنيف "%1$s" يحتوى على %2$d عله.';
 $s_delete_category_button = 'حذف التصنيف';
 $s_edit_project_category_title = 'عدل تصنيف المشروع';
 $s_update_category_button = 'تحديث التصنيف';
@@ -1013,7 +1010,6 @@ $s_time_tracking_cost = 'تكلفة';
 $s_time_tracking_cost_label = 'تمَن:';
 $s_total_time_for_issue = 'الوقت الإجمالى للقضيه = %1$s';
 $s_access_denied = 'السماح تم رفضه.';
-$s_development_team = 'فريق التطوير';
 $s_manage_columns_config = 'التحكم بالأعمدة';
 $s_all_columns_title = 'كل الأعمده المتوفرة';
 $s_csv_columns_title = 'أعمده CSV';

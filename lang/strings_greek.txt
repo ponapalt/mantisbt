@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Greek (Ελληνικά)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -375,7 +375,7 @@ $s_select_file = 'Επιλογή Αρχείου';
 $s_select_files = 'Επιλογή αρχείων';
 $s_upload_file_button = 'Φόρτωση Αρχείου';
 $s_upload_files_button = 'Ανέβασμα αρχείων';
-$s_max_file_size_label = 'Μέγιστο μέγεθος:';
+$s_max_file_size_info = 'Μέγιστο μέγεθος: %1$s %2$s';
 $s_bug_reopened_msg = 'Το θέμα επανεξετάζεται...';
 $s_reopen_add_bugnote_title = 'Προσθήκη Αιτιολόγησης Επαναξέτασης';
 $s_bugnote_add_reopen_button = 'Πρόσθηκη Σημείωσης Και Επανέξεταση';
@@ -446,7 +446,7 @@ $s_bugnote_updated_msg = 'Η σημείωση ενημερώθηκε με επι
 $s_last_edited = 'Επεξεργάστηκε για τελευταία φορά:';
 $s_hide_content = 'Απόκρυψη περιεχομένου';
 $s_show_content = 'Εμφάνιση Περιεχομένων';
-$s_memory_usage_in_kb = 'Χρήση μνήμης: %1$s KiB';
+$s_memory_usage = 'Χρήση μνήμης: %1$s KiB';
 $s_log_page_number = 'Αριθμός';
 $s_log_page_time = 'Ώρα εκτέλεσης';
 $s_log_page_caller = 'Κλητής';
@@ -558,7 +558,6 @@ $s_resolved_status = 'Κατάσταση στην οποία ένα θέμα θ�
 $s_readonly_status = 'Κατάσταση στην οποία ένα θέμα γίνεται μόνο προβαλλόμενο';
 $s_reopen_status = 'Κατάσταση στην οποία ενα επανεξεταζόμενο θέμα ορίζεται';
 $s_reopen_resolution = 'Επίλυση στην οποία ένα επανεξεταζόμενο θέμα ορίζεται';
-$s_in_project = 'στο εγχείρημα';
 $s_delete_config_button = 'Διαγραφή Ρυθμίσεων';
 $s_configuration_report = 'Ρύθμιση Αναφοράς';
 $s_database_configuration = 'Ρύθμιση Βάσης';
@@ -588,7 +587,6 @@ $s_plugin_key_upgrade = 'χρειάζεται αναβάθμιση';
 $s_project_added_msg = 'Η εφαρμογή προστέθηκε επιτυχώς...';
 $s_category_added_msg = 'Η κατηγορία προστέθηκε επιτυχώς...';
 $s_category_deleted_msg = 'Η κατηγορία διαγράφηκε επιτυχώς...';
-$s_category_delete_sure_msg = 'Είστε σίγουρος πως θέλετε να γίνει η διαγραφή αυτἠς της κατηγορίας;<br />Η κατηγορία "%1$s" περιέχει %2$d σφάλματα.';
 $s_delete_category_button = 'Διαγραφή Κατηγορίας';
 $s_edit_project_category_title = 'Επεξεργασία Κατηγορίας ΕφαρμοEdit Project Category';
 $s_update_category_button = 'Ενημέρωση Κατηγορίας';
@@ -895,7 +893,7 @@ $s_simple_filters = 'Απλά Φίλτρα';
 $s_monitored_by = 'Επιβλέπων';
 $s_attachments = 'συννημένα';
 $s_bytes = 'μπάιτς';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_sponsors = '%1$d χορηγός(-οί)';
 $s_sponsorship_added = 'Προστέθηκε χορηγία';
 $s_sponsorship_updated = 'Η χορηγία ενημερώθηκε';
@@ -1025,7 +1023,6 @@ $s_time_tracking_stopwatch_start = 'Έναρξη';
 $s_time_tracking_stopwatch_stop = 'Διακοπή';
 $s_time_tracking_stopwatch_reset = 'Επαναφορά';
 $s_access_denied = 'Δεν επετράπη η πρόσβαση.';
-$s_development_team = 'Ομάδα ανάπτυξης';
 $s_manage_columns_config = 'Διαχείριση στηλών';
 $s_all_columns_title = 'Όλες οι διαθέσιμες στήλες';
 $s_csv_columns_title = 'Στήλες CSV';

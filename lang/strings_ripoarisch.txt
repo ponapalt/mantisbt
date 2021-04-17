@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Colognian (Ripoarisch)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -334,7 +334,7 @@ $s_select_file = 'Dattei ußwähle';
 $s_select_files = 'Datteije ußwähle';
 $s_upload_file_button = 'Lohß Jonn!';
 $s_upload_files_button = 'Datteihje huhlahde';
-$s_max_file_size_label = 'De hühßte Jrühße:';
+$s_max_file_size_info = 'De hühßte Jrühße: %1$s %2$s';
 $s_bug_reopened_msg = 'De Aanjelääjeheit es widder opjemaat&nbsp;…';
 $s_reopen_add_bugnote_title = 'Donn en Notiz dobei mem Jrond för et wider neu Opmaache.';
 $s_bugnote_add_reopen_button = 'Donn en Notiz dobi un maach di Aanjelääjeheit wider op';
@@ -403,7 +403,7 @@ $s_hide_content = 'Don der Enhalld verschteische';
 $s_show_content = 'Don der Enhalld aanzeije';
 $s_total_queries_executed = 'Froore ensjesamp beärbeid: %1$d';
 $s_unique_queries_executed = 'Ongerscheidlijje Froore beärbeid: %1$d';
-$s_memory_usage_in_kb = 'Schpeijscher jebruch: %1$s KiB';
+$s_memory_usage = 'Schpeijscher jebruch: %1$s KiB';
 $s_log_page_number = 'Nommer';
 $s_log_page_time = 'Loufzigg';
 $s_log_page_caller = 'Oprohfer';
@@ -474,12 +474,10 @@ $s_non_existent = 'Jidd_et nit';
 $s_current_status = 'Der aktoölle Zohschtand';
 $s_next_status = 'Der nähksde Zohschtand';
 $s_status_level = 'Zohschtand';
-$s_in_project = 'em Projäk';
 $s_configuration_option_type = 'Zoot';
 $s_project_added_msg = 'Dat Projäk wood derbei jedonn...';
 $s_category_added_msg = 'Di Saachjropp wood derbei jedonn...';
 $s_category_deleted_msg = 'Di Saachjropp wood fott jeschmeße...';
-$s_category_delete_sure_msg = 'Wells De di Saachjropp „%1$s“ verhaftesh fott schmiiße? <br /> Do sin %2$d Aanjelääjeheite dren.';
 $s_categories = 'Saachjroppe';
 $s_add_category_button = 'Donn en Saachjropp derbei';
 $s_versions = 'Väsjohne';
@@ -661,7 +659,6 @@ $s_sponsorship_deleted = 'Shponserschaff fottjeschmeße';
 $s_sponsorship_paid = 'De Shponserschaff es bezahlt';
 $s_sponsorship_more_info = 'Mih övver de Schponserschaff';
 $s_sponsorship_total = 'Jesamp för de Shponserschaff';
-$s_sponsorship_process_url = '';
 $s_changelog = 'Et Logbohch vun de Änderonge';
 $s_changelog_empty = 'Mer han kein Date övver de verjange Änderunge';
 $s_roadmap = 'Övverssesch udder Faaplan';
@@ -751,7 +748,6 @@ $s_time_tracking_billing_link = 'Et Afräschne';
 $s_time_tracking_cost_per_hour = 'Koste pro Shtund';
 $s_time_tracking_cost = 'Koste';
 $s_total_time_for_issue = 'De jesampte Zick för di Saach = %1$s';
-$s_development_team = 'Dä Entweckler-Schmolz';
 $s_manage_columns_config = 'Shpallde verwallde';
 $s_all_columns_title = 'All de Shpallde, di mer han';
 $s_csv_columns_title = '<i lang="en">CSV</i> Shpallde';

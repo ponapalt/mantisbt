@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Traditional Chinese (中文（繁體）‎)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -49,6 +49,7 @@
  * @author Macofe
  * @author Mark85296341
  * @author Oapbtommy
+ * @author S8321414
  * @author Sanmosa
  * @author Simon Shek
  * @author Smarky
@@ -398,7 +399,7 @@ $s_select_file = '選擇檔案';
 $s_select_files = '選擇檔案';
 $s_upload_file_button = '上傳檔案';
 $s_upload_files_button = '上傳檔案';
-$s_max_file_size_label = '大小限制：';
+$s_max_file_size_info = '最大大小：%1$s %2$s';
 $s_bug_reopened_msg = '問題已重新開啟...';
 $s_reopen_add_bugnote_title = '說明重啟問題的原因';
 $s_bugnote_add_reopen_button = '新增說明並重新開啟問題';
@@ -482,12 +483,14 @@ $s_bugnote_updated_msg = '已成功更新說明...';
 $s_last_edited = '最近編輯於：$1';
 $s_hide_content = '隱藏內容';
 $s_show_content = '顯示內容';
+$s_file_icon_description = '%1$s檔案圖標';
+$s_unknown_file_extension = '未知';
 $s_webmaster_contact_information = '請聯絡 <a href="mailto:%1$s" title="透過電子郵件聯絡網站管理員">管理人員</a> 提供協助。';
 $s_total_queries_executed = '已執行查詢總計：%1$d';
 $s_unique_queries_executed = '已執行特殊查詢次數：%1$d';
 $s_total_query_execution_time = '查詢執行時間總計：%1$s 秒';
 $s_page_execution_time = '頁面執行時間：%1$s 秒';
-$s_memory_usage_in_kb = '記憶體使用量：%1$s KB';
+$s_memory_usage = '記憶體使用量：%1$s KiB';
 $s_log_page_number = '編號';
 $s_log_page_time = '執行時間';
 $s_log_page_caller = '呼叫者';
@@ -632,8 +635,7 @@ $s_readonly_status = '此狀態之後不允許修改問題';
 $s_reopen_status = '重新開啟問題後的預設狀態';
 $s_reopen_resolution = '重新開啟問題後的分析';
 $s_limit_view_unless_threshold_option = '檢視其他使用者的問題（若未設定，存取會限制於由使用者回報、處理、或監視的問題）';
-$s_config_delete_sure = '您確定要刪除以下的設定:';
-$s_in_project = '於專案';
+$s_config_delete_sure = '您確定要刪除用於專案%2$s的%1$s設定？';
 $s_delete_config_button = '刪除設定值';
 $s_configuration_report = '設置報表';
 $s_database_configuration = '資料庫設定';
@@ -652,7 +654,10 @@ $s_show_all_complex = '顯示所有用於「%1$s」選項的值';
 $s_plugin = '套件';
 $s_plugins_installed = '已安裝的套件';
 $s_plugins_available = '可用的套件';
+$s_plugins_missing = '缺少或為無效的套件';
+$s_plugins_missing_description = '在以下清單的套件已註冊，但找不到或無法從「%s」載入它們的程式原始碼。<br>請嘗試重新安裝或是移除它們。';
 $s_plugin_description = '說明';
+$s_plugin_problem_description = '問題描述';
 $s_plugin_author = '作者： %1$s';
 $s_plugin_url = '網站:';
 $s_plugin_depends = '相依套件';
@@ -663,16 +668,23 @@ $s_plugin_actions = '操作';
 $s_plugin_install = '安装';
 $s_plugin_upgrade = '升級';
 $s_plugin_uninstall = '解除安裝';
+$s_plugin_manual_fix = '需要手動干預';
 $s_plugin_uninstall_message = '您確定要解除安裝 "%1$s" 套件?';
+$s_plugin_remove_message = '您確定您要移除無效或缺少的「%1$s」套件？';
 $s_plugin_key_label = '金鑰：';
 $s_plugin_key_met = '可使用套件';
 $s_plugin_key_unmet = '未滿足相依性';
 $s_plugin_key_dated = '過期的相依性';
 $s_plugin_key_upgrade = '需要升級';
+$s_plugin_invalid_description = '無效套件';
+$s_plugin_invalid_status_message = '以下所需屬性未在套件類別裡定義：%s。';
+$s_plugin_missing_description = '缺少套件';
+$s_plugin_missing_status_message = '安裝在 Mantis 資料庫的套件無法載入。';
+$s_plugin_missing_class_description = '缺少套件基本類別';
+$s_plugin_missing_class_status_message = '用於此套件的目錄已找出，但裡頭沒有相應的套件程式碼。請確定目錄的名稱符合套件的基本名稱（有區分大小寫）';
 $s_project_added_msg = '已成功新增專案...';
 $s_category_added_msg = '類別已新增成功...';
 $s_category_deleted_msg = '類別已刪除成功...';
-$s_category_delete_sure_msg = '您確定要刪除此類別?<br />類別 "%1$s" 中尚有 %2$d 個問題。';
 $s_category_delete_confirm_msg = '您確定要刪除分類 "%1$s" ？';
 $s_delete_category_button = '刪除類別';
 $s_edit_project_category_title = '編輯專案類別';
@@ -681,7 +693,7 @@ $s_category_updated_msg = '類別已更新成功...';
 $s_create_first_project = '建立一個專案來記錄問題。';
 $s_add_subproject_title = '新增子專案';
 $s_project_deleted_msg = '已成功刪除專案...';
-$s_project_delete_msg = '您確定要刪除此專案和其所有的問題回報記錄?';
+$s_project_delete_msg = '您確定要刪除此專案「%1$s」？<br>這會另外刪除全部%2$s附加問題回報。';
 $s_project_delete_button = '刪除專案';
 $s_edit_project_title = '編輯專案';
 $s_project_name = '專案名稱';
@@ -722,7 +734,7 @@ $s_name = '名稱';
 $s_project_updated_msg = '專案已經成功更新...';
 $s_version_added_msg = '版本已經成功新增...';
 $s_version_deleted_msg = '版本已經成功刪除...';
-$s_version_delete_sure = '您確定要刪除此版本?';
+$s_version_delete_sure = '您確定要刪除此版本「%1$s」？';
 $s_delete_version_button = '刪除版本';
 $s_edit_project_version_title = '編輯專案版本';
 $s_update_version_button = '更新版本';
@@ -733,7 +745,7 @@ $s_obsolete = '已廢棄';
 $s_version_updated_msg = '版本已經成功更新...';
 $s_account_delete_protected_msg = '帳號受保護，無法刪除此帳號。';
 $s_account_deleted_msg = '帳號已刪除...';
-$s_delete_account_sure_msg = '你確定要刪除此帳號?';
+$s_delete_account_sure_msg = '你確定要刪除帳號「%1$s」？';
 $s_notify_user = '通知此更改的使用者';
 $s_accounts_pruned_msg = '所有未登入過以及超過一星期還未通過認證的帳號將被刪除';
 $s_prune_accounts_button = '清除';
@@ -800,7 +812,7 @@ $s_file_uploaded_msg = '檔案上傳成功';
 $s_upload_file_title = '上傳檔案';
 $s_title = '標題';
 $s_project_file_deleted_msg = '已刪除專案檔案。';
-$s_confirm_file_delete_msg = '您確定要刪除此檔案？';
+$s_confirm_file_delete_msg = '您確定要刪除檔案「%1$s」？';
 $s_filename = '檔案名稱';
 $s_filename_label = '檔案名稱：';
 $s_file_update_button = '更新檔案';
@@ -812,7 +824,7 @@ $s_add_file = '新增檔案';
 $s_project_document_updated = '專案更新成功';
 $s_project_user_added_msg = '成功新增這專案使用者';
 $s_project_removed_user_msg = '成功刪除這專案使用者';
-$s_remove_user_sure_msg = '您確定要移除此使用者？';
+$s_remove_user_sure_msg = '您確定要移除來自專案%2$s的使用者「%1$s」？';
 $s_remove_user_button = '移除使用者';
 $s_remove_all_users_sure_msg = '您確定要移除這個專案全部的使用者？';
 $s_remove_all_users_button = '移除全部使用者';
@@ -940,7 +952,7 @@ $s_query_blank_name = '您不可儲存未命名的查詢條件，請在儲存前
 $s_query_name_too_long = '查詢條件名稱不能超過 64 個字元，請為您的查詢條件取一個短一點的名稱。';
 $s_query_store_error = '儲存查詢條件時發生錯誤。';
 $s_open_queries = '管理查詢條件';
-$s_query_delete_msg = '您確定要刪除此查詢條件';
+$s_query_delete_msg = '您確定要刪除查詢條件「%1$s」？';
 $s_edit_filter = '編輯查詢條件';
 $s_owner = '擁有者';
 $s_update_filter = '更新查詢條件';
@@ -1003,10 +1015,10 @@ $s_linked_projects_label = '已連結的專案';
 $s_custom_field_sequence = '順序';
 $s_custom_field_sequence_label = '順序';
 $s_custom_field_type_enum_string = '0:字串,1:整數,2:浮點數,3:下拉式選單,4:E-Mail,5:多選核選方塊,6:單選清單,7:多選清單,8:日期,9:單選核選項目,10:文字區塊';
-$s_confirm_used_custom_field_deletion = '這個欄位目前已連結至少一個專案，若您要繼續，所有此欄位的值將會被永久刪除，這個動作無法還原。若您不想刪除此欄位，點選在您瀏覽器上的 [上一頁] 按鈕。若要繼續，請點選以下按鈕';
-$s_confirm_custom_field_deletion = '你確定要刪除此自訂欄位與其所有相關的資料嗎？';
+$s_confirm_used_custom_field_deletion = '欄位「%1$s」目前已連結至少一個專案，若您要繼續，所有此欄位的值將會被永久刪除，這個動作無法還原。若您不想刪除此欄位，點選在您瀏覽器上的 [上一頁] 按鈕。若要繼續，請點選以下按鈕';
+$s_confirm_custom_field_deletion = '你確定要刪除自訂欄位「%1$s」與其所有相關的資料嗎？';
 $s_field_delete_button = '刪除欄位';
-$s_confirm_custom_field_unlinking = '您確定要移除 (解除連結) 專案的這個自訂欄位? 已有的欄位值在自訂欄位尚未刪除前將會被保留。';
+$s_confirm_custom_field_unlinking = '您確定要解除連結來自專案的這個自訂欄位「%1$s」？ 已有的欄位值在自訂欄位尚未刪除前將會被保留。';
 $s_field_remove_button = '移除欄位';
 $s_hide_status = '隱藏狀態';
 $s_filter_closed = '已結束';
@@ -1019,7 +1031,7 @@ $s_simple_filters = '簡易查詢條件';
 $s_monitored_by = '追蹤者';
 $s_attachments = '附加檔案';
 $s_bytes = 'bytes';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = '附加檔案遺失';
 $s_attachment_count = '附加檔案數量';
 $s_view_attachments_for_issue = '檢視問題 #%2$d 的 %1$d 附加檔案';
@@ -1081,6 +1093,8 @@ $s_update_readonly_issues = '更新唯讀問題';
 $s_update_issue_status = '更新問題狀態';
 $s_set_view_status = '當回報新問題或說明時設定檢視狀態';
 $s_update_view_status = '更改現有問題或說明的檢視狀態';
+$s_view_issue_revisions = '檢視問題或說明修訂';
+$s_drop_issue_revisions = '放棄問題或說明修訂';
 $s_set_sticky = '置頂/取消置頂問題';
 $s_show_list_of_users_monitoring_issue = '顯示追蹤此問題的使用者清單';
 $s_add_users_monitoring_issue = '新增追蹤到問題裡';
@@ -1191,7 +1205,6 @@ $s_time_tracking_stopwatch_start = '開始';
 $s_time_tracking_stopwatch_stop = '停止';
 $s_time_tracking_stopwatch_reset = '重設';
 $s_access_denied = '拒絕存取。';
-$s_development_team = '開發團隊';
 $s_manage_columns_config = '管理欄位';
 $s_all_columns_title = '所有可用的欄位';
 $s_csv_columns_title = 'CSV 欄位';
@@ -1245,7 +1258,7 @@ $s_timeline_issue_reopened = '<span class="username">%1$s</span> 已重新開啟
 $s_timeline_issue_assigned = '<span class="username">%1$s</span> 指派問題 <span class="issue_id">%2$s</span> 給 <span class="username">%3$s</span>';
 $s_timeline_issue_assigned_to_self = '<span class="username">%1$s</span> 已處理問題 <span class="issue_id">%2$s</span>';
 $s_timeline_issue_unassigned = '<span class="username">%1$s</span> 取消指派問題 <span class="issue_id">%2$s</span>';
-$s_timeline_no_activity = '在時間範圍內沒有任合使用動作。';
+$s_timeline_no_activity = '在時間範圍內沒有任何使用動作。';
 $s_timeline_title = '時間軸';
 $s_timeline_more = '更多事件...';
 $s_missing_error_string = '缺少錯誤字串：%1$s';
@@ -1306,6 +1319,7 @@ $MANTIS_ERROR[ERROR_BUG_DUPLICATE_SELF] = '你不能將自己設為重複的問�
 $MANTIS_ERROR[ERROR_BUG_REVISION_NOT_FOUND] = '無此問題修訂版號。';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_NOT_FOUND] = '查無自訂欄位。';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_NAME_NOT_UNIQUE] = '此名稱重複。';
+$MANTIS_ERROR[ERROR_CUSTOM_FIELD_NAME_INVALID] = '無效的自訂欄位名稱「%1$s」：不允許逗號。請在管理指南裡查看「本地化自訂欄位名稱」章節來做為解決方法。';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_IN_USE] = '至少有一個或以上的專案仍在使用這欄位。';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_INVALID_VALUE] = '"%1$s" 欄位值無效。';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_INVALID_DEFINITION] = '自訂欄位定義無效。';
@@ -1316,6 +1330,8 @@ $MANTIS_ERROR[ERROR_LDAP_SERVER_CONNECT_FAILED] = '連線至 LDAP 伺服器失�
 $MANTIS_ERROR[ERROR_LDAP_UPDATE_FAILED] = '更新 LDAP 記錄失敗。';
 $MANTIS_ERROR[ERROR_LDAP_USER_NOT_FOUND] = '找不到 LDAP 使用者記錄。';
 $MANTIS_ERROR[ERROR_LDAP_EXTENSION_NOT_LOADED] = '未載入 LDAP 擴充套件。';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_SET_MIN_TLS] = '在 LDAP 伺服器上設定最低 TLS 版本失敗。';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_STARTTLS] = '無法在 LDAP 伺服器上初始化 StartTLS。';
 $MANTIS_ERROR[ERROR_DB_CONNECT_FAILED] = '資料庫連線失敗，資料庫的錯誤訊息為 #%1$d: %2$s。';
 $MANTIS_ERROR[ERROR_DB_QUERY_FAILED] = '資料庫查詢失敗，資料庫查詢 %3$s 的錯誤訊息為 #%1$d: %2$s。';
 $MANTIS_ERROR[ERROR_DB_SELECT_FAILED] = '選擇資料庫失敗。資料庫的錯誤訊息為 #%1$d: %2$s。';
@@ -1392,7 +1408,7 @@ $MANTIS_ERROR[ERROR_API_TOKEN_NAME_NOT_UNIQUE] = 'API 密鑰名稱 "%s" 已被�
 $MANTIS_ERROR[ERROR_LOGFILE_NOT_WRITABLE] = '在 $g_log_destination「%s」指定的檔案不可寫入。';
 $s_dropzone_default_message = '透過拖放、選擇、或是貼上來附加檔案。';
 $s_dropzone_fallback_message = '您的瀏覽器不支援托放檔案上傳功能。';
-$s_dropzone_file_too_big = '檔案太大（{{filesize}}MiB）。檔案大小上限：{{maxFilesize}}MiB。';
+$s_dropzone_file_too_big = '檔案太大（{{filesize}} MiB）。最大大小：{{maxFilesize}} MiB。';
 $s_dropzone_invalid_file_type = '您不能上傳此類型的檔案。';
 $s_dropzone_response_error = '伺服器回應代碼 {{statusCode}}。';
 $s_dropzone_cancel_upload = '取消上傳';

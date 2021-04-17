@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Urdu (اردو)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -467,7 +467,6 @@ $s_readonly_status = ' مقام جس جگہ صرف پٹراھا جا سکتا ھ
 $s_reopen_status = ' مقام جس جگہ پر دوبارہ کھولا گیا ایشوذ سیٹ کیاگیا ھے';
 $s_reopen_resolution = 'ساہز جس جگہ پر دوبارہ کھولا گیا ایشوذ سیٹ کیا گیا ھے';
 $s_config_delete_sure = ' کیا آپ واقعی سيٹنگز کو خارج کرنا چاھتے ھیں';
-$s_in_project = '  منصو بہ میں';
 $s_delete_config_button = 'سيٹنگز کو خارج کرو';
 $s_configuration_report = 'ڈیزاہن کی رپورٹ';
 $s_database_configuration = 'ڈیٹابیس کی کانفیگریشن';
@@ -480,7 +479,6 @@ $s_delete_config_sure_msg = ' کیا آپ واقعی ڈیزاہن کی آپشن 
 $s_project_added_msg = '  منصو بہ کامیابی کے ساتھ جمع ھو گیا ھے...';
 $s_category_added_msg = 'کيٹگری کامیابی کے ساتھ جمع ھو گی ھے ...';
 $s_category_deleted_msg = 'کيٹگری کامیابی کے ساتھ خارج ھو گی ھے...';
-$s_category_delete_sure_msg = 'کیا آپ واقعی اس کيٹگری کو خارج کرنا چاھتے ھیں ?';
 $s_delete_category_button = 'کيٹگری کو خارج کرو';
 $s_edit_project_category_title = ' منصو بہ کی کيٹگری کو تبدیل کرو';
 $s_update_category_button = 'کيٹگری کو تبدیل کر کے نیا کرو';
@@ -767,7 +765,6 @@ $s_sponsorship_deleted = ' سپانسر شپ خارج ھو گی ھے';
 $s_sponsorship_paid = ' سپانسر شپ ادا ھو گی ھے';
 $s_sponsorship_more_info = '  سپانسر شپ سے متعلق اور معلومات';
 $s_sponsorship_total = 'مجموعی اسپانسر شپ';
-$s_sponsorship_process_url = ' سپانسر شپ کا یو آر ایل';
 $s_changelog = 'لاگ کو بدلو';
 $s_roadmap = 'روڈ میپ';
 $s_resolved_progress = '  ایشوذ حل ھو چکے ھیں پراگریس( ڈی)%ڈی کا %ڈی .';

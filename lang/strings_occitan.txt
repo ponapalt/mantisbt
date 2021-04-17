@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,12 +33,13 @@
 /** Occitan (occitan)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
  *
  * @author Cedric31
+ * @author Nicolas Eynaud
  */
 
 $s_actiongroup_menu_copy = 'Copiar';
@@ -360,7 +361,7 @@ $s_select_file = 'Seleccionar un fichièr';
 $s_select_files = 'Seleccionar de fichièrs';
 $s_upload_file_button = 'Mandar lo fichièr';
 $s_upload_files_button = 'Telecargar de fichièrs';
-$s_max_file_size_label = 'Talha maximala :';
+$s_max_file_size_info = 'Talha maximala : %1$s %2$s';
 $s_bug_reopened_msg = 'Lo bug es estat reobèrt...';
 $s_reopen_add_bugnote_title = 'Apondre una nòta per la redobertura del bòg';
 $s_bugnote_add_reopen_button = 'Apondre una nòta e tornar dobrir lo bòg';
@@ -444,7 +445,7 @@ $s_hide_content = 'Amagar';
 $s_show_content = 'Afichar';
 $s_total_queries_executed = 'Requèstas executadas al total : %1$d';
 $s_unique_queries_executed = 'Requèstas unicas executadas : %1$d';
-$s_memory_usage_in_kb = 'Utilizacion de la memòria : %1$s KB';
+$s_memory_usage = 'Utilizacion de la memòria : %1$s KiB';
 $s_log_page_number = 'Nombre';
 $s_log_page_time = 'Temps d\'execucion';
 $s_log_page_caller = 'Apelant';
@@ -572,7 +573,6 @@ $s_readonly_status = 'Estat alquin un bòg pòt èsser modificat';
 $s_reopen_status = 'Estat alquin un bògue redobert es iniciat';
 $s_reopen_resolution = 'Resolucion a laquina un bòg redobert es iniciat';
 $s_config_delete_sure = 'Sètz segur que volètz suprimir la configuracion per :';
-$s_in_project = 'del projècte';
 $s_delete_config_button = 'Suprimir la configuracion';
 $s_configuration_report = 'Rapòrt de configuracion';
 $s_database_configuration = 'Configuracion de la basa de donadas';
@@ -586,7 +586,9 @@ $s_configuration_corrupted = 'La configuracion dins la basa de donadas es corrom
 $s_plugin = 'Plugin';
 $s_plugins_installed = 'Plugins installats';
 $s_plugins_available = 'Plugins disponibles';
+$s_plugins_missing = 'Plugins mancants ò invalids';
 $s_plugin_description = 'Descripcion';
+$s_plugin_problem_description = 'Descripcion dau problema';
 $s_plugin_author = 'Autor : %1$s';
 $s_plugin_url = 'Sit web :';
 $s_plugin_depends = 'Dependéncias';
@@ -597,16 +599,18 @@ $s_plugin_actions = 'Accions';
 $s_plugin_install = 'Installacion';
 $s_plugin_upgrade = 'Mesa a nivèl';
 $s_plugin_uninstall = 'Desinstallar';
+$s_plugin_manual_fix = 'Intervencion manuala necessària';
 $s_plugin_uninstall_message = 'Sètz segur que volètz desinstallar lo plugin « %1$s » ?';
 $s_plugin_key_label = 'Clau :';
 $s_plugin_key_met = 'Plugin prèst';
 $s_plugin_key_unmet = 'Dependéncias introbablas';
 $s_plugin_key_dated = 'Dependéncias perimidas';
 $s_plugin_key_upgrade = 'Mesa a nivèl requerida';
+$s_plugin_invalid_description = 'Plugin invalid';
+$s_plugin_invalid_status_message = 'Lei proprietats seguentas son pas definidas dins la classa dau plugin::%s';
 $s_project_added_msg = 'Lo projècte es estat apondut amb succès...';
 $s_category_added_msg = 'Categoria novèla creada amb succès...';
 $s_category_deleted_msg = 'Categoria escafada amb succès...';
-$s_category_delete_sure_msg = 'Sètz segur que volètz suprimir aquesta categoria ?<br />La categoria « %1$s » conten %2$d bugs.';
 $s_delete_category_button = 'Suprimir la categoria';
 $s_edit_project_category_title = 'Modificar las categorias del projècte';
 $s_update_category_button = 'Metre a jorn la categoria';
@@ -934,7 +938,7 @@ $s_simple_filters = 'Filtres simples';
 $s_monitored_by = 'Susvelhat per';
 $s_attachments = 'pèça(s) junta(s)';
 $s_bytes = 'octets';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Pèça junta mancanta';
 $s_attachment_count = 'Nombre de pèças juntas';
 $s_view_attachments_for_issue = 'Veire %1$d pèça(s) junta(s) pel bug #%2$d';
@@ -1086,7 +1090,6 @@ $s_time_tracking_stopwatch_start = 'Aviar';
 $s_time_tracking_stopwatch_stop = 'Arrèst';
 $s_time_tracking_stopwatch_reset = 'Reïnicializar';
 $s_access_denied = 'Accès refusat.';
-$s_development_team = 'Còla de desvolopament';
 $s_manage_columns_config = 'Gerir totas las colomnas';
 $s_all_columns_title = 'Totas las colomnas disponiblas';
 $s_csv_columns_title = 'Colomnas CSV';

@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Persian (فارسی)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -393,7 +393,6 @@ $s_select_file = 'انتخاب کردن پرونده';
 $s_select_files = 'انتخاب کردن پرونده​ها';
 $s_upload_file_button = 'بارگذاری پرونده';
 $s_upload_files_button = 'بارگذاری پرونده‌ها';
-$s_max_file_size_label = 'حداکثر حجم پرونده:';
 $s_bug_reopened_msg = 'مسئله بازگشایی شده است...';
 $s_reopen_add_bugnote_title = 'نوشتن دلیل برای بازگشایی مسئله';
 $s_bugnote_add_reopen_button = 'نوشتن یادداشت و بازگشایی کردن مسئله';
@@ -471,7 +470,7 @@ $s_hide_content = 'مخفی کردن محتوا';
 $s_show_content = 'نمایش محتوا';
 $s_webmaster_contact_information = 'تماس با <a href="mailto:%1$s" title="تماس با مدیر سایت از طریق ایمیل.">مدیریت</a> برای دریافت راهنمایی';
 $s_page_execution_time = 'زمان اجرای صفحه: %1$s ثانیه';
-$s_memory_usage_in_kb = 'استفادۀ حافظه: %1$s کیلوبایت';
+$s_memory_usage = 'استفادۀ حافظه: %1$s کیلوبایت';
 $s_log_page_number = 'شماره';
 $s_log_page_time = 'مدت زمان اجرا';
 $s_log_page_caller = 'تماس‌گیرنده';
@@ -609,7 +608,6 @@ $s_readonly_status = 'وضعیتِ جایی که مسئله فقط خواندن�
 $s_reopen_status = 'وضعیتی که یک مسئله بازگشایی‌شده تنظیم می‌شود';
 $s_reopen_resolution = 'تحلیلی که یک مسئله‌ی بازگشایی‌شده تنظیم می‌شود';
 $s_config_delete_sure = 'آیا مطمئن هستید که می‌خواهید تنظیمات را حذف کنید؟ برای:';
-$s_in_project = 'در پروژه';
 $s_delete_config_button = 'حذف تنظیمات';
 $s_configuration_report = 'گزارش پیکربندی​ها';
 $s_database_configuration = 'پیکربندی دیتابیس';
@@ -646,7 +644,6 @@ $s_plugin_key_upgrade = 'نیازمند ارتقا';
 $s_project_added_msg = 'پروژه با موفقیت اضافه شد...';
 $s_category_added_msg = 'دسته با موفقیت اضافه شد...';
 $s_category_deleted_msg = 'دسته با موفقیت حذف شد...';
-$s_category_delete_sure_msg = 'آیا مطمئنید که این دسته را حذف کنید؟<br /> دسته "%1$s" شامل این مسائل است: %2$d';
 $s_category_delete_confirm_msg = 'آیا مطمئنید می‌خواهید دستۀ "%1$s" را حذف کنید؟';
 $s_delete_category_button = 'حذف دسته';
 $s_edit_project_category_title = 'ویرایش دسته‌های پروژه';
@@ -990,7 +987,6 @@ $s_simple_filters = 'پالایه‌های ساده';
 $s_monitored_by = 'پیگیری‌شده توسط';
 $s_attachments = 'پیوست(ها):';
 $s_bytes = 'بايت';
-$s_kb = 'کیلوبایت';
 $s_attachment_missing = 'پیوست یافت نشد';
 $s_attachment_count = 'تعداد پیوست‌ها';
 $s_view_attachments_for_issue = 'نمایش %1$d پیوست برای مسئله %2$d';
@@ -1154,7 +1150,6 @@ $s_time_tracking_stopwatch_start = 'شروع';
 $s_time_tracking_stopwatch_stop = 'توقف';
 $s_time_tracking_stopwatch_reset = 'از نو';
 $s_access_denied = 'دسترسی ممنوع است.';
-$s_development_team = 'تیم توسعه';
 $s_manage_columns_config = 'مدیریت ستون‌ها';
 $s_all_columns_title = 'همه‌ی ستون‌های موجود';
 $s_csv_columns_title = 'ستون‌های CSV';

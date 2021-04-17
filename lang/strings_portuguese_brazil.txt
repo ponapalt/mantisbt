@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Brazilian Portuguese (português do Brasil)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -43,11 +43,13 @@
  * @author Dianakc
  * @author Eduardo Addad de Oliveira
  * @author Eduardo.mps
+ * @author Eduardoaddad
  * @author Elival
  * @author Fasouzafreitas
  * @author Felipe L. Ewald
  * @author Giro720
  * @author Gusta
+ * @author Gustavo.moraes
  * @author Jefersonfoliveira
  * @author Joao Xavier
  * @author Lowvy
@@ -56,6 +58,7 @@
  * @author Luigipiccoli
  * @author Luk3
  * @author Macofe
+ * @author Mariagarbin
  * @author Maxan
  * @author Pedroca cerebral
  * @author Raphaelras
@@ -408,7 +411,7 @@ $s_select_file = 'Selecionar Arquivo';
 $s_select_files = 'Selecionar arquivos';
 $s_upload_file_button = 'Enviar arquivo';
 $s_upload_files_button = 'Enviar arquivos';
-$s_max_file_size_label = 'Tamanho máximo:';
+$s_max_file_size_info = 'Tamanho máximo: %1$s %2$s';
 $s_bug_reopened_msg = 'A tarefa foi reaberta...';
 $s_reopen_add_bugnote_title = 'Adicionar Anotação do Motivo para a Reabertura da Tarefa';
 $s_bugnote_add_reopen_button = 'Adicionar Anotação e Reabrir Tarefa';
@@ -492,12 +495,14 @@ $s_bugnote_updated_msg = 'A anotação foi atualizada com sucesso...';
 $s_last_edited = 'Última edição:';
 $s_hide_content = 'Ocultar Conteúdo';
 $s_show_content = 'Mostrar Conteúdo';
+$s_file_icon_description = 'Ícone de arquivo %1$s';
+$s_unknown_file_extension = 'desconhecido';
 $s_webmaster_contact_information = 'Contato <a href="mailto:%1$s" title="Entre em contato com o webmaster via e-mail.">administrator</a> para assistência';
 $s_total_queries_executed = 'Total de %1$d consultas executadas.';
 $s_unique_queries_executed = '%1$d consultas únicas executadas.';
 $s_total_query_execution_time = 'Tempo de execução de consulta Total:%1$s segundos';
 $s_page_execution_time = 'Tempo de execução da página:%1$s segundos';
-$s_memory_usage_in_kb = 'O uso de memória:%1$s KiB';
+$s_memory_usage = 'O uso de memória:%1$s KiB';
 $s_log_page_number = 'Número';
 $s_log_page_time = 'Tempo de execução';
 $s_log_page_caller = 'Caller';
@@ -642,8 +647,7 @@ $s_readonly_status = 'Status no qual uma tarefa se torna somente-leitura';
 $s_reopen_status = 'Status para o qual tarefas reabertas são ajustadas';
 $s_reopen_resolution = 'Resolução para a qual tarefas reabertas são ajustadas';
 $s_limit_view_unless_threshold_option = 'Visualizar os problemas de outros usuários (se não definido, o acesso será limitado aos problemas relatados, manipulados ou monitorados pelo usuário)';
-$s_config_delete_sure = 'Você tem certeza que deseja apagar as configurações para:';
-$s_in_project = 'no projeto';
+$s_config_delete_sure = 'Você tem certeza que deseja apagar as configurações para %1$s no projeto %2$s?';
 $s_delete_config_button = 'Apagar Configurações';
 $s_configuration_report = 'Relatório de Configuração';
 $s_database_configuration = 'Configuração de Banco-de-dados';
@@ -682,7 +686,6 @@ $s_plugin_key_upgrade = 'atualização necessária';
 $s_project_added_msg = 'O projeto foi adicionado com sucesso...';
 $s_category_added_msg = 'A categoria foi adicionada com sucesso...';
 $s_category_deleted_msg = 'A categoria foi apagada com sucesso...';
-$s_category_delete_sure_msg = 'Você tem certeza que deseja apagar esta categoria?<br />A categoria "%1$s" contém %2$d bugs.';
 $s_category_delete_confirm_msg = 'Você tem certeza que deseja deletar a categoria "%1$s"?';
 $s_delete_category_button = 'Apagar Categoria';
 $s_edit_project_category_title = 'Alterar Categoria do Projeto';
@@ -691,7 +694,7 @@ $s_category_updated_msg = 'A categoria foi atualizada com sucesso...';
 $s_create_first_project = 'Crie um projeto para ser capaz de registro de problemas.';
 $s_add_subproject_title = 'Adicionar subprojeto';
 $s_project_deleted_msg = 'O projeto foi removido com sucesso...';
-$s_project_delete_msg = 'Você tem certeza que deseja apagar este projeto e todas as tarefas relacionadas?';
+$s_project_delete_msg = 'Você tem certeza que deseja apagar o projeto "%1$s"?<br>Isso também excluirá %2$s relatórios de problemas anexados.';
 $s_project_delete_button = 'Apagar Projeto';
 $s_edit_project_title = 'Editar projeto';
 $s_project_name = 'Nome do Projeto';
@@ -732,7 +735,7 @@ $s_name = 'Nome';
 $s_project_updated_msg = 'O projeto foi atualizado com sucesso...';
 $s_version_added_msg = 'A versão foi adicionada com sucesso...';
 $s_version_deleted_msg = 'A versão foi apagada com sucesso...';
-$s_version_delete_sure = 'Você tem certeza que deseja apagar esta versão?';
+$s_version_delete_sure = 'Você tem certeza que deseja apagar a versão "%1$s"?';
 $s_delete_version_button = 'Apagar Versão';
 $s_edit_project_version_title = 'Alterar Versão do Projeto';
 $s_update_version_button = 'Atualizar Versão';
@@ -743,7 +746,7 @@ $s_obsolete = 'Obsoleto';
 $s_version_updated_msg = 'A versão foi atualizada com sucesso...';
 $s_account_delete_protected_msg = 'Conta protegida. Não se pode apagar esta conta.';
 $s_account_deleted_msg = 'Conta apagada...';
-$s_delete_account_sure_msg = 'Você tem certeza que deseja apagar esta conta?';
+$s_delete_account_sure_msg = 'Você tem certeza que deseja apagar a conta "%1$s"?';
 $s_notify_user = 'Notificar o usuário dessa mudança';
 $s_accounts_pruned_msg = 'Todas as contas que nunca foram acessadas e foram criadas há mais do que uma semana foram removidas';
 $s_prune_accounts_button = 'Apagar contas velhas';
@@ -809,7 +812,7 @@ $s_file_uploaded_msg = 'Arquivo carregado com sucesso';
 $s_upload_file_title = 'Enviar arquivo';
 $s_title = 'Título';
 $s_project_file_deleted_msg = 'Arquivo do projeto apagado';
-$s_confirm_file_delete_msg = 'Você tem certeza que deseja apagar este arquivo?';
+$s_confirm_file_delete_msg = 'Você tem certeza que deseja apagar o arquivo "%1$s"?';
 $s_filename = 'Nome do Arquivo';
 $s_filename_label = 'Nome do Arquivo:';
 $s_file_update_button = 'Atualizar Arquivo';
@@ -821,7 +824,7 @@ $s_add_file = 'Adicionar Arquivo';
 $s_project_document_updated = 'Projeto atualizado com sucesso';
 $s_project_user_added_msg = 'Usuário adicionado com sucesso ao projeto';
 $s_project_removed_user_msg = 'Usuário removido com sucesso do projeto';
-$s_remove_user_sure_msg = 'Você tem certeza que deseja remover este usuário?';
+$s_remove_user_sure_msg = 'Você tem certeza que deseja remover o usuário "%1$s" do(s) projeto(s) "%2$s"?';
 $s_remove_user_button = 'Remover Usuário';
 $s_remove_all_users_sure_msg = 'Você tem certeza que deseja remover todos os usuários deste projeto?';
 $s_remove_all_users_button = 'Remover Todos os Usuários';
@@ -949,7 +952,7 @@ $s_query_blank_name = 'Você não pode armazenar um filtro sem um nome. Por favo
 $s_query_name_too_long = 'Você não pode guardar um nome de filtro com mais de 64 caracteres. Por favor dê a este filtro um nome menor.';
 $s_query_store_error = 'Houve um erro ao salvar este filtro.';
 $s_open_queries = 'Gerenciar Filtros';
-$s_query_delete_msg = 'Você tem certeza que deseja apagar este filtro?';
+$s_query_delete_msg = 'Você tem certeza que deseja apagar o filtro "%1$s"?';
 $s_edit_filter = 'Editar filtro';
 $s_owner = 'Proprietário';
 $s_update_filter = 'Atualizar Filtro';
@@ -1012,10 +1015,10 @@ $s_linked_projects_label = 'Projetos Vinculados';
 $s_custom_field_sequence = 'Sequência';
 $s_custom_field_sequence_label = 'Sequência';
 $s_custom_field_type_enum_string = '0:String,1:Numérico,2:Ponto-flutuante,3:Enumeração,4:E-Mail,5:Caixa de Marcação,6:Lista,7:Lista de seleção múltipla,8:Data,9:Botão de seleção,10:Textarea';
-$s_confirm_used_custom_field_deletion = 'Este campo atualmente está ligado a pelo menos um projeto.  Se você continuar, todos os valores para este campo serão apagados permanentemente.  Esta ação não pode ser desfeita.  Se você não deseja apagar este campo, clique no botão Voltar de seu navegador.  Para continuar, clique no botão abaixo.';
-$s_confirm_custom_field_deletion = 'Você tem certeza que deseja apagar este campo personalizado e todos os seus valores associados?';
+$s_confirm_used_custom_field_deletion = 'O campo "%1$s" atualmente está ligado a pelo menos um projeto.  Se você continuar, todos os valores para este campo serão apagados permanentemente.  Esta ação não pode ser desfeita.  Se você não deseja apagar este campo, clique no botão Voltar de seu navegador.  Para continuar, clique no botão abaixo.';
+$s_confirm_custom_field_deletion = 'Você tem certeza que deseja apagar o campo personalizado "%1$s" e todos os seus valores associados?';
 $s_field_delete_button = 'Apagar Campo';
-$s_confirm_custom_field_unlinking = 'Você tem certeza que deseja remover (desvincular) este campo personalizado do projeto? Os valores não serão eliminados, visto que o campo personalizado por si só não é eliminado.';
+$s_confirm_custom_field_unlinking = 'Você tem certeza que deseja remover (desvincular) o campo personalizado "%1$s" do projeto? Os valores não serão eliminados, visto que o campo personalizado por si só não é eliminado.';
 $s_field_remove_button = 'Remover Campo';
 $s_hide_status = 'Ocultar Status';
 $s_filter_closed = 'Fechado';
@@ -1028,7 +1031,7 @@ $s_simple_filters = 'Filtros Simples';
 $s_monitored_by = 'Monitorado Por';
 $s_attachments = 'anexo(s)';
 $s_bytes = 'bytes';
-$s_kb = 'kB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Anexo em falta';
 $s_attachment_count = 'Contagem de anexos';
 $s_view_attachments_for_issue = 'Ver %1$d anexo(s) do problema #%2$d';
@@ -1091,6 +1094,8 @@ $s_update_readonly_issues = 'Atualizar tarefas somente-leitura';
 $s_update_issue_status = 'Atualizar status da tarefa';
 $s_set_view_status = 'Estabelecer visibilidade quando estiver reportando um problema ou nota';
 $s_update_view_status = 'Mudar visibilidade de um problema ou nota existente';
+$s_view_issue_revisions = 'Ver problemas ou revisões de notas';
+$s_drop_issue_revisions = 'Eliminar revisões de problemas ou notas';
 $s_set_sticky = 'Fixar / desvincular um problema';
 $s_show_list_of_users_monitoring_issue = 'Ver lista de usuários monitorando a tarefa';
 $s_add_users_monitoring_issue = 'Adicione monitores a um problema';
@@ -1201,7 +1206,6 @@ $s_time_tracking_stopwatch_start = 'Iniciar';
 $s_time_tracking_stopwatch_stop = 'Parar';
 $s_time_tracking_stopwatch_reset = 'Reiniciar';
 $s_access_denied = 'Acesso Negado.';
-$s_development_team = 'Equipe de desenvolvimento';
 $s_manage_columns_config = 'Gerenciar Colunas';
 $s_all_columns_title = 'Todas as Colunas Disponíveis';
 $s_csv_columns_title = 'Colunas das Tarefas no Arquivo CSV';
@@ -1326,6 +1330,8 @@ $MANTIS_ERROR[ERROR_LDAP_SERVER_CONNECT_FAILED] = 'Conexão ao Servidor LDAP Fal
 $MANTIS_ERROR[ERROR_LDAP_UPDATE_FAILED] = 'Atualização de Registro LDAP falhou.';
 $MANTIS_ERROR[ERROR_LDAP_USER_NOT_FOUND] = 'Registro de Usuário LDAP Não Encontrado.';
 $MANTIS_ERROR[ERROR_LDAP_EXTENSION_NOT_LOADED] = 'Extensão LDAP Não Carregada.';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_SET_MIN_TLS] = 'Falha em estabelecer a versão mínima no servidor LDAP.';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_STARTTLS] = 'Não pôde iniciar StartTLS no servidor LDAP.';
 $MANTIS_ERROR[ERROR_DB_CONNECT_FAILED] = 'Conexão ao banco-de-dados falhou. Erro recebido do banco-de-dados foi #%1$d: "%2$s"';
 $MANTIS_ERROR[ERROR_DB_QUERY_FAILED] = 'Consulta ao banco-de-dados falhou.  Erro recebido do banco-de-dados foi #%1$d:%2$s" para a consulta: "%3$s"';
 $MANTIS_ERROR[ERROR_DB_SELECT_FAILED] = 'Seleção de banco-de-dados falhou.  Erro recebido do banco-de-dados foi #%1$d: "%2$s"';
@@ -1402,7 +1408,7 @@ $MANTIS_ERROR[ERROR_API_TOKEN_NAME_NOT_UNIQUE] = 'O nome do Token API "%s" já e
 $MANTIS_ERROR[ERROR_LOGFILE_NOT_WRITABLE] = 'O arquivo especificado em  $g_log_destination "%s" não é gravável.';
 $s_dropzone_default_message = 'Anexe arquivos arrastando e soltando, selecionando e colando-os.';
 $s_dropzone_fallback_message = 'Seu navegador não permite carregamento de arquivos arrastando';
-$s_dropzone_file_too_big = 'O arquivo é muito pesado ({{filesize}}MiB). Tamanho máximo de arquivo: {{maxFilesize}}MiB.';
+$s_dropzone_file_too_big = 'O arquivo é muito pesado ({{filesize}} MiB). Tamanho máximo de arquivo: {{maxFilesize}} MiB.';
 $s_dropzone_invalid_file_type = 'Você não pode carregar arquivos deste tipo.';
 $s_dropzone_response_error = 'O servidor respondeu com o código {{statusCode}}';
 $s_dropzone_cancel_upload = 'Cancelar upload';

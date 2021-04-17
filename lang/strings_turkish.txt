@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,11 +33,12 @@
 /** Turkish (Türkçe)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
  *
+ * @author Agaafd
  * @author Archaeodontosaurus
  * @author BaRaN6161 TURK
  * @author Burakolik
@@ -66,7 +67,7 @@
  * @author Vito Genovese
  */
 
-$s_directionality = 'soldan sağa';
+$s_directionality = 'ltr';
 $s_actiongroup_menu_copy = 'Kopyala';
 $s_actiongroup_menu_assign = 'Ata';
 $s_actiongroup_menu_resolve = 'Çözümle';
@@ -372,8 +373,8 @@ $s_no_sponsored = 'Üstlenmeniz için atanmış hiç bir sorun bulunamadı.';
 $s_own_sponsored = 'Üstlendiğiniz Sorunlar:';
 $s_issues_handled = 'Üstlenmeniz İçin Size Atanan Sorunlar:';
 $s_no_own_sponsored = 'Hiçbir konuya sponsor olmadınız.';
-$s_sponsor = 'Sponsor';
-$s_sponsor_verb = 'Sponsor';
+$s_sponsor = 'Destekleyen';
+$s_sponsor_verb = 'Destekleyen';
 $s_amount = 'Miktar';
 $s_total_owing = 'Toplam Borç';
 $s_total_paid = 'Toplam Ödeme';
@@ -408,7 +409,7 @@ $s_select_file = 'Dosya Seç';
 $s_select_files = 'Dosya Seç';
 $s_upload_file_button = 'Dosya Yükle';
 $s_upload_files_button = 'Dosya Yükle';
-$s_max_file_size_label = 'Maksimum boyut:';
+$s_max_file_size_info = 'Maksimum boyut: %1$s %2$s';
 $s_bug_reopened_msg = 'Sorun yeniden açıldı...';
 $s_reopen_add_bugnote_title = 'Not Yeniden Açma Sorunu Ekle';
 $s_bugnote_add_reopen_button = 'Sorun Notu Ekle ve Sorunu Yeniden Aç';
@@ -492,12 +493,14 @@ $s_bugnote_updated_msg = 'Sorun notu başarıyla güncellendi...';
 $s_last_edited = 'Son düzenleme:';
 $s_hide_content = 'İçeriği Gizle';
 $s_show_content = 'İçeriği Göster';
+$s_file_icon_description = '%1$s dosya ikonu';
+$s_unknown_file_extension = 'bilinmiyor';
 $s_webmaster_contact_information = 'Yardım için <a href="mailto:%1$s" title="E-posta yoluyla ağ yöneticisiyle iletişime geçin.">yöneticiyle</a> iletişime geçiniz';
 $s_total_queries_executed = 'Toplamda yapılan sorgu sayısı: %1$d';
 $s_unique_queries_executed = 'Yürütülen benzersiz sorgular: %1$d';
 $s_total_query_execution_time = 'Toplam sorgu yürütme süresi: %1$s saniye';
 $s_page_execution_time = 'Sayfa yürütme süresi: %1$s saniye';
-$s_memory_usage_in_kb = 'Bellek kullanımı: %1$s KiB';
+$s_memory_usage = 'Bellek kullanımı: %1$s KiB';
 $s_log_page_number = 'Sayı';
 $s_log_page_time = 'Yürütme süresi';
 $s_log_page_caller = 'Arayan';
@@ -643,8 +646,7 @@ $s_readonly_status = 'Sorunun yalnızca okunabilir olduğu durum';
 $s_reopen_status = 'Yeniden açılan sorunun durumu';
 $s_reopen_resolution = 'Yeniden açılan sorunun çözümlenme durumu';
 $s_limit_view_unless_threshold_option = 'Diğer kullanıcıların sorunlarını görüntüle (ayarlanmadıysa, erişim kullanıcı tarafından bildirilen, ele alınan veya izlenen sorunlarla sınırlı olacaktır)';
-$s_config_delete_sure = 'Aşağıdakiler için ayarları silmek istediğinizden emin misiniz:';
-$s_in_project = 'projede';
+$s_config_delete_sure = '%2$s projesindeki %1$s ayarlarını silmek istediğinizden emin misiniz?';
 $s_delete_config_button = 'Ayarları Sil';
 $s_configuration_report = 'Yapılandırma Raporu';
 $s_database_configuration = 'Veritabanı Yapılandırması';
@@ -663,7 +665,10 @@ $s_show_all_complex = 'Tüm "%1$s" Seçeneklerinin Değerini Göster';
 $s_plugin = 'Eklenti';
 $s_plugins_installed = 'Yüklenen Eklentiler';
 $s_plugins_available = 'Mevcut Eklentiler';
+$s_plugins_missing = 'Eksik veya Geçersiz Eklentiler';
+$s_plugins_missing_description = 'Aşağıdaki listede bulunan Eklentiler kaydedildi, ancak kaynak kodları "%s" içinde bulunamadı veya yüklenemedi. <br> Bunları yeniden yüklemeyi veya kaldırmayı deneyin.';
 $s_plugin_description = 'Açıklama';
+$s_plugin_problem_description = 'Program açıklaması';
 $s_plugin_author = 'Yazar: %1$s';
 $s_plugin_url = 'Web sitesi:';
 $s_plugin_depends = 'Bağımlılıklar';
@@ -674,16 +679,23 @@ $s_plugin_actions = 'Eylemler';
 $s_plugin_install = 'Yükle';
 $s_plugin_upgrade = 'Yükselt';
 $s_plugin_uninstall = 'Kaldır';
+$s_plugin_manual_fix = 'Elle müdahale gerekli';
 $s_plugin_uninstall_message = '"%1$s" eklentisini kaldırmak istediğinizden emin misiniz?';
+$s_plugin_remove_message = 'Geçersiz ya da eksik "%1$s" eklentisini kaldırmak istediğinizden emin misiniz?';
 $s_plugin_key_label = 'Anahtar:';
 $s_plugin_key_met = 'eklentisi hazır';
 $s_plugin_key_unmet = 'karşılanamayan bağımlılıklar';
 $s_plugin_key_dated = 'eski bağımlılıklar';
 $s_plugin_key_upgrade = 'yükseltme gerekli';
+$s_plugin_invalid_description = 'Geçersiz Eklenti';
+$s_plugin_invalid_status_message = 'Aşağıdaki gerekli özellikler Eklenti Sınıfında tanımlanmamıştır: %s.';
+$s_plugin_missing_description = 'Eksik Eklenti';
+$s_plugin_missing_status_message = 'Eklenti Mantis veri tabanına kuruldu, ama yüklenemedi.';
+$s_plugin_missing_class_description = 'Eksik Eklenti Temel Sınıfı';
+$s_plugin_missing_class_status_message = 'Bu Eklenti için bir dizin bulundu, ancak içinde uygun bir Eklenti kodu yok. Dizinin adının Eklentinin temel adıyla uygun olduğuna emin olun (büyük küçük harf duyarlı)';
 $s_project_added_msg = 'Proje başarıyla eklendi...';
 $s_category_added_msg = 'Kategori başarıyla eklendi...';
 $s_category_deleted_msg = 'Kategori başarıyla silindi...';
-$s_category_delete_sure_msg = 'Bu kategoriyi silmek istediğinizden emin misiniz?<br />"%1$s" Kategorisi %2$d adet sorun içermektedir.';
 $s_category_delete_confirm_msg = '"%1$s" kategorisini silmek istediğinizde emin misiniz?';
 $s_delete_category_button = 'Kategori Sil';
 $s_edit_project_category_title = 'Proje Kategorisi Düzenle';
@@ -692,7 +704,7 @@ $s_category_updated_msg = 'Kategori başarıyla güncellendi...';
 $s_create_first_project = 'Sorunları günlüğe kaydedebilmek için bir proje oluşturun.';
 $s_add_subproject_title = 'Alt Proje Ekle';
 $s_project_deleted_msg = 'Proje başarıyla silindi...';
-$s_project_delete_msg = 'Projeyi ve projeye ait bütün sorunları silmek istediginizden emin misiniz?';
+$s_project_delete_msg = '"%1$s" projesini silmek istediğinizden emin misiniz?<br>Bu, eklenen %2$s sorun raporlarını da silecek.';
 $s_project_delete_button = 'Proje Sil';
 $s_edit_project_title = 'Proje Düzenle';
 $s_project_name = 'Proje Adı';
@@ -733,7 +745,7 @@ $s_name = 'Ad';
 $s_project_updated_msg = 'Proje başarıyla güncellendi...';
 $s_version_added_msg = 'Sürüm başarıyla eklendi...';
 $s_version_deleted_msg = 'Sürüm başarıyla silindi...';
-$s_version_delete_sure = 'Bu sürümü silmek istediğinizden emin misiniz?';
+$s_version_delete_sure = '"%1$s" sürümü silmek istediğinizden emin misiniz?';
 $s_delete_version_button = 'Sürümü Sil';
 $s_edit_project_version_title = 'Proje Sürümü Düzenle';
 $s_update_version_button = 'Sürümü Güncelle';
@@ -744,7 +756,7 @@ $s_obsolete = 'Eski';
 $s_version_updated_msg = 'Sürüm başarıyla güncellendi...';
 $s_account_delete_protected_msg = 'Hesap korundu. Bu hesap silinemez.';
 $s_account_deleted_msg = 'Hesap silindi...';
-$s_delete_account_sure_msg = 'Bu hesabı silmek istediğinizden emin misiniz?';
+$s_delete_account_sure_msg = '"%1$s" kullanıcı hesabını silmek istediğinizden emin misiniz?';
 $s_notify_user = 'Bu değişikliği kullanıcıya bildir';
 $s_accounts_pruned_msg = 'Daha önce hiç giriş yapmayan ve 1 haftadan daha eski olan tüm hesaplar kaldırıldı';
 $s_prune_accounts_button = 'Azalt';
@@ -810,7 +822,7 @@ $s_file_uploaded_msg = 'Dosya yükleme başarılı.';
 $s_upload_file_title = 'Dosya Yükle';
 $s_title = 'Başlık';
 $s_project_file_deleted_msg = 'Proje dosyası silindi.';
-$s_confirm_file_delete_msg = 'Bu dosyayı silmek istediğinizden emin misiniz?';
+$s_confirm_file_delete_msg = '"%1$s" dosyayı silmek istediğinizden emin misiniz?';
 $s_filename = 'Dosya adı';
 $s_filename_label = 'Dosya adı:';
 $s_file_update_button = 'Dosya Güncelle';
@@ -822,7 +834,7 @@ $s_add_file = 'Dosya Ekle';
 $s_project_document_updated = 'Proje güncellemesi başarılı.';
 $s_project_user_added_msg = 'Kullanıcı projeye başarıyla eklendi.';
 $s_project_removed_user_msg = 'Kullanıcı projeden başarıyla kaldırıldı.';
-$s_remove_user_sure_msg = 'Bu kullanıcıyı silmek istediğinizden emin misiniz?';
+$s_remove_user_sure_msg = '"%1$s" kullanıcısını "%2$s" projesinden kaldırmak istediğinizden emin misiniz?';
 $s_remove_user_button = 'Kullanıcıyı Kaldır';
 $s_remove_all_users_sure_msg = 'Bu projedeki bütün kullanıcıları silmek istediğinizden emin misiniz?';
 $s_remove_all_users_button = 'Bütün Kullanıcıları Sil';
@@ -950,7 +962,7 @@ $s_query_blank_name = 'Filtreyi isimsiz olarak kaydedemezsiniz. Lütfen kaydetme
 $s_query_name_too_long = 'Filtre isimleri 64 karakterden daha uzun olmamalıdır. Lütfen daha kısa bir isim yazınız.';
 $s_query_store_error = 'Bu filtre kaydedilirken bir hata oluştu.';
 $s_open_queries = 'Filtreleri Yönet';
-$s_query_delete_msg = 'Bu filtreyi silmek istediğinizden emin misiniz?';
+$s_query_delete_msg = '"%1$s" filtreyi silmek istediğinizden emin misiniz?';
 $s_edit_filter = 'Filtreyi Düzenle';
 $s_owner = 'Sahibi';
 $s_update_filter = 'Filtreyi Güncelle';
@@ -1013,10 +1025,10 @@ $s_linked_projects_label = 'Bağlantılı Projeler';
 $s_custom_field_sequence = 'Sıra';
 $s_custom_field_sequence_label = 'Sıra';
 $s_custom_field_type_enum_string = '0:Dizi,1:Sayısal,2:Şamandıra,3:Numaralandırmalar,4:E-posta,5:İşaret Kutusu,6:Liste,7:Çoklu Seçim Listesi,8:Tarih,9:Radyo,10:Textarea';
-$s_confirm_used_custom_field_deletion = 'Bu alan şu anda en az bir projeye bağlı. Devam ederseniz bu alan için tüm değerler kalıcı olarak silinecektir. Bu işlem geri alınamaz. Bu alanı silmek istemiyorsanız, tarayıcınızdaki Geri düğmesine basın. Devam etmek için aşağıdaki düğmeyi tıklayın';
-$s_confirm_custom_field_deletion = 'Bu özel alan ve tüm ilişkili değerleri silmek istediğinizden emin misiniz?';
+$s_confirm_used_custom_field_deletion = '"%1$s" alanı şu anda en az bir projeye bağlı. Devam ederseniz bu alan için tüm değerler kalıcı olarak silinecektir. Bu işlem geri alınamaz. Bu alanı silmek istemiyorsanız, tarayıcınızdaki Geri düğmesine basın. Devam etmek için aşağıdaki düğmeyi tıklayın';
+$s_confirm_custom_field_deletion = '"%1$s" özel alanını ve ilişkili tüm değerleri silmek istediğinizden emin misiniz?';
 $s_field_delete_button = 'Alanı Sil';
-$s_confirm_custom_field_unlinking = 'Bu özel alanın projeyle olan bağlantısını kaldırmak istediğinizden emin misiniz? Özel alanın kendisi silinmediği sürece değerler silinmeyecektir.';
+$s_confirm_custom_field_unlinking = '"%1$s" özel alanın projeyle olan bağlantısını kaldırmak istediğinizden emin misiniz? Özel alanın kendisi silinmediği sürece değerler silinmeyecektir.';
 $s_field_remove_button = 'Alanı Kaldır';
 $s_hide_status = 'Durumu Gizle';
 $s_filter_closed = 'Kapalı';
@@ -1029,7 +1041,7 @@ $s_simple_filters = 'Basit Filtreler';
 $s_monitored_by = 'İzlenen';
 $s_attachments = 'ek';
 $s_bytes = 'baytlar';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Eki eksik';
 $s_attachment_count = 'Ek sayısı';
 $s_view_attachments_for_issue = '#%2$d sorunu için %1$d eklentiyi görüntüle';
@@ -1092,6 +1104,8 @@ $s_update_readonly_issues = 'Yalnızca okunabilir sorunları güncelle';
 $s_update_issue_status = 'Sorun durumunu güncelle';
 $s_set_view_status = 'Yeni bir sorun veya not bildirirken görünüm durumunu ayarla';
 $s_update_view_status = 'Mevcut sayının veya notun görünüm durumunu değiştir';
+$s_view_issue_revisions = 'Sorun veya not revizyonlarını görün';
+$s_drop_issue_revisions = 'Sorun veya not revizyonlarını bırakın';
 $s_set_sticky = 'Bir sorunu yapıştırın / çıkartın';
 $s_show_list_of_users_monitoring_issue = 'Bu sorunu izleyenlerin listesini göster';
 $s_add_users_monitoring_issue = 'Bir soruna monitör ekle';
@@ -1202,7 +1216,6 @@ $s_time_tracking_stopwatch_start = 'Başla';
 $s_time_tracking_stopwatch_stop = 'Durdur';
 $s_time_tracking_stopwatch_reset = 'Sıfırla';
 $s_access_denied = 'Erişim Engellendi.';
-$s_development_team = 'Geliştirme Ekibi';
 $s_manage_columns_config = 'Sütunları Yönet';
 $s_all_columns_title = 'Tüm Kullanılabilir Sütunlar';
 $s_csv_columns_title = 'CSV Sütunlar';
@@ -1317,6 +1330,7 @@ $MANTIS_ERROR[ERROR_BUG_DUPLICATE_SELF] = 'Bir sorunu birden fazla kez ayarlayam
 $MANTIS_ERROR[ERROR_BUG_REVISION_NOT_FOUND] = 'Sorun düzeltme bulunamadı.';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_NOT_FOUND] = 'Özel alan bulunamadı.';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_NAME_NOT_UNIQUE] = 'Bu yinelenen bir isim.';
+$MANTIS_ERROR[ERROR_CUSTOM_FIELD_NAME_INVALID] = 'Geçersiz özel alan ismi "%1$s": virgüle izin verilmiyor. Geçici çözüm olarak Admin Rehberindeki "Özel Alan İsimlerini Yerelleştirmek" bölümüne bakın.';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_IN_USE] = 'En az bir proje hala bu alanı kullanır.';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_INVALID_VALUE] = '"%1$s" alanı için geçersiz değer.';
 $MANTIS_ERROR[ERROR_CUSTOM_FIELD_INVALID_DEFINITION] = 'Özel alan tanımı geçersiz.';
@@ -1327,6 +1341,8 @@ $MANTIS_ERROR[ERROR_LDAP_SERVER_CONNECT_FAILED] = 'LDAP Sunucu Bağlantısı Ba�
 $MANTIS_ERROR[ERROR_LDAP_UPDATE_FAILED] = 'LDAP Kayıt Güncelleme başarısız.';
 $MANTIS_ERROR[ERROR_LDAP_USER_NOT_FOUND] = 'LDAP Kullanıcı Kaydı Bulunamadı.';
 $MANTIS_ERROR[ERROR_LDAP_EXTENSION_NOT_LOADED] = 'LDAP Uzantısı Yüklenemedi.';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_SET_MIN_TLS] = 'LDAP sunucusunda minimum TLS sürümü ayarlanamadı.';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_STARTTLS] = 'LDAP sunusunda StartTLS başlatılamadı.';
 $MANTIS_ERROR[ERROR_DB_CONNECT_FAILED] = 'Veritabanı bağlantısı başarısız. Veritabanından gelen hata #%1$d: %2$s.';
 $MANTIS_ERROR[ERROR_DB_QUERY_FAILED] = 'Veritabanı sorgusu başarısız oldu. Veritabanından gelen hata #%1$d: %2$s sorgusu için: %3$s.';
 $MANTIS_ERROR[ERROR_DB_SELECT_FAILED] = 'Veritabanı bağlantısı başarısız. Veritabanından gelen hata #%1$d: %2$s.';
@@ -1403,7 +1419,7 @@ $MANTIS_ERROR[ERROR_API_TOKEN_NAME_NOT_UNIQUE] = 'API simgesi "%s" adı zaten ku
 $MANTIS_ERROR[ERROR_LOGFILE_NOT_WRITABLE] = '$g_log_destination "%s" içinde belirtilen dosya yazılabilir değil.';
 $s_dropzone_default_message = 'Dosyaları sürükleyip bırakarak, seçerek ve yapıştırarak ekleyin.';
 $s_dropzone_fallback_message = 'Tarayıcınız drag\'n\'drop dosya yüklemelerini desteklemiyor.';
-$s_dropzone_file_too_big = 'Dosya çok büyük ({{filesize}}MiB). Maksimum dosya boyutu: {{maxFilesize}}MiB.';
+$s_dropzone_file_too_big = 'Dosya çok büyük ({{filesize}} MiB). Maksimum boyut: {{maxFilesize}} MiB.';
 $s_dropzone_invalid_file_type = 'Bu tür dosyaları yükleyemezsiniz.';
 $s_dropzone_response_error = 'Sunucu {{statusCode}} koduyla yanıt verdi.';
 $s_dropzone_cancel_upload = 'Yüklemeyi iptal et';
@@ -1411,7 +1427,7 @@ $s_dropzone_cancel_upload_confirmation = 'Yüklemeyi iptal etmek istediğinize e
 $s_dropzone_remove_file = 'Dosyayı kaldır';
 $s_dropzone_max_files_exceeded = 'Daha fazla dosya yükleyemezsiniz.';
 $s_dropzone_not_supported = 'Dropzone.js eski tarayıcıları desteklemez!';
-$s_dropzone_multiple_files_too_big = 'Aşağıdaki dosyalar:{{files}}İzin verilen maksimum dosya boyutunu aşıyor ({{maxFilesize}} MiB)';
+$s_dropzone_multiple_files_too_big = 'Aşağıdaki dosyalar:{{files}}izin verilen maksimum dosya boyutunu aşıyor ({{maxFilesize}} MiB)';
 $s_save = 'Kaydet';
 $s_reset = 'Sıfırla';
 $s_persist = 'Sürdür';

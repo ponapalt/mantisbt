@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Swiss German (Alemannisch)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -344,7 +344,6 @@ $s_select_file = 'Datei wehle';
 $s_select_files = 'Dateie wehle';
 $s_upload_file_button = 'Datei uffelade';
 $s_upload_files_button = 'Dateie uffelade';
-$s_max_file_size_label = 'Maximali Greßi';
 $s_bug_reopened_msg = 'Problämmäldig reaktiviert …';
 $s_reopen_add_bugnote_title = 'Notiz fir Problämreaktivierig zuefiege';
 $s_bugnote_add_reopen_button = 'Notiz zuefiege un Probläm reaktiviere';
@@ -422,7 +421,7 @@ $s_hide_content = 'Inhalt uusblände';
 $s_show_content = 'Inhalt yyblände';
 $s_total_queries_executed = '%1$d insgsamt uusgfierti Abfroge';
 $s_unique_queries_executed = '%1$d einzelni Abfroge uusgfiert.';
-$s_memory_usage_in_kb = 'Spycherverbruuch: %1$s KB';
+$s_memory_usage = 'Spycherverbruuch: %1$s KiB';
 $s_please_report = 'Bitte mäld des dr %1$e.';
 $s_warning_plain_password_authentication = '<strong>WARNIG:</strong> Eifachi Passwort-Authentifizierig wird brucht, des zeigt dr Admischtratore s Passwort.';
 $s_warning_default_administrator_account_present = '<strong>WARNUNG:</strong> Du sottsch s Standard-Adminischtrator-Konto uschalte oder s Passwort ändere.';
@@ -550,7 +549,6 @@ $s_readonly_status = 'Status, wu ne Probläm schrybgschitzt wird';
 $s_reopen_status = 'Status, wu ne wider ufgmacht Problem druf gsetzt wird';
 $s_reopen_resolution = 'Lesig, wu ne wider ufgmacht Probläm druf gsetzt wird';
 $s_config_delete_sure = 'Bisch sicher, ass Du d Yystellige witt lesche fir:';
-$s_in_project = 'im Projäkt';
 $s_delete_config_button = 'Yystellige lesche';
 $s_configuration_report = 'Konfigurations-Report';
 $s_database_configuration = 'Datebank-Konfiguration';
@@ -584,7 +582,6 @@ $s_plugin_key_upgrade = 'Upgrade notwändig';
 $s_project_added_msg = 'Projäkt isch zuegfiegt wore …';
 $s_category_added_msg = 'Kategorii isch zuegfiegt wore …';
 $s_category_deleted_msg = 'Kategorii isch glescht wore …';
-$s_category_delete_sure_msg = 'Soll die Kategorii wirkli glescht wäre?<br />In dr Kategorii „%1$s“ het s %2$d Bugs.';
 $s_delete_category_button = 'Kategorii lesche';
 $s_edit_project_category_title = 'Projäktkategorii bearbeite';
 $s_update_category_button = 'Kategorii aktualisiere';
@@ -1053,7 +1050,6 @@ $s_time_tracking_stopwatch_start = 'Aafange';
 $s_time_tracking_stopwatch_stop = 'Aahebe';
 $s_time_tracking_stopwatch_reset = 'Zruggsetze';
 $s_access_denied = 'Zuegriff verweigeret.';
-$s_development_team = 'Entwickligs-Team';
 $s_manage_columns_config = 'Spalte verwalte';
 $s_all_columns_title = 'Alli verfiegbare Spalte';
 $s_csv_columns_title = 'CSV-Spalte';

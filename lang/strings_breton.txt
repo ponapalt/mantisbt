@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Breton (brezhoneg)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -381,7 +381,7 @@ $s_select_file = 'Diuzañ ur restr';
 $s_select_files = 'Diuzañ Restroù';
 $s_upload_file_button = 'Kargañ ar restr';
 $s_upload_files_button = 'Enporzhiañ Restroù';
-$s_max_file_size_label = 'Ment vrasañ :';
+$s_max_file_size_info = 'Ment vrasañ : %1$s %2$s';
 $s_bug_reopened_msg = 'Addigoret eo bet an draen...';
 $s_reopen_add_bugnote_title = 'Ouzhpennañ un notenn gant an abeg evit addigeriñ an draen';
 $s_bugnote_add_reopen_button = 'Ouzhpennañ un notenn hag addigeriñ an draen';
@@ -470,7 +470,7 @@ $s_total_queries_executed = '%1$d reked sevenet en holl.';
 $s_unique_queries_executed = 'Rekedoù dibar sevenet :%1$d';
 $s_total_query_execution_time = 'Amzer seveniñ ar reked en holl : %1$s eilenn';
 $s_page_execution_time = 'Amzer seveniñ ar bajenn : %1$s eilenn';
-$s_memory_usage_in_kb = 'implij ar memor : %1$s Ko';
+$s_memory_usage = 'implij ar memor : %1$s Ko';
 $s_log_page_number = 'Niver';
 $s_log_page_time = 'Amzer seveniñ';
 $s_log_page_caller = 'Galver';
@@ -616,7 +616,6 @@ $s_reopen_status = 'Statud a vez lakaet d\'un draen addigoret';
 $s_reopen_resolution = 'Diskoulm a vez lakaet d\'un draen addigoret';
 $s_limit_view_unless_threshold_option = 'Diskouez kudennoù an implijerien all (ma n\'eo ket resisaet e vo bevennet ar moned ouzh ar c\'hudennoù titouret, meret pe heuliet gant an implijer)';
 $s_config_delete_sure = 'Ha sur oc\'h hoc\'h eus c\'hoant da ziverkañ an arventennoù evit :';
-$s_in_project = 'er raktres';
 $s_delete_config_button = 'Dilemel an arventennoù';
 $s_configuration_report = 'Danevell kefluniadur';
 $s_database_configuration = 'Kefluniadur an diaz roadennoù';
@@ -655,7 +654,6 @@ $s_plugin_key_upgrade = 'Ezhomm zo da lakaat a-live';
 $s_project_added_msg = 'Ouzhpennet-mat eo bet ar raktres...';
 $s_category_added_msg = 'Ouzhpennet-mat eo bet ar rummad...';
 $s_category_deleted_msg = 'Dilamet-mat eo bet ar rummad...';
-$s_category_delete_sure_msg = 'Ha sur oc\'h hoc\'h eus c\'hoant da zilemel ar rummad-mañ ?<br />Er rummad « %1$s » ez eus %2$d draen.';
 $s_category_delete_confirm_msg = 'Ha sur oc\'h e fell deoc\'h dilemel ar rummad "%1$s" ?';
 $s_delete_category_button = 'Dilemel ar rummad';
 $s_edit_project_category_title = 'Aozañ rummad ar raktres';
@@ -1001,7 +999,6 @@ $s_simple_filters = 'Siloù eeun';
 $s_monitored_by = 'Evezhiet gant';
 $s_attachments = 'pezh stag';
 $s_bytes = 'okted';
-$s_kb = 'Diaz anaoudegezh';
 $s_attachment_missing = 'Mankout a ra ar restr stag';
 $s_attachment_count = 'Niver a restroù da-heul';
 $s_view_attachments_for_issue = 'Gwelet %1$d pezh stag evit an draen #%2$d';
@@ -1172,7 +1169,6 @@ $s_time_tracking_stopwatch_start = 'Deroù';
 $s_time_tracking_stopwatch_stop = 'Paouez';
 $s_time_tracking_stopwatch_reset = 'Adderaouekaat';
 $s_access_denied = 'Moned nac\'het.';
-$s_development_team = 'Skipailh diorren';
 $s_manage_columns_config = 'Merañ ar bannoù';
 $s_all_columns_title = 'An holl vannoù zo da gaout';
 $s_csv_columns_title = 'Bannoù CSV';

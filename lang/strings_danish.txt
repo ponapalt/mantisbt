@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Danish (dansk)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -387,7 +387,7 @@ $s_select_file = 'Vælg fil';
 $s_select_files = 'Vælg filer';
 $s_upload_file_button = 'Overfør fil';
 $s_upload_files_button = 'Overfør filer';
-$s_max_file_size_label = 'Maksimal størrelse:';
+$s_max_file_size_info = 'Maksimal størrelse: %1$s %2$s';
 $s_bug_reopened_msg = 'Rapporten er blevet genåbnet...';
 $s_reopen_add_bugnote_title = 'Tilføj bemærkning med begrundelse for at genåbne rapporten';
 $s_bugnote_add_reopen_button = 'Tilføj bemærkning og genåbn rapporten';
@@ -470,12 +470,13 @@ $s_bugnote_updated_msg = 'Bemærkning er blevet opdateret ...';
 $s_last_edited = 'Sidst redigeret:';
 $s_hide_content = 'Skjul indhold';
 $s_show_content = 'Vis indhold';
+$s_unknown_file_extension = 'ukendt';
 $s_webmaster_contact_information = 'Kontakt <a href="mailto:%1$s" title="Kontakt administratoren via e-post.">administrator</a> for assistance';
 $s_total_queries_executed = 'Samlet antal udførte forespørgsler: %1$d';
 $s_unique_queries_executed = 'Antal udførte forespørgsler: %1$d';
 $s_total_query_execution_time = 'Samlet antal kørselstid: %1$s sekunder';
 $s_page_execution_time = 'Sidekørselstid: %1$s sekunder';
-$s_memory_usage_in_kb = 'hukommelsesforbrug: %1$s KiB';
+$s_memory_usage = 'hukommelsesforbrug: %1$s KiB';
 $s_log_page_number = 'Nummer';
 $s_log_page_time = 'Kørselstid';
 $s_log_page_caller = 'Kalder';
@@ -621,7 +622,6 @@ $s_readonly_status = 'Status hvor en rapport bliver skrivebeskyttet';
 $s_reopen_status = 'Status som en genåbnet rapport får';
 $s_reopen_resolution = 'Status som en genåbnet rapport får';
 $s_config_delete_sure = 'Er du sikker på, du vil slette indstillingerne for:';
-$s_in_project = 'i projektet';
 $s_delete_config_button = 'Slet indstillinger';
 $s_configuration_report = 'Konfigurationsrapport';
 $s_database_configuration = 'Databasekonfiguration';
@@ -658,7 +658,6 @@ $s_plugin_key_upgrade = 'opgradering nødvendig';
 $s_project_added_msg = 'Projektet er tilføjet...';
 $s_category_added_msg = 'Kategorien er blevet tilføjet...';
 $s_category_deleted_msg = 'Kategorien er blevet slettet...';
-$s_category_delete_sure_msg = 'Er du sikker på, du vil slette denne kategori?<br />Kategorien "%1$s" indeholder %2$d rapporter.';
 $s_category_delete_confirm_msg = 'Er du sikker på, at du ønsker at slette kategorien »%1$s«?';
 $s_delete_category_button = 'Slet kategori';
 $s_edit_project_category_title = 'Rediger projektkategori';
@@ -705,7 +704,7 @@ $s_name = 'Navn';
 $s_project_updated_msg = 'Projektet er blevet opdateret...';
 $s_version_added_msg = 'Version er blevet tilføjet...';
 $s_version_deleted_msg = 'Version er blevet slettet...';
-$s_version_delete_sure = 'Er du sikker på du vil slette denne version?';
+$s_version_delete_sure = 'Er du sikker på du vil slette versionen "%1$s"?';
 $s_delete_version_button = 'Slet version';
 $s_edit_project_version_title = 'Rediger projekt-version';
 $s_update_version_button = 'Opdater version';
@@ -716,7 +715,7 @@ $s_obsolete = 'Forældet';
 $s_version_updated_msg = 'Version er blevet opdateret...';
 $s_account_delete_protected_msg = 'Beskyttet konto. Kan ikke slette denne konto.';
 $s_account_deleted_msg = 'Konto slettet...';
-$s_delete_account_sure_msg = 'Er du sikker på at du vil slette denne konto?';
+$s_delete_account_sure_msg = 'Er du sikker på at du vil slette brugerkontoen "%1$s"?';
 $s_notify_user = 'Underret bruger om denne ændring';
 $s_accounts_pruned_msg = 'Alle konti der aldrig har været logget på og som er ældre end 1 uge er blevet slettet';
 $s_prune_accounts_button = 'Beskær';
@@ -782,7 +781,7 @@ $s_file_uploaded_msg = 'Fil overført.';
 $s_upload_file_title = 'Overfør fil';
 $s_title = 'Titel';
 $s_project_file_deleted_msg = 'Projektfil er slettet';
-$s_confirm_file_delete_msg = 'Er du sikker på du vil slette denne fil?';
+$s_confirm_file_delete_msg = 'Er du sikker på du vil slette filen "%1$s"?';
 $s_filename = 'Filnavn';
 $s_filename_label = 'Filnavn:';
 $s_file_update_button = 'Opdater fil';
@@ -794,7 +793,7 @@ $s_add_file = 'Tilføj fil';
 $s_project_document_updated = 'Projektet er blevet opdateret';
 $s_project_user_added_msg = 'Bruger tilføjet projektet.';
 $s_project_removed_user_msg = 'Bruger fjernet fra projektet.';
-$s_remove_user_sure_msg = 'Er du sikker på at du vil fjerne denne bruger?';
+$s_remove_user_sure_msg = 'Er du sikker på at du vil fjerne brugeren "%1$s" fra projekt(et/erne) "%2$s"?';
 $s_remove_user_button = 'Fjern brugeren';
 $s_remove_all_users_sure_msg = 'Er du sikker på at du vil fjerne alle brugere fra dette projekt?';
 $s_remove_all_users_button = 'Fjern alle brugere';
@@ -919,7 +918,7 @@ $s_query_blank_name = 'Du kan ikke gemme et filter uden et navn. Navngiv filtere
 $s_query_name_too_long = 'Du kan ikke gemme et filternavn med mere end 64 tegn. Giv venligst dette filter et kortere navn.';
 $s_query_store_error = 'Der opstod en fejl under lagring af dette filter.';
 $s_open_queries = 'Håndter filtre';
-$s_query_delete_msg = 'Er du sikker på du vil slette dette filter?';
+$s_query_delete_msg = 'Er du sikker på du vil slette filteret "%1$s"?';
 $s_edit_filter = 'Rediger filter';
 $s_owner = 'Ejer';
 $s_update_filter = 'Opdater filter';
@@ -994,7 +993,7 @@ $s_simple_filters = 'Simple filtre';
 $s_monitored_by = 'Overvåget af';
 $s_attachments = 'vedhæftede filer';
 $s_bytes = 'bytes';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Vedhæftet fil mangler';
 $s_attachment_count = 'Antal vedhæftede filer';
 $s_view_attachments_for_issue = 'Vis %1$d vedhæftede fil(er) for rapporten #%2$d';
@@ -1154,7 +1153,6 @@ $s_time_tracking_stopwatch_start = 'Start';
 $s_time_tracking_stopwatch_stop = 'Stop';
 $s_time_tracking_stopwatch_reset = 'Nulstil';
 $s_access_denied = 'Adgang nægtet.';
-$s_development_team = 'Udviklingshold';
 $s_manage_columns_config = 'Administrer kolonner';
 $s_all_columns_title = 'Alle tilgængelige kolonner';
 $s_csv_columns_title = 'CSV kolonner';

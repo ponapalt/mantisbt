@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Lithuanian (lietuvių)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -364,7 +364,7 @@ $s_select_file = 'Pasirinkite failą';
 $s_select_files = 'Pasirinkite failus';
 $s_upload_file_button = 'Įkelti failą';
 $s_upload_files_button = 'Įkelti failus';
-$s_max_file_size_label = 'Maksimalus dydis:';
+$s_max_file_size_info = 'Maksimalus dydis: %1$s %2$s';
 $s_bug_reopened_msg = 'Klaida atidaryta dar kartą...';
 $s_reopen_add_bugnote_title = 'Atidarymo priežasties komentaras';
 $s_bugnote_add_reopen_button = 'Pridėti komentarą ir iš naujo atidaryti klaidą';
@@ -445,7 +445,7 @@ $s_hide_content = 'Slėpti turinį';
 $s_show_content = 'Rodyti turinį';
 $s_total_queries_executed = '%1$d iš viso užklausų įvykdytas.';
 $s_unique_queries_executed = '%1$d unikalios užklausos įvykdytas.';
-$s_memory_usage_in_kb = 'Memory usage: %1$s KiB';
+$s_memory_usage = 'Memory usage: %1$s KiB';
 $s_log_page_number = 'Numeris';
 $s_log_page_event = 'Įvykis';
 $s_please_report = 'Prašome pranešti apie tai %1$s .';
@@ -572,7 +572,6 @@ $s_readonly_status = 'Būsena, kuriai esant klaida tampa neredaguojama';
 $s_reopen_status = 'Būsena, kuri nustatoma pakartotinai atidaromai klaidai';
 $s_reopen_resolution = 'Sprendimas, kuris nustatomas pakartotinai atidarytai klaidai';
 $s_config_delete_sure = 'Ar tikrai norite ištrinti nustatymus:';
-$s_in_project = 'projekto';
 $s_delete_config_button = 'Ištrinti nustatymus';
 $s_configuration_report = 'Konfigūracijos ataskaita';
 $s_database_configuration = 'Duomenų bazės konfigūracija';
@@ -606,7 +605,6 @@ $s_plugin_key_upgrade = 'reikalingas atnaujinimas';
 $s_project_added_msg = 'Projektas sėkmingai sukurtas...';
 $s_category_added_msg = 'Kategorija sėkmingai sukurta...';
 $s_category_deleted_msg = 'Kategorija sėkmingai ištrinta...';
-$s_category_delete_sure_msg = 'Ar tikrai norite ištrinti šią kategoriją? <br /> Kategorija " %1$s "yra %2$d klausimus.';
 $s_delete_category_button = 'Ištrinti kategoriją';
 $s_edit_project_category_title = 'Projekto kategorijos redagavimas';
 $s_update_category_button = 'Atnaujinti kategoriją';
@@ -932,7 +930,7 @@ $s_simple_filters = 'Paprasti filtrai';
 $s_monitored_by = 'Stebimos';
 $s_attachments = 'prikabintas failas(ai)';
 $s_bytes = 'baitų';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Priedas trūksta';
 $s_attachment_count = 'Priedas skaičius';
 $s_view_attachments_for_issue = 'Peržiūrėti %1$d areštas (-ų) klausimo # %2$d';
@@ -1066,7 +1064,6 @@ $s_time_tracking_stopwatch_start = 'Pradėti';
 $s_time_tracking_stopwatch_stop = 'Sustabdyti';
 $s_time_tracking_stopwatch_reset = 'Iš naujo';
 $s_access_denied = 'Neleidžiama.';
-$s_development_team = 'Kūrimo komanda';
 $s_manage_columns_config = 'Valdyti stulpelius';
 $s_csv_columns_title = 'CSV stulpeliai';
 $s_update_columns_for_current_project = 'Atnaujinti stulpelius esamam projektui';

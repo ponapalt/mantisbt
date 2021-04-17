@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Latvian (latviešu)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -424,6 +424,7 @@ $s_set_configuration_option_action_clone = 'Klonē konfigurācijas opciju';
 $s_plugin = 'Spraudnis';
 $s_plugins_installed = 'Uzstādītie spraudņi';
 $s_plugin_description = 'Apraksts';
+$s_plugin_problem_description = 'Problēmas apraksts';
 $s_plugin_priority = 'Prioritāte';
 $s_plugin_protected = 'Aizsargāts konts';
 $s_plugin_actions = 'Darbības';
@@ -434,7 +435,6 @@ $s_plugin_key_met = 'spraudnis gatavs';
 $s_project_added_msg = 'Projekts pievienots...';
 $s_category_added_msg = 'Kategorija pievienota...';
 $s_category_deleted_msg = 'Kategorija nodzēsta...';
-$s_category_delete_sure_msg = 'Vai esat pārliecināti par kategorijas dzēšanu? <br />Kategorija "%1$s" satur %2$d bugus.';
 $s_delete_category_button = 'Dzēst kategoriju';
 $s_edit_project_category_title = 'Projekta kategoriju labošana';
 $s_update_category_button = 'Saglabāt kategoriju';
@@ -682,7 +682,7 @@ $s_hide_resolved = 'Paslēpt atrisinātos';
 $s_advanced_filters = 'Papildu filtri';
 $s_monitored_by = 'Uzrauga';
 $s_attachments = 'pielikums(-i)';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Trūkst pielikuma';
 $s_view_attachments_for_issue = 'Apskatīt %1$d pielikumu(-s) bugam #%2$d';
 $s_changelog_empty_manager = 'Izmaiņu žurnāla informācija nav pieejama. Bugi versiju vēsturē tiek iekļauti, kad projektiem ir versijas, un bugi ir atrisināti ar uzstādījumu "fiksēts versijā".';

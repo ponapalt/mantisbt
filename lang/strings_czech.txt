@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Czech (čeština)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -43,7 +43,9 @@
  * @author Cvanca
  * @author Dvorapa
  * @author FikusModry
+ * @author Georg101
  * @author Ilimanaq29
+ * @author Jan Myšák
  * @author Jezevec
  * @author Kuvaly
  * @author Luk
@@ -53,6 +55,7 @@
  * @author Matěj Grabovský
  * @author Mormegil
  * @author Patriccck
+ * @author Patrik L.
  * @author Quinn
  * @author Rattkin
  * @author Tchoř
@@ -234,6 +237,7 @@ $s_new_account_signup_msg = 'Byl vytvořen následující účet:';
 $s_reset_request_msg = 'Někdo (nejspíš vy) požádal o změnu hesla s ověřením pomocí e-mailu. Pokud jste to vy nebyl, ignorujte tuto zprávu a nic se nestane.
 
 Pokud jste si skutečně přáli tuto změnu, navštivte následující stránku a dokončete změnu přístupového hesla:';
+$s_reset_request_admin_msg = 'Vaše heslo bylo vyresetováno. Navštivte prosím tuto URL adresu k nastavení nového:';
 $s_reset_request_in_progress_msg = 'Pokud byla zadána správná kombinace uživatelského jména a e-mailu u vášeho účtu, odešleme vám na tuto adresu potvrzovací zprávu. Až zprávu dostanete, řiďte se v něm uvedenými pokyny pro změnu hesla.';
 $s_email_notification_title_for_status_bug_new = 'Následující záznam je označen jako NOVÝ (znovu)';
 $s_email_notification_title_for_status_bug_feedback = 'Následující záznam vyžaduje vaši REAKCI.';
@@ -350,8 +354,14 @@ $s_timezone = 'Časové pásmo';
 $s_prefs_reset_msg = 'Nastavení bylo resetováno.';
 $s_prefs_updated_msg = 'Nastavení bylo upraveno...';
 $s_select_profile = 'Vybrat profil';
+$s_add_profile = 'Přidat profil';
 $s_edit_profile = 'Upravit profil';
+$s_update_profile = 'Upravit profil';
 $s_delete_profile = 'Smazat profil';
+$s_delete_profile_confirm_msg = 'Určitě chcete smazat profil „%1$s“?';
+$s_global_profile = 'Globální profil';
+$s_default_profile = 'Základní profil';
+$s_profile_description = 'Popis systému';
 $s_my_sponsorship = 'Mí sponzoři';
 $s_update_sponsorship_button = 'Změnit stav platby';
 $s_no_sponsored = 'Nebyly nalezeny žádné sponzorované záznamy přiřazené vám.';
@@ -394,7 +404,7 @@ $s_select_file = 'Vybrat soubor';
 $s_select_files = 'Vybrat soubory';
 $s_upload_file_button = 'Nahrát soubor';
 $s_upload_files_button = 'Nahrát soubory';
-$s_max_file_size_label = 'Maximální velikost:';
+$s_max_file_size_info = 'Maximální velikost: %1$s %2$s';
 $s_bug_reopened_msg = 'Záznam byl znovuotevřen.';
 $s_reopen_add_bugnote_title = 'Přidat důvod pro znovuotevření záznamu';
 $s_bugnote_add_reopen_button = 'Přidat poznámku a znovuotevřít záznam';
@@ -483,7 +493,7 @@ $s_total_queries_executed = 'Celkem vykonáno dotazů: %1$d';
 $s_unique_queries_executed = 'Unikátních dotazů vykonáno: %1$d';
 $s_total_query_execution_time = 'Celkový čas dotazu: %1$s sekund';
 $s_page_execution_time = 'Čas spuštění stránky: %1$s sekund';
-$s_memory_usage_in_kb = 'Využití paměti: %1$s KiB';
+$s_memory_usage = 'Využití paměti: %1$s KiB';
 $s_log_page_number = 'Číslo';
 $s_log_page_time = 'Čas spuštění';
 $s_log_page_caller = 'Volající';
@@ -629,7 +639,6 @@ $s_readonly_status = 'Stav ve kterém se stává problém pouze ke čtení';
 $s_reopen_status = 'Stav na který je nastaven znovuotevřený problém';
 $s_reopen_resolution = 'Řešení na které je nastaven znovuotevřený problém.';
 $s_config_delete_sure = 'Jste si jistý, že chcete smazat nastavení pro:';
-$s_in_project = 'v projektu';
 $s_delete_config_button = 'Smazat nastavení';
 $s_configuration_report = 'Hlášení o konfiguraci';
 $s_database_configuration = 'Konfigurace databáze';
@@ -667,7 +676,6 @@ $s_plugin_key_upgrade = 'vyžadován upgrade';
 $s_project_added_msg = 'Projekt byl úspěšně přidán...';
 $s_category_added_msg = 'Kategorie byla úspěšně přidána...';
 $s_category_deleted_msg = 'Kategorie byla úspěšně smazána...';
-$s_category_delete_sure_msg = 'Skutečně chcete smazat tuto kategorii?<br />Kategorie "%1$s" obsahuje %2$d problémů.';
 $s_category_delete_confirm_msg = 'Opravdu chcete odstranit kategorii "%1$s"?';
 $s_delete_category_button = 'Smazat kategorii';
 $s_edit_project_category_title = 'Aktualizace kategorií projektu';
@@ -806,7 +814,7 @@ $s_add_file = 'Přidat soubor';
 $s_project_document_updated = 'Projekt byl úspěšně aktualizován';
 $s_project_user_added_msg = 'Uživatel byl úspěšně přiřazen k projektu';
 $s_project_removed_user_msg = 'Uživatel byl úspěšně odebrán z projektu';
-$s_remove_user_sure_msg = 'Skutečně odebrat tohoto uživatele?';
+$s_remove_user_sure_msg = 'Skutečně si přejete odeprat uživatele "%1$s" z projektu(ů) "%2$s"?';
 $s_remove_user_button = 'Odebrat uživatele';
 $s_remove_all_users_sure_msg = 'Opravdu chcete odebrat všechny uživatele tohoto projektu?';
 $s_remove_all_users_button = 'Odebrat všechny uživatele';
@@ -919,7 +927,7 @@ $s_yes = 'Ano';
 $s_no = 'Ne';
 $s_open_filters = 'Změna filtru';
 $s_or_unassigned = 'nebo nepřiřazeno';
-$s_ok = 'OK';
+$s_ok = 'O. k.';
 $s_select_all = 'Vybrat vše';
 $s_use_query = 'Použít filtr';
 $s_delete_query = 'Smazat filtr';
@@ -1013,7 +1021,7 @@ $s_simple_filters = 'Jednoduché filtry';
 $s_monitored_by = 'Sledováno';
 $s_attachments = 'přílohy';
 $s_bytes = 'bajtů';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Příloha chybí';
 $s_attachment_count = 'Počet příloh';
 $s_view_attachments_for_issue = 'Zobrazit %1$d příloh k problému #%2$d';
@@ -1059,6 +1067,8 @@ $s_dependency_graph = 'Graf závislostí';
 $s_vertical = 'Vertikální';
 $s_horizontal = 'Horizontální';
 $s_view_issue = 'Zobrazit problém';
+$s_show_summary = 'Ukázat shrnutí';
+$s_hide_summary = 'Skrýt shrnutí';
 $s_perm_rpt_capability = 'Schopnost';
 $s_view = 'Zobrazit';
 $s_issues = 'Problémy';
@@ -1183,7 +1193,6 @@ $s_time_tracking_stopwatch_start = 'Spustit';
 $s_time_tracking_stopwatch_stop = 'Zastavit';
 $s_time_tracking_stopwatch_reset = 'Resetovat';
 $s_access_denied = 'Přístup zamítnut.';
-$s_development_team = 'Vývojářský tým';
 $s_manage_columns_config = 'Spravovat sloupce';
 $s_all_columns_title = 'Všechny dostupné sloupce';
 $s_csv_columns_title = 'Sloupce v CSV';

@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Serbo-Croatian (srpskohrvatski / српскохрватски)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -375,7 +375,7 @@ $s_select_file = 'Odaberi datoteku';
 $s_select_files = 'Odaberite datoteke';
 $s_upload_file_button = 'Postavi';
 $s_upload_files_button = 'Postavi';
-$s_max_file_size_label = 'Dopuštena veličina:';
+$s_max_file_size_info = 'Dopuštena veličina: %1$s %2$s';
 $s_bug_reopened_msg = 'Problem je ponovo otvoren...';
 $s_reopen_add_bugnote_title = 'Dodaj bijelešku s razlogom za ponovno otvaranje problema';
 $s_bugnote_add_reopen_button = 'Dodaj bilješku i ponovo otvori problem';

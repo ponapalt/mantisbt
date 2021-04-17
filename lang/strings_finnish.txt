@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Finnish (suomi)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -320,8 +320,10 @@ $s_timezone = 'Aikavyöhyke';
 $s_prefs_reset_msg = 'Asetukset palautettu oletuksiin...';
 $s_prefs_updated_msg = 'Asetukset päivitetty...';
 $s_select_profile = 'Valitse profiili';
+$s_add_profile = 'Lisää profiili';
 $s_edit_profile = 'Muokkaa profiilia';
 $s_delete_profile = 'Poista profiiili';
+$s_global_profile = 'Globaali profiili';
 $s_my_sponsorship = 'Omat sponsoritapahtumat';
 $s_update_sponsorship_button = 'Muokkaa maksatustilaa';
 $s_no_sponsored = 'Yhtään sinulle osoitettua sponsoroitua tapahtumaa ei löytynyt.';
@@ -364,7 +366,7 @@ $s_select_file = 'Valitse tiedosto';
 $s_select_files = 'Valitse tiedostot';
 $s_upload_file_button = 'Lähetä tiedosto';
 $s_upload_files_button = 'Lähetä tiedostoja';
-$s_max_file_size_label = 'Maksimikoko:';
+$s_max_file_size_info = 'Maksimikoko: %1$s %2$s';
 $s_bug_reopened_msg = 'Tapahtuma on uudelleenavattu...';
 $s_reopen_add_bugnote_title = 'Lisää muistiinpanoksi uudelleenavaamisen syy';
 $s_bugnote_add_reopen_button = 'Lisää muistiinpano ja avaa tapahtuma uudelleen';
@@ -382,7 +384,7 @@ $s_reminder_sent_none = 'Muistutuksia ei voitu lähettää';
 $s_bug_send_button = 'Lähetä';
 $s_reminder = 'Muistutus';
 $s_reminder_explain = 'Tämä muistutus lähetetään niille vastaanottajille, jotka seuraavat tätä tapahtumaa.';
-$s_reminder_monitor = 'Nämä vastaanottajat lisätään tapahtuman seuraajien listalle. Tapahtumaseurannan voi peruuttaa painamalla painiketta Lopeta tapahtuman seuranta.';
+$s_reminder_monitor = 'Nämä vastaanottajat lisätään tapahtuman seuraajien listalle. Tapahtumaseurannan voi peruuttaa painamalla painiketta "Lopeta tapahtuman seuranta".';
 $s_reminder_store = 'Tämä muistutus talletetaan tapahtuman tietoihin.';
 $s_confirm_sponsorship = 'Vahvista tapahtuman %1$d sponsorointi %2$s:lla.';
 $s_stick_bug_button = 'Aseta pysyväksi';
@@ -444,7 +446,8 @@ $s_hide_content = 'Piilota sisältö';
 $s_show_content = 'Näytä sisältö';
 $s_total_queries_executed = 'Kyselyjä suoritettu yhteensä: %1$d';
 $s_unique_queries_executed = 'Yksilöllisiä kyselyjä suoritettu: %1$d';
-$s_memory_usage_in_kb = 'Muistin käyttö: %1$s KB';
+$s_page_execution_time = 'Sivun suoritusaika: %1$s sekuntia';
+$s_memory_usage = 'Muistin käyttö: %1$s KiB';
 $s_log_page_number = 'Numero';
 $s_log_page_time = 'Suoritusaika';
 $s_log_page_event = 'Tapahtuma';
@@ -517,6 +520,7 @@ $s_hide_inactive = 'Piilota passiiviset';
 $s_manage_accounts_title = 'Käyttäjähallinta';
 $s_date_created = 'Luontiajankohta';
 $s_last_visit = 'Edellinen käynti';
+$s_last_visit_label = 'Edellinen käynti:';
 $s_edit_user_link = 'Muokkaa käyttäjää';
 $s_separate_list_items_by = '(erota luettelon kohteet merkillä ”%1$s”)';
 $s_config_all_projects = 'Huomaa: Nämä asetukset vaikuttavat kaikkiin projekteihin.';
@@ -570,7 +574,6 @@ $s_readonly_status = 'Tapahtuman tila, jolla tapahtumaa ei voida enää muokata 
 $s_reopen_status = 'Tapahtuman tila, jolle uudelleenavatut tapahtumat asetetaan';
 $s_reopen_resolution = 'Ratkaisuaste, jolle uudelleeavattu tapahtuma asetetaan';
 $s_config_delete_sure = 'Oletko varma, että haluat poistaa asetukset kohteelta';
-$s_in_project = 'projektissa';
 $s_delete_config_button = 'Poista asetukset';
 $s_configuration_report = 'Konfiguraatioraportti';
 $s_database_configuration = 'Tietokannan konfiguraatio';
@@ -604,8 +607,6 @@ $s_plugin_key_upgrade = 'tarvittava päivitys';
 $s_project_added_msg = 'Projekti lisätty...';
 $s_category_added_msg = 'Kategoria lisätty...';
 $s_category_deleted_msg = 'Kategoria poistettu...';
-$s_category_delete_sure_msg = 'Haluatko varmasti poistaa tämän luokan?<br />
-Luokassa %1$s on %2$d virheilmoitusta.';
 $s_category_delete_confirm_msg = 'Haluatko varmasti poistaa luokan "%1$s"?';
 $s_delete_category_button = 'Poista kategoria';
 $s_edit_project_category_title = 'Muokkaa projektin kategoriaa';
@@ -643,6 +644,7 @@ $s_unlink_link = 'Pura linkitys';
 $s_show_global_users = 'Näytä käyttäjät, joilla on yleinen käyttöoikeus';
 $s_hide_global_users = 'Piilota käyttäjät, joilla on yleinen käyttöoikeus';
 $s_review_changes = 'Esikatsele muutoksia';
+$s_review_changes_empty = 'Muutoksia ei ole valittu';
 $s_add_project_title = 'Lisää projekti';
 $s_upload_file_path = 'Lähetettävän tiedoston polku';
 $s_add_project_button = 'Lisää projekti';
@@ -652,7 +654,7 @@ $s_name = 'Nimi';
 $s_project_updated_msg = 'Projekti päivitetty...';
 $s_version_added_msg = 'Versio lisätty...';
 $s_version_deleted_msg = 'Versio poistettu...';
-$s_version_delete_sure = 'Oletko varma, että haluat poistaa tämän version?';
+$s_version_delete_sure = 'Oletko varma, että haluat poistaa version "%1$s"?';
 $s_delete_version_button = 'Poista versio';
 $s_edit_project_version_title = 'Muokkaa projektin versiota';
 $s_update_version_button = 'Päivitä versio';
@@ -679,6 +681,7 @@ $s_users_unused = 'Ei käytössä';
 $s_users_new = 'Uusi';
 $s_account_reset_msg = 'Vahvistusviesti on lähetetty sähköpostiosoitteeseesi...';
 $s_account_reset_msg2 = 'Käyttäjätunnukselle on asetettu tyhjä salasana...';
+$s_account_unlock_msg = 'Tilin lukitus on poistettu.';
 $s_manage_user_protected_msg = 'Käyttäjätunnus on suojattu. Kenttiö ”käyttöoikeustaso” ja ”käytössä” ei voi muuttaa. Muut kentät päivitettiin.';
 $s_manage_user_updated_msg = 'Käyttäjätunnus päivitetty...';
 $s_email_user_updated_subject = 'Tili päivitetty';
@@ -748,6 +751,7 @@ $s_add_user_button = 'Lisää käyttäjätunnus';
 $s_project_selection_title = 'Projektin valinta';
 $s_remove_link = 'Poista';
 $s_remove_all_link = 'Poista kaikki';
+$s_remove_project_user_title = 'Poista käyttöoikeus projektilta';
 $s_updated_user_msg = 'Käyttäjätunnus päivitetty';
 $s_must_enter_category = 'Sinun on valittava kategoria';
 $s_must_enter_severity = 'Sinun on valittava vakavuusaste';
@@ -934,7 +938,7 @@ $s_simple_filters = 'Yksinkertaiset suotimet';
 $s_monitored_by = 'Seuraaja';
 $s_attachments = 'liitteet';
 $s_bytes = 'tavua';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Liite puuttuu';
 $s_attachment_count = 'Liitteiden lukumäärä';
 $s_view_attachments_for_issue = 'Näytä %1$d liitettä ilmoitukselle #%2$d';
@@ -1090,7 +1094,6 @@ $s_time_tracking_stopwatch_start = 'Aloita';
 $s_time_tracking_stopwatch_stop = 'Lopeta';
 $s_time_tracking_stopwatch_reset = 'Nollaa';
 $s_access_denied = 'Pääsy estetty.';
-$s_development_team = 'Kehitystiimi';
 $s_manage_columns_config = 'Hallinnoi sarakkeita';
 $s_all_columns_title = 'Kaikki käytettävissä olevat sarakkeet';
 $s_csv_columns_title = 'CSV-sarakkeet';
@@ -1236,8 +1239,13 @@ $MANTIS_ERROR[ERROR_INVALID_SORT_FIELD] = 'Virheellinen lajittelukenttä.';
 $MANTIS_ERROR[ERROR_INVALID_DATE_FORMAT] = 'Virheellinen päivämäärämuoto.';
 $MANTIS_ERROR[ERROR_UPDATING_TIMEZONE] = 'Aikavyöhykettä ei voida päivittää.';
 $s_dropzone_invalid_file_type = 'Et voi puhuroida tämäntyyppisiä tiedostoja.';
+$s_dropzone_remove_file = 'Poista tiedosto';
 $s_dropzone_max_files_exceeded = 'Et voi puhuroida enempää tiedostoja.';
 $s_dropzone_not_supported = 'Dropzone.js ei tue vanhempia selaimia!';
+$s_save = 'Tallenna';
+$s_reset = 'Nollaa';
+$s_load = 'Lataa';
+$s_undo = 'Kumoa';
 $s_edit = 'Muokkaa';
 $s_update = 'Päivitä';
 $s_delete = 'Poista';

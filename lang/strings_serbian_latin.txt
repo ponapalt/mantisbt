@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Serbian (Latin script) (srpski (latinica)‎)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -414,7 +414,7 @@ $s_hide_content = 'Sakrij sadržaj';
 $s_show_content = 'Prikaži sadržaj';
 $s_total_queries_executed = 'Izvršeno upita: %1$d.';
 $s_unique_queries_executed = 'Izvršeno zasebnih upita: %1$d.';
-$s_memory_usage_in_kb = 'iskorišćeno memorije: %1$s kB';
+$s_memory_usage = 'iskorišćeno memorije: %1$s kB';
 $s_please_report = 'Molimo vas da prijavite ovo na %1$s.';
 $s_warning_plain_password_authentication = '<strong>Upozorenje:</strong> koristi se prosta provera lozinke. Ova lozinka će biti vidljiva administratorima.';
 $s_warning_default_administrator_account_present = '<strong>Upozorenje:</strong> trebalo bi da onemogućite podrazumevani nalog administratora ili da promenite lozinku.';
@@ -532,7 +532,6 @@ $s_readonly_status = 'Stanje pri kom problem postaje nedostupan za uređivanje';
 $s_reopen_status = 'Stanje na koje je naznačen ponovo otvoreni problem';
 $s_reopen_resolution = 'Rešenje na koje je naznačen ponovo otvoreni problem';
 $s_config_delete_sure = 'Želite li da obrišete postavke za:';
-$s_in_project = 'u projektu';
 $s_delete_config_button = 'Obriši postavke';
 $s_configuration_report = 'Izveštaj o postavkama';
 $s_database_configuration = 'Postavke baze podataka';
@@ -565,7 +564,6 @@ $s_plugin_key_upgrade = 'potrebna je dogradnja';
 $s_project_added_msg = 'Projekat je dodat.';
 $s_category_added_msg = 'Kategorija je dodata.';
 $s_category_deleted_msg = 'Kategorija je obrisana.';
-$s_category_delete_sure_msg = 'Želite li da obrišete ovu kategoriju?<br />Kategorija „%1$s“ sadrži %2$d grešaka.';
 $s_delete_category_button = 'Obriši kategoriju';
 $s_edit_project_category_title = 'Izmena kategorije projekta';
 $s_update_category_button = 'Ažuriraj kategoriju';
@@ -1023,7 +1021,6 @@ $s_time_tracking_stopwatch_start = 'Počni';
 $s_time_tracking_stopwatch_stop = 'Zaustavi';
 $s_time_tracking_stopwatch_reset = 'Poništi';
 $s_access_denied = 'Pristup je odbijen.';
-$s_development_team = 'Razvojni tim';
 $s_manage_columns_config = 'Upravljanje kolonama';
 $s_all_columns_title = 'Sve dostupne kolone';
 $s_csv_columns_title = 'Kolone CSV';

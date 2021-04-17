@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Dutch (Nederlands)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -396,7 +396,7 @@ $s_select_file = 'Bestand selecteren';
 $s_select_files = 'Bestanden selecteren';
 $s_upload_file_button = 'Toevoegen';
 $s_upload_files_button = 'Bestanden uploaden';
-$s_max_file_size_label = 'Maximale grootte:';
+$s_max_file_size_info = 'Maximale grootte: %1$s %2$s';
 $s_bug_reopened_msg = 'De melding is heropend.';
 $s_reopen_add_bugnote_title = 'Reden voor heropenen toevoegen';
 $s_bugnote_add_reopen_button = 'Opmerkingen toevoegen en heropenen';
@@ -485,7 +485,7 @@ $s_total_queries_executed = 'Totaal aantal uitgevoerde zoekopdrachten: %1$d';
 $s_unique_queries_executed = 'Aantal uitgevoerde unieke zoekopdrachten: %1$d';
 $s_total_query_execution_time = 'Totale uitvoertijd: %1$s seconden';
 $s_page_execution_time = 'Uitvoertijd voor pagina: %1$s seconden';
-$s_memory_usage_in_kb = 'Geheugengebruik: %1$s KiB';
+$s_memory_usage = 'Geheugengebruik: %1$s KiB';
 $s_log_page_number = 'Getal';
 $s_log_page_time = 'Uitvoeringstijd';
 $s_log_page_caller = 'Aanroeper';
@@ -631,7 +631,6 @@ $s_readonly_status = 'Status waarbij een melding alleen-lezen wordt';
 $s_reopen_status = 'Status waarop een heropende melding wordt ingesteld';
 $s_reopen_resolution = 'Oplossing die voor een heropende melding wordt ingesteld';
 $s_config_delete_sure = 'Weet u zeker dat u de instellingen wilt verwijderen voor:';
-$s_in_project = 'in project';
 $s_delete_config_button = 'Instellingen verwijderen';
 $s_configuration_report = 'Instellingenrapport';
 $s_database_configuration = 'Instellingen database';
@@ -669,7 +668,6 @@ $s_plugin_key_upgrade = 'upgrade nodig';
 $s_project_added_msg = 'Het project is toegevoegd.';
 $s_category_added_msg = 'De categorie is toegevoegd.';
 $s_category_deleted_msg = 'De categorie is verwijderd.';
-$s_category_delete_sure_msg = 'Weet u zeker dat u deze categorie wilt verwijderen?<br />Categorie "%1$s" bevat %2$d bugs.';
 $s_category_delete_confirm_msg = 'Weet u zeker dat u de categorie "%1$s" wilt verwijderen?';
 $s_delete_category_button = 'Categorie verwijderen';
 $s_edit_project_category_title = 'Projectcategorie bewerken';
@@ -1016,7 +1014,7 @@ $s_simple_filters = 'Eenvoudige filters';
 $s_monitored_by = 'Gevolgd door';
 $s_attachments = 'bijlage(n)';
 $s_bytes = 'bytes';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'De bijlage ontbreekt';
 $s_attachment_count = 'Aantal toegevoegde bestanden';
 $s_view_attachments_for_issue = '%1$d bestand(en) bekijken voor melding #%2$d';
@@ -1182,7 +1180,6 @@ $s_time_tracking_stopwatch_start = 'Starten';
 $s_time_tracking_stopwatch_stop = 'Stoppen';
 $s_time_tracking_stopwatch_reset = 'Herinstellen';
 $s_access_denied = 'Geen toegang.';
-$s_development_team = 'Ontwikkelteam';
 $s_manage_columns_config = 'Kolommen beheren';
 $s_all_columns_title = 'Alle beschikbare kolommen';
 $s_csv_columns_title = 'Kolommen voor CSV';

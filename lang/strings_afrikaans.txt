@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Afrikaans (Afrikaans)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -190,7 +190,7 @@ $s_unmonitor_bug_button = 'Stop monitering';
 $s_upload_file = 'Laai lêer';
 $s_select_file = 'Kies Lêer';
 $s_upload_file_button = 'Laai lêer';
-$s_max_file_size_label = 'Maksimum grootte:';
+$s_max_file_size_info = 'Maksimum grootte: %1$s %2$s';
 $s_from = 'Van';
 $s_to = 'Na';
 $s_reminder_sent_to = 'Herinnering gestuur aan:';
@@ -229,7 +229,7 @@ $s_revision_by = '%1$s deur %2$s';
 $s_revision_drop = 'Skrap';
 $s_hide_content = 'Versteek inhoud';
 $s_show_content = 'Wys inhoud';
-$s_memory_usage_in_kb = 'geheue gebruik: %1$s KB';
+$s_memory_usage = 'geheue gebruik: %1$s KiB';
 $s_please_report = 'Rapporteer dit asseblief aan die %1$s.';
 $s_login_title = 'Aanmeld';
 $s_save_login = 'Onthou my wagwoord op hierdie rekenaar';
@@ -273,7 +273,6 @@ $s_workflow = 'Werkvloei';
 $s_threshold = 'Drempelwaarde';
 $s_status_level = 'Status';
 $s_access_levels = 'Toegangvlakke';
-$s_in_project = 'in projek';
 $s_database_configuration = 'Databasiskonfigurasie';
 $s_configuration_option = 'Instelling';
 $s_configuration_option_type = 'Tipe';
@@ -450,7 +449,6 @@ $s_time_tracking_cost_per_hour = 'Tarief  / uur';
 $s_time_tracking_cost = 'Koste';
 $s_time_tracking_cost_label = 'Koste:';
 $s_access_denied = 'Geen toegang.';
-$s_development_team = 'Ontwikkelingspan';
 $s_manage_columns_config = 'Bestuur kolomme';
 $s_all_columns_title = 'Alle beskikbare kolomme';
 $s_csv_columns_title = 'Kolomme vir CVS';

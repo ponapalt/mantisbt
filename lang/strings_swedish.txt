@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Swedish (svenska)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -400,8 +400,7 @@ $s_select_file = 'Välj fil';
 $s_select_files = 'Välj filer';
 $s_upload_file_button = 'Ladda upp fil';
 $s_upload_files_button = 'Ladda upp filer';
-$s_max_file_size_label = 'Maximal storlek:';
-$s_file_size_info = '%1$s %2$s';
+$s_max_file_size_info = 'Maximal storlek: %1$s %2$s';
 $s_bug_reopened_msg = 'Ärendet har återöppnats...';
 $s_reopen_add_bugnote_title = 'Lägg till meddelande om anledning till återöppning';
 $s_bugnote_add_reopen_button = 'Lägg till meddelande och återöppna ärende';
@@ -485,12 +484,14 @@ $s_bugnote_updated_msg = 'Meddelandet har uppdaterats...';
 $s_last_edited = 'Senast redigerad:';
 $s_hide_content = 'Dölj innehåll';
 $s_show_content = 'Visa innehåll';
+$s_file_icon_description = '%1$s filikon';
+$s_unknown_file_extension = 'okänd';
 $s_webmaster_contact_information = 'Kontakta <a href="mailto:%1$s" title="Kontakta webbansvarig via e-post.">administratör</a> för hjälp';
 $s_total_queries_executed = 'Totalt antal förfrågningar utförda: %1$d';
 $s_unique_queries_executed = 'Unika förfrågningar utförda: %1$d';
 $s_total_query_execution_time = 'Total exekveringstid för frågan: %1$s sekunder';
 $s_page_execution_time = 'Sidans exekveringstid: %1$s sekunder';
-$s_memory_usage_in_kb = 'Minnesanvändning: %1$s KiB';
+$s_memory_usage = 'Minnesanvändning: %1$s KiB';
 $s_log_page_number = 'Nummer';
 $s_log_page_time = 'Exekveringstid';
 $s_log_page_caller = 'Uppringare';
@@ -533,7 +534,7 @@ $s_mantis_version = 'Version av MantisBT';
 $s_schema_version = 'Version av schema';
 $s_site_path = 'Sökväg till webbplats';
 $s_core_path = 'Kärnsökväg';
-$s_plugin_path = 'Sökväg till insticksmoduler';
+$s_plugin_path = 'Sökväg till insticksprogram';
 $s_created_user_part1 = 'Skapade användare';
 $s_created_user_part2 = 'med en åtkomstnivån av';
 $s_create_new_account_title = 'Skapa ett nytt användarkonto';
@@ -636,8 +637,7 @@ $s_readonly_status = 'Status där ett ärende blir skrivskyddat';
 $s_reopen_status = 'Status att sätta ett återöppnat ärende till';
 $s_reopen_resolution = 'Lösning som ett återöppnat ärende sätts till';
 $s_limit_view_unless_threshold_option = 'Visa andra användares rapporter (om inte inställt kommer åtkomsten att begränsas till rapporter rapporterade, hanterade eller visade av användaren)';
-$s_config_delete_sure = 'Är du säker på att du vill ta bort inställningarna för:';
-$s_in_project = 'i projektet';
+$s_config_delete_sure = 'Är du säker på att du vill ta bort inställningarna för %1$s i projekt %2$s?';
 $s_delete_config_button = 'Ta bort inställningar';
 $s_configuration_report = 'Konfigurationsrapport';
 $s_database_configuration = 'Databaskonfiguration';
@@ -656,6 +656,7 @@ $s_show_all_complex = 'Visa värde för alla "%1$s"-alternativ';
 $s_plugin = 'Insticksprogram';
 $s_plugins_installed = 'Installerade insticksprogram';
 $s_plugins_available = 'Tillgängliga insticksprogram';
+$s_plugins_missing = 'Insticksprogram saknas eller är ogiltiga';
 $s_plugin_description = 'Beskrivning';
 $s_plugin_author = 'Författare: %1$s';
 $s_plugin_url = 'Webbplats:';
@@ -668,15 +669,19 @@ $s_plugin_install = 'Installera';
 $s_plugin_upgrade = 'Uppgradera';
 $s_plugin_uninstall = 'Avinstallera';
 $s_plugin_uninstall_message = 'Är du säker att du vill avinstallera insticksprogrammet "%1$s"?';
+$s_plugin_remove_message = 'Är du säker på att du vill ta bort insticksprogrammet "%1$s" som saknas eller är ogiltigt?';
 $s_plugin_key_label = 'Nyckel:';
-$s_plugin_key_met = 'instickprogrammet redo';
+$s_plugin_key_met = 'insticksprogrammet redo';
 $s_plugin_key_unmet = 'beroende saknas';
 $s_plugin_key_dated = 'föråldrade beroenden';
 $s_plugin_key_upgrade = 'uppgradering behövs';
+$s_plugin_invalid_description = 'Ogiltigt insticksprogram';
+$s_plugin_invalid_status_message = 'Följande obligatoriska egenskaper definieras inte i insticksprogrammets klass: %s.';
+$s_plugin_missing_description = 'Insticksprogram saknas';
+$s_plugin_missing_status_message = 'Insticksprogrammet är installerat i Mantis databas, men kunde inte laddas.';
 $s_project_added_msg = 'Projektet har lagts till...';
 $s_category_added_msg = 'Kategorin har lagts till...';
 $s_category_deleted_msg = 'Kategorin har tagits bort...';
-$s_category_delete_sure_msg = 'Är du säker på att du vill ta bort den här kategorin?<br />Kategorin "%1$s" innehåller %2$d ärenden.';
 $s_category_delete_confirm_msg = 'Är du säker på att du vill radera kategorin "%1$s"?';
 $s_delete_category_button = 'Ta bort kategori';
 $s_edit_project_category_title = 'Redigera projektkategori';
@@ -815,7 +820,7 @@ $s_add_file = 'Lägg till fil';
 $s_project_document_updated = 'Uppdaterade projektet';
 $s_project_user_added_msg = 'Lade till användaren till projektet';
 $s_project_removed_user_msg = 'Tog bort användaren från projektet';
-$s_remove_user_sure_msg = 'Är du säker på att du vill ta bort användaren?';
+$s_remove_user_sure_msg = 'Är du säker på att du vill ta bort användaren "%1$s" från projekt "%2$s"?';
 $s_remove_user_button = 'Ta bort användaren';
 $s_remove_all_users_sure_msg = 'Är du säker på att du vill ta bort alla användare i detta projekt?';
 $s_remove_all_users_button = 'Ta bort alla användare';
@@ -1023,7 +1028,7 @@ $s_simple_filters = 'Enkla filter';
 $s_monitored_by = 'Bevakas av';
 $s_attachments = 'bilagor';
 $s_bytes = 'bytes';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = 'Bilaga saknas';
 $s_attachment_count = 'Antal bilagor';
 $s_view_attachments_for_issue = 'Visa %1$d bilaga/bilagor till ärende #%2$d';
@@ -1036,7 +1041,6 @@ $s_sponsorship_deleted = 'Sponsring borttagen';
 $s_sponsorship_paid = 'Sponsring betald';
 $s_sponsorship_more_info = 'Mer information om sponsring';
 $s_sponsorship_total = 'Sponsring totalt';
-$s_sponsorship_process_url = '';
 $s_changelog = 'Ändringslogg';
 $s_changelog_empty = 'Det finns ingen ändringslogg';
 $s_changelog_empty_manager = 'Ingen information från förändringsloggen tillgänglig. Ärenden inkluderas när projekt har versioner och ärenden löses med "fixad i version" set.';
@@ -1197,7 +1201,6 @@ $s_time_tracking_stopwatch_start = 'Starta';
 $s_time_tracking_stopwatch_stop = 'Stoppa';
 $s_time_tracking_stopwatch_reset = 'Återställ';
 $s_access_denied = 'Åtkomst nekad.';
-$s_development_team = 'Utvecklingsgrupp';
 $s_manage_columns_config = 'Hantera kolumner';
 $s_all_columns_title = 'Alla tillgänliga kolumner';
 $s_csv_columns_title = 'CSV-kolumner';
@@ -1324,6 +1327,8 @@ $MANTIS_ERROR[ERROR_LDAP_SERVER_CONNECT_FAILED] = 'Anslutningen till LDAP-server
 $MANTIS_ERROR[ERROR_LDAP_UPDATE_FAILED] = 'Uppdatering av LDAP-posten misslyckades.';
 $MANTIS_ERROR[ERROR_LDAP_USER_NOT_FOUND] = 'Användarens LDAP-post kunde inte hittas.';
 $MANTIS_ERROR[ERROR_LDAP_EXTENSION_NOT_LOADED] = 'LDAP-tillägget har inte laddats.';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_SET_MIN_TLS] = 'Kunde inte sätta minimum TLS-version på LDAP-server.';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_STARTTLS] = 'Kan inte starta StarTLS på LDAP-server.';
 $MANTIS_ERROR[ERROR_DB_CONNECT_FAILED] = 'Kan inte ansluta till databasen. Felmeddelandet som erhölls från databasen var #%1$d: %2$s.';
 $MANTIS_ERROR[ERROR_DB_QUERY_FAILED] = 'Databasfråga misslyckades. Felmeddelandet som erhölls från databasen var #%1$d: %2$s för frågan: %3$s.';
 $MANTIS_ERROR[ERROR_DB_SELECT_FAILED] = 'Databasurval misslyckades. Felmeddelandet som erhölls från databasen var #%1$d: %2$s.';
@@ -1400,7 +1405,7 @@ $MANTIS_ERROR[ERROR_API_TOKEN_NAME_NOT_UNIQUE] = 'API-tokennamnet "%s" används 
 $MANTIS_ERROR[ERROR_LOGFILE_NOT_WRITABLE] = 'Filen som specificerades i $g_log_destination "%s" är skrivskyddad.';
 $s_dropzone_default_message = 'Bifoga filer genom att dra och släppa, markera eller klistra in.';
 $s_dropzone_fallback_message = 'Din webbläsare stödjer inte filuppladdning med dra-och-släpp.';
-$s_dropzone_file_too_big = 'Filen är för stor ({{filesize}}MiB). Maximal filstorlek: {{maxFilesize}}MiB.';
+$s_dropzone_file_too_big = 'Filen är för stor ({{filesize}} MiB). Maximal storlek: {{maxFilesize}} MiB.';
 $s_dropzone_invalid_file_type = 'Du kan inte ladda upp filer av den här typen.';
 $s_dropzone_response_error = 'Servern svarade med koden {{statusCode}}.';
 $s_dropzone_cancel_upload = 'Avbryt uppladdning';
@@ -1408,7 +1413,7 @@ $s_dropzone_cancel_upload_confirmation = 'Är du säker på att du vill avbryta 
 $s_dropzone_remove_file = 'Ta bort fil';
 $s_dropzone_max_files_exceeded = 'Du kan inte ladda upp fler filer.';
 $s_dropzone_not_supported = 'Dropzone.js har inte stöd för äldre webbläsare!';
-$s_dropzone_multiple_files_too_big = 'Följande filer:{{files}}Överskrider den maximalt tillåtna filstorleken ({{maxFilesize}} MiB)';
+$s_dropzone_multiple_files_too_big = 'Följande filer:{{files}}överskrider den maximalt tillåtna filstorleken ({{maxFilesize}} MiB)';
 $s_save = 'Spara';
 $s_reset = 'Återställ';
 $s_persist = 'Beständig';

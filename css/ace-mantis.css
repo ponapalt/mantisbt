@@ -343,6 +343,10 @@ textarea.input-xs, select.input-xs[multiple] {
 
 th > label,
 td > label {
+    font-size: 13px;
+}
+
+th > label {
     font-weight: bold;
 }
 
@@ -561,6 +565,11 @@ input.typeahead.scrollable ~ .tt-menu {
 .progress.progress-large[data-percent]:after {
     line-height:32px;
     font-size:18px;
+}
+
+hr {
+    /* Set to match body text color */
+    border-color: #393939;
 }
 
 /* Small devices (tablets, 768px and up) */

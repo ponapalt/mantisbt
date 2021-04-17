@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Luxembourgish (Lëtzebuergesch)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -95,7 +95,7 @@ $s_description_updated = 'Beschreiwung aktualiséiert';
 $s_additional_information_updated = 'Zousatzinformatioun aktuliséiert';
 $s_file_added = 'Fichier derbäigesat';
 $s_file_deleted = 'Fichier geläscht';
-$s_bug_deleted = 'Problem geläscht';
+$s_bug_deleted = 'Probleem geläscht';
 $s_make_private = 'Privat maachen';
 $s_make_public = 'Ëffentlech maachen';
 $s_create_new_project_link = 'Neie Projet uleeën';
@@ -181,6 +181,7 @@ $s_select_file = 'Fichier eraussichen';
 $s_select_files = 'Fichieren eraussichen';
 $s_upload_file_button = 'Fichier eroplueden';
 $s_upload_files_button = 'Fichieren eroplueden';
+$s_max_file_size_info = 'Maximal Gréisst: %1$s %2$s';
 $s_bugnote_add_resolve_button = 'Notiz derbäisetzen';
 $s_from = 'Vum';
 $s_bug_reminder = 'Eng Erënnerung schécken';
@@ -208,6 +209,7 @@ $s_add_bugnote_title = 'Notiz derbäisetzen';
 $s_add_bugnote_button = 'Notiz derbäisetzen';
 $s_hide_content = 'Inhalt verstoppen';
 $s_show_content = 'Inhalt weisen';
+$s_unknown_file_extension = 'onbekannt';
 $s_log_page_number = 'Zuel';
 $s_login_title = 'Aloggen';
 $s_save_login = 'Mech ageloggt halen';
@@ -232,7 +234,6 @@ $s_email_notify_users = 'All Benotzer mat Zougangsrecht';
 $s_message = 'Message';
 $s_status_level = 'Status';
 $s_allowed_access_levels = 'Erlaabt fir all Benotzer mat Zougangsrechter';
-$s_in_project = 'am Projet';
 $s_delete_config_button = 'Astellungen läschen';
 $s_configuration_option_type = 'Typ';
 $s_configuration_option_value = 'Wäert';
@@ -241,12 +242,15 @@ $s_set_configuration_option_action_edit = 'Optioun vun der Konfiguratioun änner
 $s_show_all_complex = 'Wäert fir all "%1$s" Optioune weisen';
 $s_plugin = 'Plugin';
 $s_plugin_description = 'Beschreiwung';
+$s_plugin_problem_description = 'Beschreiwung vum Probleem';
 $s_plugin_author = 'Auteur: %1$s';
 $s_plugin_url = 'Internetsite:';
 $s_plugin_priority = 'Prioritéit';
 $s_plugin_actions = 'Aktiounen';
 $s_plugin_install = 'Installéieren';
 $s_plugin_upgrade = 'Aktualiséieren';
+$s_plugin_invalid_description = 'Plugin net valabel';
+$s_plugin_missing_description = 'Plugin feelt';
 $s_category_delete_confirm_msg = 'Sidd Dir sécher datt Dir d\'Kategorie "%1$s" läsche wëllt?';
 $s_delete_category_button = 'Kategorie läschen';
 $s_update_category_button = 'Kategorie aktualiséieren';
@@ -350,7 +354,7 @@ $s_custom_field_sequence = 'Sequenz';
 $s_custom_field_sequence_label = 'Sequenz';
 $s_filter_resolved = 'Geléist';
 $s_bytes = 'Byten';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_phpmailer_language = 'lb';
 $s_roadmap_empty = 'Keng Informatioun iwwer en Zäitplang disponibel';
 $s_replace_relationship_button = 'Ersetzen';

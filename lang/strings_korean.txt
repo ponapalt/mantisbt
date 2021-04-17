@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Korean (한국어)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -396,7 +396,7 @@ $s_select_file = '파일 선택';
 $s_select_files = '파일 선택';
 $s_upload_file_button = '파일 업로드';
 $s_upload_files_button = '파일 올리기';
-$s_max_file_size_label = '최대 크기:';
+$s_max_file_size_info = '최대 크기: %1$s %2$s';
 $s_bug_reopened_msg = '이슈가 재발생했습니다...';
 $s_reopen_add_bugnote_title = '재발생한 이슈에 대하여 이슈노트에 사유 추가';
 $s_bugnote_add_reopen_button = '이슈노트 추가 & 이슈 재발생 처리';
@@ -481,11 +481,13 @@ $s_bugnote_updated_msg = '노트가 성공적으로 업데이트되었습니다.
 $s_last_edited = '최근 수정:';
 $s_hide_content = '내용 숨기기';
 $s_show_content = '내용 보이기';
+$s_file_icon_description = '%1$s 파일 아이콘';
+$s_unknown_file_extension = '알 수 없음';
 $s_total_queries_executed = ' 전체 검색 실행결과: %1$d';
 $s_unique_queries_executed = '특정 쿼리 실행: %1$d개';
 $s_total_query_execution_time = '쿼리 실행 시간: %1$s 초';
 $s_page_execution_time = '페이지 실행 시간: %1$s 초';
-$s_memory_usage_in_kb = '메모리 사용: %1$s KiB';
+$s_memory_usage = '메모리 사용: %1$s KiB';
 $s_log_page_number = '번호';
 $s_log_page_time = '실행 시간';
 $s_log_page_caller = '콜러';
@@ -626,8 +628,7 @@ $s_resolved_status = '이슈가 해결된것으로 간주되어 있는 상태';
 $s_readonly_status = '이슈가 읽기 전용이 되어 있는 상태';
 $s_reopen_status = '재발생된 이슈가 설정되어 있는 상태';
 $s_reopen_resolution = '재오픈된 이슈가 설정되어 있는 것에 대한 해결책';
-$s_config_delete_sure = '정말로 다음의 상태를 삭제하시겠습니까:';
-$s_in_project = '프로젝트에서';
+$s_config_delete_sure = '%2$s 프로젝트의 %1$s의 설정을 삭제하시겠습니까?';
 $s_delete_config_button = '설정 삭제';
 $s_configuration_report = '구성 보고서';
 $s_database_configuration = '데이터베이스 구성';
@@ -645,7 +646,10 @@ $s_set_configuration_option_action_view = '구성 옵션 보기';
 $s_plugin = '플러그인';
 $s_plugins_installed = '설치된 플러그인';
 $s_plugins_available = '사용 가능 플러그인';
+$s_plugins_missing = '플러그인이 없거나 유효하지 않음';
+$s_plugins_missing_description = '아래 목록의 플러그인이 등록되어 있으나 소스 코드를 찾을 수 없거나 "%s"에서 로드되었습니다.<br>다시 설치하거나 제거해 보십시오.';
 $s_plugin_description = '설명';
+$s_plugin_problem_description = '문제 설명';
 $s_plugin_author = '개발: %1$s';
 $s_plugin_url = '웹사이트:';
 $s_plugin_depends = '의존';
@@ -656,16 +660,23 @@ $s_plugin_actions = '동작';
 $s_plugin_install = '설치';
 $s_plugin_upgrade = '업그레이드';
 $s_plugin_uninstall = '제거';
+$s_plugin_manual_fix = '수동 조치 필요';
 $s_plugin_uninstall_message = '정말로 "%1$s" 플러그인을 제거하시겠습니까?';
+$s_plugin_remove_message = '유효하지 않거나 존재하지 않는 "%1$s" 플러그인을 제거하시겠습니까?';
 $s_plugin_key_label = '키:';
 $s_plugin_key_met = '플러그인 준비 완료';
 $s_plugin_key_unmet = '부족한 의존성';
 $s_plugin_key_dated = '오래된 의존성';
 $s_plugin_key_upgrade = '업그레이드 필요';
+$s_plugin_invalid_description = '플러그인이 유효하지 않음';
+$s_plugin_invalid_status_message = '다음의 필수 속성이 플러그인의 클래스에 정의되어 있지 않습니다: %s.';
+$s_plugin_missing_description = '플러그인 없음';
+$s_plugin_missing_status_message = '플러그인이 Mantis 데이터베이스에 설치되어 있으나 불러오지 못했습니다.';
+$s_plugin_missing_class_description = '플러그인 베이스 클래스가 존재하지 않습니다';
+$s_plugin_missing_class_status_message = '이 플러그인의 디렉터리는 발견했으나 그 안에 일치하는 플러그인 코드가 없습니다. 디렉터리의 이름이 플러그인의 베이스 이름(대소문자 구분)과 일치하는지 확인하십시오';
 $s_project_added_msg = '프로젝트가 추가되었습니다....';
 $s_category_added_msg = '분류가 추가되었습니다...';
 $s_category_deleted_msg = '분류가 삭제되었습니다...';
-$s_category_delete_sure_msg = '이 분류를 삭제하시겠습니까?<br />"%1$s" 분류에 이슈 %2$d개가 들어 있습니다.';
 $s_category_delete_confirm_msg = '"%1$s" 분류를 삭제하시겠습니까?';
 $s_delete_category_button = '분류 삭제';
 $s_edit_project_category_title = '프로젝트 분류 편집';
@@ -674,7 +685,7 @@ $s_category_updated_msg = '분류가 갱신되었습니다....';
 $s_create_first_project = '프로젝트를 만들고 이슈를 기록하기';
 $s_add_subproject_title = '서브프로젝트 추가';
 $s_project_deleted_msg = '프로젝트가 삭제되었습니다...';
-$s_project_delete_msg = '이 프로젝트와 관련된 모든 이슈를 삭제하시겠습니까?';
+$s_project_delete_msg = '"%1$s" 프로젝트를 삭제하시겠습니까?<br>연결된 이슈 보고서 %2$s개도 삭제됩니다.';
 $s_project_delete_button = '프로젝트 삭제';
 $s_edit_project_title = '프로젝트 편집';
 $s_project_name = '프로젝트 이름';
@@ -715,7 +726,7 @@ $s_name = '이름';
 $s_project_updated_msg = '프로젝트가 갱신되었습니다....';
 $s_version_added_msg = '버전 정보가 추가되었습니다....';
 $s_version_deleted_msg = '버전 정보가 삭제되었습니다....';
-$s_version_delete_sure = '이 버전을 삭제하시겠습니까? 관련된 모든 이슈정보가 삭제됩니다.';
+$s_version_delete_sure = '"%1$s" 버전을 삭제하시겠습니까?';
 $s_delete_version_button = '버전 삭제';
 $s_edit_project_version_title = '프로젝트 버전 편집';
 $s_update_version_button = '버전 갱신';
@@ -726,7 +737,7 @@ $s_obsolete = '더 이상 사용되지 않음';
 $s_version_updated_msg = '버전 정보가 바뀌었습니다.';
 $s_account_delete_protected_msg = '계정이 보호되었습니다. 이 계정을 삭제할 수 없습니다.';
 $s_account_deleted_msg = '계정이 삭제되었습니다....';
-$s_delete_account_sure_msg = '이 계정을 삭제하시겠습니까?';
+$s_delete_account_sure_msg = '"%1$s" 사용자 계정을 삭제하시겠습니까?';
 $s_notify_user = '이 변경사항을 사용자에게 알림';
 $s_accounts_pruned_msg = '한번도 로그인하지 않은 모든 사용자는 1주일후에 삭제됩니다.';
 $s_prune_accounts_button = '삭제';
@@ -792,7 +803,7 @@ $s_file_uploaded_msg = '파일이 업로드되었습니다.';
 $s_upload_file_title = '파일 업로드';
 $s_title = '제목';
 $s_project_file_deleted_msg = '프로제트 파일 삭제됨';
-$s_confirm_file_delete_msg = '이 파일을 삭제하시겠습니까?';
+$s_confirm_file_delete_msg = '"%1$s" 파일을 삭제하시겠습니까?';
 $s_filename = '파일 이름';
 $s_filename_label = '파일 이름:';
 $s_file_update_button = '파일 갱신';
@@ -804,7 +815,7 @@ $s_add_file = '파일 추가';
 $s_project_document_updated = '프로젝트가 갱신되었습니다.';
 $s_project_user_added_msg = '프로젝트에 사용자가 추가되었습니다.';
 $s_project_removed_user_msg = '프로젝트에서 사용자가 제거되었습니다.';
-$s_remove_user_sure_msg = '현재 사용자를 제거하시겠습니까?';
+$s_remove_user_sure_msg = '"%2$s" 프로젝트에서 "%1$s" 사용자를 제거하시겠습니까?';
 $s_remove_user_button = '사용자 제거';
 $s_remove_all_users_sure_msg = '이 프로젝트의 모든 사용자를 제거하시겠습니까?';
 $s_remove_all_users_button = '모든 사용자 제거';
@@ -930,7 +941,7 @@ $s_query_blank_name = '필터를 저장하려면 이름을 지정해야 합니�
 $s_query_name_too_long = '64자보다 더 긴 필터 이름을 저장할 수 없습니다. 필터에 더 짧은 이름을 사용하십시오.';
 $s_query_store_error = '필터를 저장하는 중에 오류가 발생했습니다.';
 $s_open_queries = '필더 관리';
-$s_query_delete_msg = '정말로 이 필터를 삭제하시겠습니까?';
+$s_query_delete_msg = '정말로 "%1$s" 필터를 삭제하시겠습니까?';
 $s_edit_filter = '편집 필터';
 $s_owner = '소유자';
 $s_update_filter = '필터 업데이트';
@@ -994,7 +1005,7 @@ $s_custom_field_sequence = '시퀀스';
 $s_custom_field_sequence_label = '시퀀스';
 $s_custom_field_type_enum_string = '0:문자열,1:숫자,2:부동 소수,3:열거,4:이메일,5:확인 상자,6:목록,7:다중 선택 목록,8:날짜,9:라디오,10:텍스트 영역';
 $s_confirm_used_custom_field_deletion = '이 필드는 적어도 하나의 프로젝트에 링크되어 있습니다.  이 필드와 관련된 모든 값은 삭제될 것입니다. 이 필드를 삭제하지 않으려면, 브라우저에서 뒤로 버튼을 누르시기 바랍니다. 삭제를 계속 진행하기 위해서는 아래의 버튼을 누르세요';
-$s_confirm_custom_field_deletion = '사용자 지정필드와 모든 관련된 값을 삭제하시겠습니까?';
+$s_confirm_custom_field_deletion = '"%1$s" 사용자 지정 필드와 모든 관련된 값을 삭제하시겠습니까?';
 $s_field_delete_button = '필드 삭제';
 $s_confirm_custom_field_unlinking = '정말로 프로젝트에서 사용자 정의 항목 연결을 프로젝트에서 제거하시겠습니까? 사용자 지정필드 자체를 삭제하지 않는 한 값이 지워지지는 않습니다.';
 $s_field_remove_button = '필드 제거';
@@ -1009,7 +1020,7 @@ $s_simple_filters = '단순 필터';
 $s_monitored_by = '참조인(모니터링중인 사람)';
 $s_attachments = '첨부 파일';
 $s_bytes = '바이트';
-$s_kb = 'KB';
+$s_kib = 'KiB';
 $s_attachment_missing = '첨부 파일이 없습니다';
 $s_attachment_count = '첨부 파일 개수';
 $s_view_attachments_for_issue = '이슈 %2$d번의 첨부 파일 %1$d개 보기';
@@ -1177,7 +1188,6 @@ $s_time_tracking_stopwatch_start = '시작';
 $s_time_tracking_stopwatch_stop = '중지';
 $s_time_tracking_stopwatch_reset = '초기화';
 $s_access_denied = '접근이 거부되었습니다.';
-$s_development_team = '개발팀';
 $s_manage_columns_config = '열 관리';
 $s_all_columns_title = '사용 가능한 열';
 $s_csv_columns_title = 'CSV 열';
@@ -1294,6 +1304,8 @@ $MANTIS_ERROR[ERROR_LDAP_SERVER_CONNECT_FAILED] = 'LDAP 서버 연결 실패';
 $MANTIS_ERROR[ERROR_LDAP_UPDATE_FAILED] = 'LDAP 사용자 갱신 오류.';
 $MANTIS_ERROR[ERROR_LDAP_USER_NOT_FOUND] = 'LDAP 사용자 레코드가 발견되지 않습니다.';
 $MANTIS_ERROR[ERROR_LDAP_EXTENSION_NOT_LOADED] = 'LDAP 확장을 읽어들이지 않았습니다.';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_SET_MIN_TLS] = 'LDAP 서버에서 최소 TLS 버전 설정을 실패했습니다.';
+$MANTIS_ERROR[ERROR_LDAP_UNABLE_TO_STARTTLS] = 'LDAP 서버에서 StartTLS를 초기화할 수 없습니다.';
 $MANTIS_ERROR[ERROR_DB_CONNECT_FAILED] = '데이터베이스 연결이 실패했습니다. 데이터베이스에서 받은 오류는 #%1$d: %2$s.';
 $MANTIS_ERROR[ERROR_DB_QUERY_FAILED] = '데이터베이스 쿼리 실패. 데이터베이스에서 받은 오류는 #%1$d: %2$s이며 쿼리 내용: %3$s입니다.';
 $MANTIS_ERROR[ERROR_DB_SELECT_FAILED] = '데이터베이스 셀렉션 실패. 데이터베이스로부터 다음과 같은 오류를 수신했습니다. #%1$d: %2$s';

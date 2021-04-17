@@ -74,12 +74,12 @@ require_api( 'lang_api.php' );
 	<div id="bugnote_add" class="widget-box widget-color-blue2 <?php echo $t_block_css ?>">
 		<div class="widget-header widget-header-small">
 			<h4 class="widget-title lighter">
-				<i class="ace-icon fa fa-comment"></i>
+				<?php print_icon( 'fa-comment', 'ace-icon' ); ?>
 				<?php echo lang_get( 'add_bugnote_title' ) ?>
 			</h4>
 			<div class="widget-toolbar">
 				<a data-action="collapse" href="#">
-					<i class="1 ace-icon fa <?php echo $t_block_icon ?> bigger-125"></i>
+					<?php print_icon( $t_block_icon, '1 ace-icon bigger-125' ); ?>
 				</a>
 			</div>
 		</div>
@@ -156,7 +156,8 @@ require_api( 'lang_api.php' );
 					<?php print_dropzone_template() ?>
 					<input type="hidden" name="max_file_size" value="<?php echo $t_max_file_size ?>" />
 					<div class="dropzone center" <?php print_dropzone_form_data() ?>>
-						<i class="upload-icon ace-icon fa fa-cloud-upload blue fa-3x"></i><br>
+						<?php print_icon( 'fa-cloud-upload', 'upload-icon ace-icon blue fa-3x' ); ?>
+						<br>
 						<span class="bigger-150 grey"><?php echo lang_get( 'dropzone_default_message' ) ?></span>
 						<div id="dropzone-previews-box" class="dz dropzone-previews dz-max-files-reached"></div>
 					</div>
@@ -174,19 +175,6 @@ require_api( 'lang_api.php' );
 </table>
 </div>
 </div>
-	<div id="before_reporting" class="widget-box widget-color-orange ">
-		<div class="widget-header widget-header-small">
-			<h4 class="widget-title lighter">
-				送信ボタンを押す前に / Before pushing "Send" button
-			</h4>
-		</div>
-		<div class="widget-body">
-			<ul>
-				<li>スパム避けのためにパスワードが必要です。送信ボタンを押すとユーザー名とパスワードを聞かれますので、それぞれ "bts" と入力してください。</li>
-				<li>To send report, please input "bts" into username and password box in popup dialog.</li>
-			</ul>
-		</div>
-	</div>
 	<div class="widget-toolbox padding-8 clearfix">
 		<input type="submit" class="btn btn-primary btn-white btn-round" value="<?php echo lang_get( 'add_bugnote_button' ) ?>" />
 	</div>

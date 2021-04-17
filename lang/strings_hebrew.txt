@@ -25,7 +25,7 @@
  * **                                                                  **
  * **                      DO NOT UPDATE MANUALLY                      **
  * **                                                                  **
- * ** To improve a translation please visit http://translatewiki.net   **
+ * ** To improve a translation please visit https://translatewiki.net  **
  * ** Detailed instructions on how to create or update translations at **
  * ** http://www.mantisbt.org/wiki/doku.php/mantisbt:translationshowto **
  * **********************************************************************
@@ -33,7 +33,7 @@
 /** Hebrew (עברית)
  * 
  * See the qqq 'language' for message documentation incl. usage of parameters
- * To improve a translation please visit http://translatewiki.net
+ * To improve a translation please visit https://translatewiki.net
  *
  * @ingroup Language
  * @file
@@ -144,6 +144,7 @@ $s_bug_deleted = 'הבאג נמחק';
 $s_make_private = 'להגדיר כפרטית';
 $s_make_public = 'להגדיר כציבורית';
 $s_create_new_project_link = 'פרויקט חדש';
+$s_opensearch_text_short = 'טקסט %s';
 $s_opensearch_text_description = '%s: חיפוש עבור כל הטקסט';
 $s_select_option = '(בחירה)';
 $s_bug_actiongroup_access = 'אין לך הרשאות מתאימות לבצע את הפעולה.';
@@ -224,6 +225,7 @@ $s_new_account_signup_msg = 'החשבון הבא נוצר:';
 $s_reset_request_msg = 'מישהו (אולי את או אתה) ביקש שינוי ססמה דרך בדיקה בעזרת דואר אלקטרוני. אם לא עשית זאת, אפשר להתעלם מההודעה הזאת ושום דבר לא יקרה.
 
 אם ביקשת את הבדיקה הזאת, יש להיכנס לכתובת הבאה כדי לשנות את ססמתך:';
+$s_reset_request_admin_msg = 'הססמה שלך אופסה. נא לבקר בכתובת הבאה כדי להגדיר אחת חדשה:';
 $s_reset_request_in_progress_msg = 'אם הבאת את שם המשתמש הנכון לחשבונך, תישלח אליך הודאת וידוא לאותה כתובת דואר אלקטרוני. כאשר ההודעה תגיע, ערוב אחר ההוראות שמופיעות בה כדי לשנות את הססמה של חשבונכם.';
 $s_email_notification_title_for_status_bug_new = 'הבאג הבא עכשיו במצב חדש (שוב)';
 $s_email_notification_title_for_status_bug_feedback = 'נדרשת תגובה ממך לבאג הזה.';
@@ -338,9 +340,14 @@ $s_timezone = 'אזור זמן';
 $s_prefs_reset_msg = 'ההעדפות שוחזרו לברירת המחדל';
 $s_prefs_updated_msg = 'ההעדפות עודכנו';
 $s_select_profile = 'בחירת פרופיל';
+$s_add_profile = 'הוספת פרופיל';
 $s_edit_profile = 'עריכת פרופיל';
 $s_update_profile = 'עדכן פרופיל';
 $s_delete_profile = 'מחיקת פרופיל';
+$s_delete_profile_confirm_msg = 'למחוק את הפרופיל „%1$s”?';
+$s_global_profile = 'פרופיל גלובלי';
+$s_default_profile = 'פרופיל בררת מחדל';
+$s_profile_description = 'תיאור מערכת';
 $s_my_sponsorship = 'חסויות שלי';
 $s_update_sponsorship_button = 'לשנות מצב תשלום';
 $s_no_sponsored = 'לא נמצאו באגים תחת חסות ששויכת אליהם.';
@@ -383,7 +390,7 @@ $s_select_file = 'בחירת קובץ';
 $s_select_files = 'בחירת קבצים';
 $s_upload_file_button = 'שליחה';
 $s_upload_files_button = 'העלאת קבצים';
-$s_max_file_size_label = 'הגודל המירבי:';
+$s_max_file_size_info = 'גודל מרבי: %1$s %2$s';
 $s_bug_reopened_msg = 'הבאג נפתח מחדש';
 $s_reopen_add_bugnote_title = 'הערת הבהרה לפתיחה מחדש של הבאג';
 $s_bugnote_add_reopen_button = 'שמירה';
@@ -466,7 +473,7 @@ $s_hide_content = 'להסתיר תוכן';
 $s_show_content = 'הצגת התוכן';
 $s_total_queries_executed = '%1$d סה״כ שאילתות שבוצעו';
 $s_unique_queries_executed = '%1$d שאילתות ייחודיות שבוצעו';
-$s_memory_usage_in_kb = 'שימוש בזיכרון: %1$s קילובייט';
+$s_memory_usage = 'שימוש בזיכרון: %1$s קילובייט';
 $s_log_page_number = 'מספר';
 $s_log_page_time = 'זמן ההפעלה';
 $s_log_page_event = 'אירוע';
@@ -603,7 +610,6 @@ $s_readonly_status = 'מצב שבו הבאג יוגדר לקריאה בלבד';
 $s_reopen_status = 'מצב שיוגדר לבאג שנפתח מחדש';
 $s_reopen_resolution = 'פתרון שהוגדר לבאג שנפתח מחדש';
 $s_config_delete_sure = 'האם ברצונך למחוק את ההגדרות עבור:';
-$s_in_project = 'בפרויקט:';
 $s_delete_config_button = 'מחיקת הגדרות';
 $s_configuration_report = 'דו״ח תצורה';
 $s_database_configuration = 'תצורת מסד נתונים';
@@ -640,7 +646,6 @@ $s_plugin_key_upgrade = 'נדרש שדרוג';
 $s_project_added_msg = 'הפרויקט נוסף בהצלחה...';
 $s_category_added_msg = 'הקטגוריה נוספה בהצלחה...';
 $s_category_deleted_msg = 'הקטגוריה נמחקה בהצלחה...';
-$s_category_delete_sure_msg = 'האם ברצונך למחוק את הקטגוריה?<br />בקטגוריה „%1$s” יש %2$d באגים.';
 $s_category_delete_confirm_msg = 'האם ברצונך למחוק את הקטגוריה "%1$s"?';
 $s_delete_category_button = 'מחיקת קטגוריה';
 $s_edit_project_category_title = 'עריכת קטגורייה';
@@ -648,7 +653,8 @@ $s_update_category_button = 'שמירה';
 $s_category_updated_msg = 'הקטגוריה עודכנה';
 $s_add_subproject_title = 'הוספת תת־פרויקט';
 $s_project_deleted_msg = 'הפרויקט נמחק בהצלחה...';
-$s_project_delete_msg = 'האם ברצונך למחוק את הפרויקט, כל הבאגים שבו, וכל יתר המידע הקשור לפרויקט?';
+$s_project_delete_msg = 'האם ברצונך למחוק את הפרויקט"%1$s"? <br> זה ימחק גם את %2$s כל הבאגים שבו, וכל יתר המידע הקשור לפרויקט?
+!!FAZZY!!';
 $s_project_delete_button = 'מחיקת פרויקט';
 $s_edit_project_title = 'עריכת הפרויקט';
 $s_project_name = 'שם הפרויקט';
@@ -707,11 +713,11 @@ $s_prune_accounts_button = 'ניקוי';
 $s_confirm_account_pruning = 'האם ברצונך למחוק חשבונות ישנים שמעולם לא נעשה בהם שימוש?';
 $s_edit_user_title = 'עדכון חשבון';
 $s_account_unlock_button = 'ביטול נעילת חשבון';
-$s_reset_password_button = 'איפוס ססמה';
+$s_reset_password_button = 'איפוס סיסמה';
 $s_delete_user_button = 'מחיקת חשבון';
 $s_impersonate_user_button = 'התחזות למשתמש';
-$s_reset_password_msg = 'לאחר איפוס הססמה תישלח למשתמש הודעת אישור.';
-$s_reset_password_msg2 = 'איפוס הססמה מוחק את הססמה הקיימת.';
+$s_reset_password_msg = 'לאחר איפוס הסיסמה יישלח למשתמש קישור אישור בדוא"ל.';
+$s_reset_password_msg2 = 'איפוס הסיסמה מוחק את הסיסמה הקיימת.';
 $s_show_all_users = 'כולם';
 $s_users_unused = 'לא בשימוש';
 $s_users_new = 'חדש';
@@ -979,7 +985,7 @@ $s_simple_filters = 'סינון פשוט';
 $s_monitored_by = 'במעקב של';
 $s_attachments = 'קבצים';
 $s_bytes = 'בתים';
-$s_kb = 'ק״ב';
+$s_kib = 'KiB';
 $s_attachment_missing = 'צרופה חסרה';
 $s_attachment_count = 'מספר הצרופות';
 $s_view_attachments_for_issue = 'הצגת %1$d צרופה/ות לבאג #%2$d';
@@ -1036,7 +1042,10 @@ $s_update_readonly_issues = 'עדכון באגים במצב קריאה בלבד'
 $s_update_issue_status = 'עדכון מצב הבאג';
 $s_set_view_status = 'קביעת הרשאת צפייה (ציבורי או פרטי)';
 $s_update_view_status = 'עדכון הרשאת צפייה (ציבורי או פרטי)';
+$s_set_sticky = 'נעיצה / שחרור של בעיה';
 $s_show_list_of_users_monitoring_issue = 'רשימת העוקבים אחר הבאג';
+$s_add_users_monitoring_issue = 'הוספת מעקבים לבעיה';
+$s_remove_users_monitoring_issue = 'הסרת מעקבים מבעיה';
 $s_notes = 'הערות';
 $s_add_notes = 'הוספת הערה';
 $s_view_private_notes = 'הצגת הערות פרטיות';
@@ -1134,7 +1143,6 @@ $s_time_tracking_stopwatch_start = 'התחלה';
 $s_time_tracking_stopwatch_stop = 'עצירה';
 $s_time_tracking_stopwatch_reset = 'איפוס';
 $s_access_denied = 'גישה חסומה';
-$s_development_team = 'צוות פיתוח';
 $s_manage_columns_config = 'ניהול עמודות';
 $s_all_columns_title = 'כל העמודות הקיימות';
 $s_csv_columns_title = 'עמודות CSV';
@@ -1289,7 +1297,7 @@ $MANTIS_ERROR[ERROR_INVALID_DATE_FORMAT] = 'תבנית תאריך לא תקין'
 $MANTIS_ERROR[ERROR_UPDATING_TIMEZONE] = 'לא ניתן לעדכן את אזור הזמן.';
 $s_dropzone_default_message = 'נא לשחרר לכאן את הקבצים להעלאה (או ללחוץ)';
 $s_dropzone_fallback_message = 'הדפדפן שלך אינו תומך בתכונת ה"גרירה ושחרור" של קבצים.';
-$s_dropzone_file_too_big = 'הקובץ הזה גדול מדי ({{filesize}}MiB). הגודל המרבי הוא {{maxFilesize}}MiB.';
+$s_dropzone_file_too_big = 'הקובץ הזה גדול מדי ({{filesize}} MiB). הגודל המרבי הוא: {{maxFilesize}} MiB.';
 $s_dropzone_invalid_file_type = 'לא ניתן להעלות קבצים מסוג זה.';
 $s_dropzone_response_error = 'השרת הגיב עם הקוד {{statusCode}}.';
 $s_dropzone_cancel_upload = 'ביטול ההעלאה';
@@ -1297,10 +1305,19 @@ $s_dropzone_cancel_upload_confirmation = 'לבטל העלאה זו?';
 $s_dropzone_remove_file = 'הסרת הקובץ';
 $s_dropzone_max_files_exceeded = 'לא ניתן להעלות קבצים נוספים.';
 $s_dropzone_not_supported = 'Dropzone.js אינו תומך בדפדפנים ישנים!';
+$s_dropzone_multiple_files_too_big = 'הקבצים הבאים:{{files}}חורגים מגודל הקובץ המרבי המותר ({{maxFilesize}} MiB)';
+$s_save = 'שמירה';
+$s_reset = 'איפוס';
+$s_persist = 'קיבוע';
+$s_load = 'טעינה';
+$s_apply_changes = 'החלת שינויים';
+$s_undo = 'החזרה';
 $s_edit = 'עריכה...';
+$s_submit = 'הגשה';
 $s_update = 'עדכון';
 $s_delete = 'מחיקה';
 $s_make_default = 'ברירת מחדל';
+$s_clear_default = 'פינוי בררת מחדל';
 $s_print = 'הדפסה';
 $s_jump = 'הצגה';
 $s_change = 'שינוי';
