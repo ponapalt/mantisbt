@@ -40,6 +40,7 @@
  *
  * @author Bbqyee
  * @author Duolaimi
+ * @author FakeGreenHand
  * @author Fengchao
  * @author Fwolf
  * @author Gaoxuewei
@@ -358,8 +359,14 @@ $s_timezone = '时区';
 $s_prefs_reset_msg = '个人设置已经更改...';
 $s_prefs_updated_msg = '个人设置已经更改...';
 $s_select_profile = '选择平台配置';
+$s_add_profile = '添加平台配置';
 $s_edit_profile = '编辑平台配置';
+$s_update_profile = '更新平台配置';
 $s_delete_profile = '删除平台配置';
+$s_delete_profile_confirm_msg = '您确定要删除配置“%1$s”吗？';
+$s_global_profile = '全局平台配置';
+$s_default_profile = '默认平台配置';
+$s_profile_description = '系统说明';
 $s_my_sponsorship = '我的资助';
 $s_update_sponsorship_button = '修改支付状态';
 $s_no_sponsored = '找不到分配给您自己的已资助问题。';
@@ -402,6 +409,7 @@ $s_select_file = '选择文件';
 $s_select_files = '选择文件';
 $s_upload_file_button = '上传文件';
 $s_upload_files_button = '上传文件';
+$s_max_file_size_info = '最大文件大小: %1$s %2$s';
 $s_bug_reopened_msg = '问题已经被重新打开...';
 $s_reopen_add_bugnote_title = '为重启问题添加注释原因';
 $s_bugnote_add_reopen_button = '添加问题注释并重启问题';
@@ -671,15 +679,18 @@ $s_plugin_upgrade = '升级';
 $s_plugin_uninstall = '卸载';
 $s_plugin_manual_fix = '需要人工干预';
 $s_plugin_uninstall_message = '您确实想卸载插件"%1$s"吗？';
+$s_plugin_remove_message = '你确定想要移除无效或缺失的插件“%1$s”吗？';
 $s_plugin_key_label = '密钥：';
 $s_plugin_key_met = '准备好的插件';
 $s_plugin_key_unmet = '未得到满足的依赖关系';
 $s_plugin_key_dated = '过时的依赖关系';
 $s_plugin_key_upgrade = '需要升级';
 $s_plugin_invalid_description = '无效插件';
+$s_plugin_invalid_status_message = '以下必需的属性没有在插件的类中定义：%s';
 $s_plugin_missing_description = '缺少插件';
 $s_plugin_missing_status_message = '已安装在Mantis数据库中的插件无法加载。';
 $s_plugin_missing_class_description = '缺少插件基本类';
+$s_plugin_missing_class_status_message = '该插件的文件夹已找到，但文件夹内没有相应的插件代码。请确保文件夹的名字与插件的基本名字相符（大小写敏感）。';
 $s_project_added_msg = '已添加项目...';
 $s_category_added_msg = '已添加分类...';
 $s_category_deleted_msg = '已删除分类...';
@@ -1045,7 +1056,7 @@ $s_changelog = '变更日志';
 $s_changelog_empty = '无变更日志信息';
 $s_changelog_empty_manager = '更新日志信息不可用。问题会在项目有版本并且问题已被标记“版本中解决”后包含于此。';
 $s_roadmap = '路线图';
-$s_resolved_progress = '已解决 %1$d 个问题(共 %2$d 个问题)，进度(%3$d%%)。';
+$s_resolved_progress = '已解决 %1$d 个问题 (共 %2$d 个问题)';
 $s_roadmap_empty = '没有可用路线图信息';
 $s_roadmap_empty_manager = '没有可用的线路图信息。一旦项目有版本并且问题有设置“目标版本”就会包括问题。';
 $s_http_auth_realm = 'MantisBT 登录';
@@ -1418,6 +1429,7 @@ $s_load = '载入';
 $s_apply_changes = '应用更改';
 $s_undo = '撤销';
 $s_edit = '编辑';
+$s_submit = '提交';
 $s_update = '更新';
 $s_delete = '删除';
 $s_make_default = '设为默认值';
