@@ -923,6 +923,7 @@ $g_language_choices_arr = array(
 	'ripoarisch',
 	'romanian',
 	'russian',
+	'saraiki',
 	'serbian',
 	'serbian_latin',
 	'slovak',
@@ -991,6 +992,7 @@ $g_language_auto_map = array(
 	'ksh' => 'ripoarisch',
 	'ro-mo, ro' => 'romanian',
 	'ru-mo, ru-ru, ru-ua, ru' => 'russian',
+	'skr' => 'saraiki', # skr does not actually exist as a browser language code
 	'sr' => 'serbian',
 	'sr-latn' => 'serbian_latin',
 	'sk' => 'slovak',
@@ -2520,7 +2522,7 @@ $g_enable_product_build = OFF;
  * The summary and description fields are always shown and do not need to be
  * listed in this option. Fields not listed above cannot be shown on the bug
  * report page. Visibility of custom fields is handled via the Manage =>
- * Manage Custom Fields administrator page.
+ * Custom Fields administrator page.
  *
  * Note that 'monitors' is not an actual field; adding it to the list will let
  * authorized reporters select users to add to the issue's monitoring list.
@@ -2589,7 +2591,7 @@ $g_bug_report_page_fields = array(
  *   - view_state
  *
  * Fields not listed above cannot be shown on the bug view page. Visibility of
- * custom fields is handled via the Manage => Manage Custom Fields
+ * custom fields is handled via the Manage => Custom Fields
  * administrator page.
  *
  * This setting can be set on a per-project basis by using the
@@ -2662,7 +2664,7 @@ $g_bug_view_page_fields = array(
  *   - view_state
  *
  * Fields not listed above cannot be shown on the bug update page. Visibility
- * of custom fields is handled via the Manage => Manage Custom Fields
+ * of custom fields is handled via the Manage => Custom Fields
  * administrator page.
  *
  * This setting can be set on a per-project basis by using the
