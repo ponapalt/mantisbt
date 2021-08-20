@@ -101,6 +101,30 @@ if( $t_current_project_id == ALL_PROJECTS ) {
 	$t_project_ids_to_check = filter_get_included_projects( $t_test_filter );
 }
 
+?>
+<div class="col-xs-12 col-md-12">
+	<div id="before_reporting" class="widget-box widget-color-orange ">
+		<div class="widget-header widget-header-small">
+			<h4 class="widget-title lighter">
+				報告する前に
+			</h4>
+		</div>
+		<div class="widget-body">
+			<div class="widget-main no-padding">
+				<ul>
+					<li>左側の「登録」から新規課題を登録できます。<br />
+					Please report new issue from left button.</li>
+					<li>不具合報告前にOSを「再起動」してみてください。OSレベルでの問題が直る場合があります。<br />
+					特に最近のWindowsの場合 シャットダウン→電源ON と 再起動 で挙動が異なります。<br />
+					Please reboot OS before reporting problem. It resolves OS level issue.<br />
+					In particular, recent Windows behave differently between shutdown and restart.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<?php
+
 # Retrieve the boxes to display
 # - exclude hidden boxes per configuration (order == 0)
 # - remove boxes that do not make sense in the user's context (access level)
@@ -108,7 +132,7 @@ $t_boxes = array_filter( config_get( 'my_view_boxes' ) );
 $t_anonymous_user = current_user_is_anonymous();
 foreach( $t_boxes as $t_box_title => $t_box_display ) {
 	if( # Remove "Assigned to Me" box for users that can't handle issues
-		(  $t_box_title == 'assigned'
+		(  $t_box_title == 'resolved'
 		&& (  $t_anonymous_user
 		   || !access_has_any_project_level('handle_bug_threshold', $t_project_ids_to_check, $t_current_user_id )
 		   )
