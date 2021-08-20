@@ -771,6 +771,32 @@ if( $t_show_attachments ) {
 </table>
 </div>
 </div>
+
+<div id="before_reporting" class="widget-box widget-color-orange ">
+	<div class="widget-header widget-header-small">
+		<h4 class="widget-title lighter">
+			送信ボタンを押す前に / Before pushing "Send" button
+		</h4>
+	</div>
+	<div class="widget-body">
+		<ul>
+			<li>バグ報告のコツ
+				<ul>
+					<li>SSPのバージョン・OSのバージョン・問題が発生したゴースト・詳しい再現手順がないとたいてい対応できません。</li>
+					<li>バグ報告の書き方については、<a href="https://ukiya.hatenadiary.org/entry/20091121/1258791856">バグ報告の方法</a> <a href="https://ukiya.hatenadiary.org/entry/20091127/1259336056">SSPでの情報の取り方</a> などを参考にしてください。</li>
+					<li>Please report <strong>environment information</strong> : SSP version, OS version, Ghost name (or other extension name) , and <strong>detailed reproduction procedure</strong> if available. If these important information is missing, your report will be left unattended and forced to close.</li>
+				</ul>
+			</li>
+			<li>投稿時のパスワード
+				<ul>
+					<li>スパム避けのためにパスワードが必要です。送信ボタンを押すとユーザー名とパスワードを聞かれますので、それぞれ "bts" と入力してください。</li>
+					<li>To send report, please input "bts" into username and password box in popup dialog.</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
 <div class="widget-toolbox padding-8 clearfix">
 	<span class="required pull-right"> * <?php echo lang_get( 'required' ) ?></span>
 	<input <?php echo helper_get_tab_index() ?> type="submit" class="btn btn-primary btn-white btn-round" value="<?php echo lang_get( 'submit_report_button' ) ?>" />
