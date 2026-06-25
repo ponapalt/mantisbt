@@ -22,6 +22,7 @@ class RSS_V_200 extends RSS_V_abstract {
 		$root->setAttribute('version', '2.0');
 		$root->setAttribute('xmlns:dc', 'http://purl.org/dc/elements/1.1/');
 		$root->setAttribute('xmlns:sy', 'http://purl.org/rss/1.0/modules/syndication/');
+		$root->setAttribute('xmlns:mantis', 'https://www.mantisbt.org/xmlns/rss/1.0/');
 		$this->xml->appendChild($root);
 		$channel = $this->xml->createElement('channel');
 		$root->appendChild($channel);
@@ -204,7 +205,8 @@ class RSS_V_200 extends RSS_V_abstract {
 
 			$item_guid = '$item_guid_' . $id;
 			$$item_guid = $this->xml->createElement('guid');
-			$$item_guid->appendChild($this->xml->createTextNode($rss_item->getLink()));
+			$$item_guid->setAttribute('isPermaLink', 'false');
+			$$item_guid->appendChild($this->xml->createTextNode($rss_item->getLink() . '#' . $rss_item->getItemDate()));
 			$$item->appendChild($$item_guid);
 
 			if ( $rss_item->getComments() != FALSE ) {
@@ -212,6 +214,20 @@ class RSS_V_200 extends RSS_V_abstract {
 				$$item_comments = $this->xml->createElement('comments');
 				$$item_comments->appendChild($this->xml->createTextNode($rss_item->getComments()));
 				$$item->appendChild($$item_comments);
+			} // end if
+
+			if ( $rss_item->getSeverity() != FALSE ) {
+				$item_severity = '$item_severity_' . $id;
+				$$item_severity = $this->xml->createElement('mantis:severity');
+				$$item_severity->appendChild($this->xml->createTextNode($rss_item->getSeverity()));
+				$$item->appendChild($$item_severity);
+			} // end if
+
+			if ( $rss_item->getStatus() != FALSE ) {
+				$item_status = '$item_status_' . $id;
+				$$item_status = $this->xml->createElement('mantis:status');
+				$$item_status->appendChild($this->xml->createTextNode($rss_item->getStatus()));
+				$$item->appendChild($$item_status);
 			} // end if
 
 		} // end foreach

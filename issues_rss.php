@@ -19,9 +19,7 @@
  *
  * project_id: 0 - all projects, otherwise project id.
  * filter_id: The filter id to use for generating the rss.
- * sort: This parameter is ignore if filter_id is supplied and is not equal to 0.
- *		"update": issues ordered descending by last updated date.
- *       "submit": issues ordered descending by submit date (default).
+ *            When 0 (default), shows all issues including closed, ordered by last updated date descending.
  *
  * @package MantisBT
  * @copyright Copyright 2000 - 2002  Kenzaburo Ito - kenito@300baud.org
@@ -64,7 +62,6 @@ require_api( 'utility_api.php' );
 
 $f_project_id = gpc_get_int( 'project_id', ALL_PROJECTS );
 $f_filter_id = gpc_get_int( 'filter_id', 0 );
-$f_sort = gpc_get_string( 'sort', 'submit' );
 $f_username = gpc_get_string( 'username', null );
 $f_key = gpc_get_string( 'key', null );
 
@@ -87,12 +84,6 @@ if( $f_username !== null ) {
 # Make sure that the current user has access to the selected project (if not ALL PROJECTS).
 if( $f_project_id != ALL_PROJECTS ) {
 	access_ensure_project_level( config_get( 'view_bug_threshold', null, null, $f_project_id ), $f_project_id );
-}
-
-if( $f_sort === 'update' ) {
-	$c_sort_field = 'last_updated';
-} else {
-	$c_sort_field = 'date_submitted';
 }
 
 $t_path = config_get_global( 'path' );
@@ -177,7 +168,9 @@ current_user_set( $t_user_id );
 
 if( $f_filter_id == 0 ) {
 	$t_custom_filter = filter_get_default();
-	$t_custom_filter['sort'] = $c_sort_field;
+	$t_custom_filter[FILTER_PROPERTY_SORT_FIELD_NAME] = 'last_updated';
+	$t_custom_filter[FILTER_PROPERTY_SORT_DIRECTION] = 'DESC';
+	$t_custom_filter[FILTER_PROPERTY_HIDE_STATUS] = array( META_FILTER_NONE );
 } else {
 	# null will be returned if the user doesn't have access right to access the filter.
 	$t_custom_filter = filter_get( $f_filter_id, null );
@@ -230,8 +223,11 @@ for( $i = 0; $i < $t_issues_count; $i++ ) {
 	# optional mod_im value for dispaying a different pic for every item
 	$t_image = '';
 
+	$t_severity = MantisEnum::getLabel( config_get( 'severity_enum_string' ), $t_bug->severity );
+	$t_status = MantisEnum::getLabel( config_get( 'status_enum_string' ), $t_bug->status );
+
 	$t_rssfile->addRSSItem( $t_about, $t_title, $t_link, $t_description, $t_subject, $t_date,
-						$t_author, $t_comments, $t_image );
+						$t_author, $t_comments, $t_image, $t_severity, $t_status );
 }
 
 # @todo consider making this a configuration option - 0.91 / 1.0 / 2.0
