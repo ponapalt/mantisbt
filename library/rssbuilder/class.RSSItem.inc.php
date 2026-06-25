@@ -21,7 +21,9 @@ class RSSItem extends RSSBase {
 	protected $author;
 	protected $comments;
 	protected $image;
-	
+	protected $severity;
+	protected $status;
+
 	function __construct($about = '', 
 						 $title = '', 
 						 $link = '', 
@@ -30,7 +32,9 @@ class RSSItem extends RSSBase {
 						 $date = 0,	
 						 $author = '', 
 						 $comments = '',
-						 $image = '') {
+						 $image = '',
+						 $severity = '',
+						 $status = '') {
 		parent::__construct();
 		parent::setVar($about, 'about', 'string');
 		parent::setVar($title, 'title', 'string');
@@ -41,6 +45,8 @@ class RSSItem extends RSSBase {
 		parent::setVar($author, 'author', 'string');
 		parent::setVar($comments, 'comments', 'string');
 		parent::setVar($image, 'image', 'string');
+		parent::setVar($severity, 'severity', 'string');
+		parent::setVar($status, 'status', 'string');
 	} // end constructor
 
 	public function getAbout() {
@@ -77,5 +83,13 @@ class RSSItem extends RSSBase {
 	
 	public function getImage() {
 		return parent::getVar('image');
-	} // end function		
+	} // end function
+
+	public function getSeverity() {
+		return parent::getVar('severity');
+	} // end function
+
+	public function getStatus() {
+		return parent::getVar('status');
+	} // end function
 } // end class

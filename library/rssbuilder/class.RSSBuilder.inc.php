@@ -48,9 +48,11 @@ class RSSBuilder extends RSSBase {
 							   $date = 0,
 							   $author = '',
 							   $comments = '',
-							   $image = '') {
+							   $image = '',
+							   $severity = '',
+							   $status = '') {
 		$newItem = new RSSItem($about, $title, $link, $description, $subject,
-			$date, $author, $comments, $image);
+			$date, $author, $comments, $image, $severity, $status);
 		$this->rss_itemlist->addRSSItem($newItem);
 	} // end function
 
